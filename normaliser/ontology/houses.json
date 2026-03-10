@@ -1,0 +1,124 @@
+{
+  "houses": [
+    {
+      "canonical_name": "HOUSE_1",
+      "number": 1,
+      "synonyms": ["1st house", "First house", "Lagna", "Ascendant", "Tanu Bhava", "Udaya Lagna", "Tanur"],
+      "house_type": "kendra",
+      "secondary_types": ["trikona"],
+      "natural_karaka": "SUN",
+      "primary_meanings": ["self", "personality", "appearance", "health", "vitality"],
+      "secondary_meanings": ["fame", "head", "early childhood", "complexion"]
+    },
+    {
+      "canonical_name": "HOUSE_2",
+      "number": 2,
+      "synonyms": ["2nd house", "Second house", "Dhana Bhava", "Kutumba Bhava"],
+      "house_type": "maraka",
+      "secondary_types": [],
+      "natural_karaka": "JUPITER",
+      "primary_meanings": ["wealth", "speech", "family", "food"],
+      "secondary_meanings": ["right eye", "accumulated assets", "early education"]
+    },
+    {
+      "canonical_name": "HOUSE_3",
+      "number": 3,
+      "synonyms": ["3rd house", "Third house", "Sahaja Bhava", "Parakrama Bhava"],
+      "house_type": "upachaya",
+      "secondary_types": [],
+      "natural_karaka": "MARS",
+      "primary_meanings": ["siblings", "communication", "courage", "skills"],
+      "secondary_meanings": ["short travel", "right ear", "writing", "neighbours"]
+    },
+    {
+      "canonical_name": "HOUSE_4",
+      "number": 4,
+      "synonyms": ["4th house", "Fourth house", "Sukha Bhava", "Matru Bhava", "Bandhu Bhava"],
+      "house_type": "kendra",
+      "secondary_types": [],
+      "natural_karaka": "MOON",
+      "primary_meanings": ["mother", "home", "happiness", "education"],
+      "secondary_meanings": ["land", "vehicles", "chest", "fixed assets"]
+    },
+    {
+      "canonical_name": "HOUSE_5",
+      "number": 5,
+      "synonyms": ["5th house", "Fifth house", "Putra Bhava", "Suta Bhava"],
+      "house_type": "trikona",
+      "secondary_types": [],
+      "natural_karaka": "JUPITER",
+      "primary_meanings": ["children", "intellect", "creativity", "past merit"],
+      "secondary_meanings": ["speculation", "romance", "stomach", "mantras"]
+    },
+    {
+      "canonical_name": "HOUSE_6",
+      "number": 6,
+      "synonyms": ["6th house", "Sixth house", "Ripu Bhava", "Shatru Bhava", "Roga Bhava"],
+      "house_type": "trik",
+      "secondary_types": ["upachaya"],
+      "natural_karaka": "MARS",
+      "primary_meanings": ["enemies", "disease", "debt", "service"],
+      "secondary_meanings": ["obstacles", "litigation", "maternal uncle", "digestion"]
+    },
+    {
+      "canonical_name": "HOUSE_7",
+      "number": 7,
+      "synonyms": ["7th house", "Seventh house", "Kalatra Bhava", "Jaya Bhava", "Jamitra"],
+      "house_type": "kendra",
+      "secondary_types": ["maraka"],
+      "natural_karaka": "VENUS",
+      "primary_meanings": ["marriage", "spouse", "partnerships", "business"],
+      "secondary_meanings": ["foreign travel", "trade", "lower abdomen", "legal contracts"]
+    },
+    {
+      "canonical_name": "HOUSE_8",
+      "number": 8,
+      "synonyms": ["8th house", "Eighth house", "Ayur Bhava", "Mritu Bhava", "Randhra Bhava"],
+      "house_type": "trik",
+      "secondary_types": [],
+      "natural_karaka": "SATURN",
+      "primary_meanings": ["longevity", "transformation", "research", "occult"],
+      "secondary_meanings": ["inheritance", "chronic illness", "sudden events", "in-laws"]
+    },
+    {
+      "canonical_name": "HOUSE_9",
+      "number": 9,
+      "synonyms": ["9th house", "Ninth house", "Dharma Bhava", "Bhagya Bhava", "Pitru Bhava"],
+      "house_type": "trikona",
+      "secondary_types": [],
+      "natural_karaka": "JUPITER",
+      "primary_meanings": ["fortune", "guru", "dharma", "father", "higher learning"],
+      "secondary_meanings": ["long travel", "religion", "philosophy", "luck"]
+    },
+    {
+      "canonical_name": "HOUSE_10",
+      "number": 10,
+      "synonyms": ["10th house", "Tenth house", "Karma Bhava", "Rajya Bhava", "Kirtisthana"],
+      "house_type": "kendra",
+      "secondary_types": [],
+      "natural_karaka": "SUN",
+      "primary_meanings": ["career", "status", "authority", "public image"],
+      "secondary_meanings": ["government", "father", "knees", "profession"]
+    },
+    {
+      "canonical_name": "HOUSE_11",
+      "number": 11,
+      "synonyms": ["11th house", "Eleventh house", "Labha Bhava", "Ayaya Bhava"],
+      "house_type": "upachaya",
+      "secondary_types": [],
+      "natural_karaka": "JUPITER",
+      "primary_meanings": ["gains", "income", "networks", "elder siblings"],
+      "secondary_meanings": ["fulfilment of desires", "left ear", "friends"]
+    },
+    {
+      "canonical_name": "HOUSE_12",
+      "number": 12,
+      "synonyms": ["12th house", "Twelfth house", "Vyaya Bhava", "Moksha Bhava", "Antya Bhava"],
+      "house_type": "trik",
+      "secondary_types": [],
+      "natural_karaka": "SATURN",
+      "primary_meanings": ["loss", "liberation", "foreign", "spiritual practices"],
+      "secondary_meanings": ["expenses", "sleep", "left eye", "imprisonment", "hospitals"]
+    }
+  ]
+}
