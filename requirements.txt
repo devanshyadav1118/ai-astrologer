@@ -1,0 +1,16 @@
+google-generativeai
+neo4j
+chromadb
+pyswisseph
+fastapi
+uvicorn
+streamlit
+pandas
+sqlite-utils
+PyPDF2
+pdfplumber
+pytest
+black
+ruff
+jupyter
+python-dotenv
