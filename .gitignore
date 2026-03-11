@@ -10,3 +10,13 @@ dist/
 .pytest_cache/
 .ruff_cache/
 .ipynb_checkpoints/
+logs/
+extraction.log
+Extraction Automation/extraction.log
+Extraction Automation/scripts/extraction.log
+Extraction Automation/input/
+Extraction Automation/output/
+Extraction Automation/test.json
+Extraction Automation/validation_report.txt
+Extraction Automation/roadmpa
+AI_Astrologer_Masterplan_v3.pdf
