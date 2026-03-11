@@ -1,0 +1,214 @@
+{
+  "aspects": {
+    "system": "Jyotish_drishti",
+    "system_note": "In Jyotish, aspects are sign-based (not degree-based). A planet aspects the sign it occupies plus specific signs ahead. All planets have the 7th house full aspect. Some planets have additional special aspects.",
+    "standard_aspect": {
+      "house_offset": 7,
+      "strength": 1.0,
+      "strength_label": "full",
+      "applies_to": "ALL_PLANETS",
+      "description": "Every planet fully aspects the sign 7 houses ahead (opposite sign)"
+    },
+    "special_aspects": [
+      {
+        "planet": "MARS",
+        "aspects": [
+          { "house_offset": 4, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 7, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 8, "strength": 1.0, "strength_label": "full" }
+        ],
+        "note": "Mars aspects 4th, 7th, and 8th from its position"
+      },
+      {
+        "planet": "JUPITER",
+        "aspects": [
+          { "house_offset": 5, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 7, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 9, "strength": 1.0, "strength_label": "full" }
+        ],
+        "note": "Jupiter aspects 5th, 7th, and 9th from its position"
+      },
+      {
+        "planet": "SATURN",
+        "aspects": [
+          { "house_offset": 3, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 7, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 10, "strength": 1.0, "strength_label": "full" }
+        ],
+        "note": "Saturn aspects 3rd, 7th, and 10th from its position"
+      },
+      {
+        "planet": "RAHU",
+        "aspects": [
+          { "house_offset": 5, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 7, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 9, "strength": 1.0, "strength_label": "full" }
+        ],
+        "note": "Rahu aspects like Jupiter per most classical schools"
+      },
+      {
+        "planet": "KETU",
+        "aspects": [
+          { "house_offset": 5, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 7, "strength": 1.0, "strength_label": "full" },
+          { "house_offset": 9, "strength": 1.0, "strength_label": "full" }
+        ],
+        "note": "Ketu aspects like Mars per some schools, like Jupiter per others — Jupiter model used here"
+      }
+    ],
+    "aspect_strength_weights": {
+      "conjunction": {
+        "house_offset": 0,
+        "strength": 1.0,
+        "strength_label": "full",
+        "description": "Planets in same sign — strongest possible influence, energies merge"
+      },
+      "full_aspect": {
+        "strength": 1.0,
+        "strength_label": "full",
+        "description": "Standard 7th aspect and all special aspects — full weight"
+      },
+      "partial_aspect_3_10": {
+        "house_offsets": [3, 10],
+        "strength": 0.75,
+        "strength_label": "three_quarter",
+        "description": "3rd and 10th house aspects — three-quarter strength per Parashari tradition"
+      },
+      "partial_aspect_5_9": {
+        "house_offsets": [5, 9],
+        "strength": 0.5,
+        "strength_label": "half",
+        "description": "5th and 9th house aspects — half strength per Parashari tradition"
+      },
+      "partial_aspect_4_8": {
+        "house_offsets": [4, 8],
+        "strength": 0.25,
+        "strength_label": "quarter",
+        "description": "4th and 8th house aspects — quarter strength per Parashari tradition"
+      }
+    },
+    "aspect_types": [
+      {
+        "canonical_name": "CONJUNCTION",
+        "synonyms": ["conjunction", "yuti", "same house", "co-presence"],
+        "house_offset": 0,
+        "strength": 1.0,
+        "nature": "neutral",
+        "nature_note": "Quality depends entirely on the planets involved — benefic+benefic=positive, malefic+malefic=negative",
+        "description": "Two or more planets in the same sign — energies fully merge"
+      },
+      {
+        "canonical_name": "OPPOSITION",
+        "synonyms": ["opposition", "7th aspect", "opposite sign"],
+        "house_offset": 7,
+        "strength": 1.0,
+        "nature": "neutral",
+        "nature_note": "Creates tension and awareness between the two house themes",
+        "description": "Planet aspects sign 7 houses ahead — every planet has this"
+      },
+      {
+        "canonical_name": "TRINE_ASPECT",
+        "synonyms": ["trikona drishti", "5th aspect", "9th aspect"],
+        "house_offsets": [5, 9],
+        "strength": 0.5,
+        "nature": "benefic",
+        "nature_note": "Trine aspects are harmonious — Jupiter and Rahu/Ketu have these as special aspects",
+        "description": "5th and 9th house aspects — harmonious influence"
+      },
+      {
+        "canonical_name": "SQUARE_ASPECT",
+        "synonyms": ["kendra drishti", "4th aspect", "8th aspect"],
+        "house_offsets": [4, 8],
+        "strength": 0.25,
+        "nature": "malefic",
+        "nature_note": "Square aspects create friction — Mars has 4th and 8th as special full aspects",
+        "description": "4th and 8th house aspects — challenging influence"
+      },
+      {
+        "canonical_name": "SEXTILE_ASPECT",
+        "synonyms": ["3rd aspect", "10th aspect"],
+        "house_offsets": [3, 10],
+        "strength": 0.75,
+        "nature": "neutral",
+        "nature_note": "Saturn has 3rd and 10th as special full aspects",
+        "description": "3rd and 10th house aspects — moderate influence"
+      }
+    ],
+    "aspect_modification_rules": [
+      {
+        "rule": "benefic_aspecting_malefic",
+        "effect": "reduces_malefic_strength",
+        "modifier": -0.25,
+        "description": "A benefic aspecting a malefic reduces the malefic's harmful expression"
+      },
+      {
+        "rule": "malefic_aspecting_benefic",
+        "effect": "reduces_benefic_strength",
+        "modifier": -0.25,
+        "description": "A malefic aspecting a benefic reduces the benefic's positive expression"
+      },
+      {
+        "rule": "jupiter_aspect_on_any_planet",
+        "effect": "purifies_and_expands",
+        "modifier": 0.5,
+        "description": "Jupiter's aspect on any planet improves its quality and expression"
+      },
+      {
+        "rule": "saturn_aspect_on_any_planet",
+        "effect": "delays_and_restricts",
+        "modifier": -0.25,
+        "description": "Saturn's aspect creates delays and limitations for the aspected planet"
+      },
+      {
+        "rule": "rahu_aspect_on_any_planet",
+        "effect": "amplifies_and_obsesses",
+        "modifier": 0.0,
+        "description": "Rahu's aspect amplifies — intensifies both positive and negative qualities"
+      },
+      {
+        "rule": "mutual_aspect",
+        "effect": "both_planets_influence_each_other",
+        "modifier": 0.0,
+        "description": "When two planets aspect each other, both are simultaneously influenced"
+      }
+    ],
+    "combustion_rules": {
+      "definition": "A planet within orb of the Sun loses strength due to solar heat",
+      "orbs_by_planet": [
+        {
+          "planet": "MOON",
+          "combustion_orb_degrees": 12,
+          "partial_orb_degrees": null
+        },
+        {
+          "planet": "MARS",
+          "combustion_orb_degrees": 17,
+          "partial_orb_degrees": null
+        },
+        {
+          "planet": "MERCURY",
+          "combustion_orb_degrees": 14,
+          "cazimi_orb_degrees": 1
+        },
+        {
+          "planet": "JUPITER",
+          "combustion_orb_degrees": 11,
+          "partial_orb_degrees": null
+        },
+        {
+          "planet": "VENUS",
+          "combustion_orb_degrees": 10,
+          "partial_orb_degrees": null
+        },
+        {
+          "planet": "SATURN",
+          "combustion_orb_degrees": 15,
+          "partial_orb_degrees": null
+        }
+      ],
+      "strength_penalty": -3,
+      "cazimi_note": "Mercury within 1 degree of Sun (cazimi) is actually strengthened, not weakened — per some classical sources",
+      "exception": "Rahu and Ketu are not combusted as they are shadow planets"
+    }
+  }
+}

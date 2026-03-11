@@ -1,0 +1,275 @@
+{
+  "dashas": {
+    "primary_system": "VIMSHOTTARI",
+    "total_years": 120,
+    "system_note": "Vimshottari is the primary dasha system in Parashara Jyotish. The starting dasha is determined by the Moon's nakshatra at birth. The balance of the first dasha is calculated from how far the Moon has traversed the nakshatra.",
+    "nakshatra_to_dasha_lord": {
+      "ASHWINI": "KETU",
+      "MAGHA": "KETU",
+      "MULA": "KETU",
+      "BHARANI": "VENUS",
+      "PURVA_PHALGUNI": "VENUS",
+      "PURVA_ASHADHA": "VENUS",
+      "KRITTIKA": "SUN",
+      "UTTARA_PHALGUNI": "SUN",
+      "UTTARA_ASHADHA": "SUN",
+      "ROHINI": "MOON",
+      "HASTA": "MOON",
+      "SHRAVANA": "MOON",
+      "MRIGASHIRA": "MARS",
+      "CHITRA": "MARS",
+      "DHANISHTHA": "MARS",
+      "ARDRA": "RAHU",
+      "SWATI": "RAHU",
+      "SHATABHISHA": "RAHU",
+      "PUNARVASU": "JUPITER",
+      "VISHAKHA": "JUPITER",
+      "PURVA_BHADRAPADA": "JUPITER",
+      "PUSHYA": "SATURN",
+      "ANURADHA": "SATURN",
+      "UTTARA_BHADRAPADA": "SATURN",
+      "ASHLESHA": "MERCURY",
+      "JYESHTHA": "MERCURY",
+      "REVATI": "MERCURY"
+    },
+    "mahadashas": [
+      {
+        "planet": "SUN",
+        "years": 6,
+        "sequence": 1,
+        "themes": [
+          "soul",
+          "father",
+          "authority",
+          "government",
+          "health",
+          "ego"
+        ],
+        "positive_expression": "Rise in status, government favour, recognition, vitality",
+        "negative_expression": "Ego clashes, father issues, health problems if Sun weak",
+        "key_ages_note": "Often significant around ages when Sun dasha runs"
+      },
+      {
+        "planet": "MOON",
+        "years": 10,
+        "sequence": 2,
+        "themes": ["mind", "mother", "emotions", "public", "travel", "fluids"],
+        "positive_expression": "Emotional fulfilment, public recognition, wealth, comfort",
+        "negative_expression": "Emotional instability, mother issues, mental stress if Moon weak",
+        "key_ages_note": "Quality heavily dependent on Moon waxing/waning and sign"
+      },
+      {
+        "planet": "MARS",
+        "years": 7,
+        "sequence": 3,
+        "themes": [
+          "courage",
+          "energy",
+          "siblings",
+          "land",
+          "conflict",
+          "surgery"
+        ],
+        "positive_expression": "Energy, initiative, property gains, courage, sibling support",
+        "negative_expression": "Accidents, conflicts, surgery, impulsiveness if Mars weak",
+        "key_ages_note": "Active and eventful period"
+      },
+      {
+        "planet": "RAHU",
+        "years": 18,
+        "sequence": 4,
+        "themes": [
+          "ambition",
+          "foreign",
+          "technology",
+          "obsession",
+          "material desire"
+        ],
+        "positive_expression": "Career rise, foreign opportunities, material gains, innovation",
+        "negative_expression": "Confusion, illusion, deception, health issues if Rahu badly placed",
+        "key_ages_note": "Longest dasha after Venus — transformative period"
+      },
+      {
+        "planet": "JUPITER",
+        "years": 16,
+        "sequence": 5,
+        "themes": [
+          "wisdom",
+          "children",
+          "wealth",
+          "dharma",
+          "teacher",
+          "expansion"
+        ],
+        "positive_expression": "Prosperity, wisdom, marriage, children, spiritual growth",
+        "negative_expression": "Over-expansion, overconfidence, liver issues if Jupiter weak",
+        "key_ages_note": "Generally the most auspicious dasha for most lagnas"
+      },
+      {
+        "planet": "SATURN",
+        "years": 19,
+        "sequence": 6,
+        "themes": [
+          "karma",
+          "discipline",
+          "delays",
+          "service",
+          "longevity",
+          "hard work"
+        ],
+        "positive_expression": "Steady career growth, property, longevity, karmic rewards",
+        "negative_expression": "Delays, health issues, isolation, hardship if Saturn weak",
+        "key_ages_note": "Longest malefic dasha — tests and rewards patience"
+      },
+      {
+        "planet": "MERCURY",
+        "years": 17,
+        "sequence": 7,
+        "themes": [
+          "intellect",
+          "communication",
+          "trade",
+          "education",
+          "analysis"
+        ],
+        "positive_expression": "Business success, education, writing, communication skills",
+        "negative_expression": "Nervous issues, indecision, deception if Mercury weak",
+        "key_ages_note": "Favours intellectual and business activities"
+      },
+      {
+        "planet": "KETU",
+        "years": 7,
+        "sequence": 8,
+        "themes": [
+          "liberation",
+          "spirituality",
+          "past life",
+          "detachment",
+          "occult"
+        ],
+        "positive_expression": "Spiritual growth, research, moksha orientation, healing",
+        "negative_expression": "Confusion, accidents, detachment from worldly matters",
+        "key_ages_note": "Often brings unexpected events and spiritual turning points"
+      },
+      {
+        "planet": "VENUS",
+        "years": 20,
+        "sequence": 9,
+        "themes": [
+          "marriage",
+          "luxury",
+          "arts",
+          "pleasure",
+          "vehicles",
+          "beauty"
+        ],
+        "positive_expression": "Marriage, wealth, luxury, artistic success, vehicles",
+        "negative_expression": "Overindulgence, relationship issues if Venus weak or afflicted",
+        "key_ages_note": "Longest dasha — most significant for relationships and wealth"
+      }
+    ],
+    "antardashas": {
+      "calculation_note": "Each mahadasha is divided into 9 antardashas. The first antardasha belongs to the mahadasha lord itself. Duration = (mahadasha_years × antardasha_years) / 120",
+      "sequence": [
+        "SUN",
+        "MOON",
+        "MARS",
+        "RAHU",
+        "JUPITER",
+        "SATURN",
+        "MERCURY",
+        "KETU",
+        "VENUS"
+      ],
+      "example_sun_mahadasha": [
+        { "antardasha_lord": "SUN", "duration_days": 108 },
+        { "antardasha_lord": "MOON", "duration_days": 180 },
+        { "antardasha_lord": "MARS", "duration_days": 126 },
+        { "antardasha_lord": "RAHU", "duration_days": 324 },
+        { "antardasha_lord": "JUPITER", "duration_days": 288 },
+        { "antardasha_lord": "SATURN", "duration_days": 342 },
+        { "antardasha_lord": "MERCURY", "duration_days": 306 },
+        { "antardasha_lord": "KETU", "duration_days": 126 },
+        { "antardasha_lord": "VENUS", "duration_days": 360 }
+      ]
+    },
+    "pratyantardashas": {
+      "calculation_note": "Each antardasha is further divided into 9 pratyantardashas using the same proportional formula. Duration = (antardasha_days × pratyantardasha_years) / 120",
+      "use_note": "Pratyantardasha lord activates very specific short-term themes — used for precise event timing in Phase 9"
+    },
+    "dasha_interpretation_rules": [
+      {
+        "rule": "functional_benefic_dasha",
+        "condition": "dasha_lord_is_functional_benefic_for_lagna",
+        "effect": "Generally positive period — house themes flourish"
+      },
+      {
+        "rule": "functional_malefic_dasha",
+        "condition": "dasha_lord_is_functional_malefic_for_lagna",
+        "effect": "Challenging period — obstacles and disruptions in house themes"
+      },
+      {
+        "rule": "dasha_lord_in_dusthana",
+        "condition": "dasha_lord_placed_in_6_8_12",
+        "effect": "Difficult dasha — hidden struggles, health issues, losses"
+      },
+      {
+        "rule": "dasha_lord_in_kendra_trikona",
+        "condition": "dasha_lord_placed_in_kendra_or_trikona",
+        "effect": "Strong dasha — house themes activate powerfully and positively"
+      },
+      {
+        "rule": "dasha_lord_exalted",
+        "condition": "dasha_lord_in_exaltation_sign",
+        "effect": "Excellent dasha — maximum positive expression of house themes"
+      },
+      {
+        "rule": "dasha_lord_debilitated",
+        "condition": "dasha_lord_in_debilitation_sign",
+        "effect": "Difficult dasha — unless neecha bhanga cancels"
+      },
+      {
+        "rule": "yoga_activation",
+        "condition": "dasha_lord_is_part_of_yoga",
+        "effect": "Dasha activates the yoga — yoga results manifest during this period"
+      },
+      {
+        "rule": "antardasha_harmony",
+        "condition": "mahadasha_lord_and_antardasha_lord_are_friends",
+        "effect": "Smooth sub-period — both lords support each other"
+      },
+      {
+        "rule": "antardasha_conflict",
+        "condition": "mahadasha_lord_and_antardasha_lord_are_enemies",
+        "effect": "Difficult sub-period — conflicting energies, tension and obstacles"
+      }
+    ],
+    "secondary_systems": [
+      {
+        "name": "YOGINI",
+        "total_years": 36,
+        "lords_sequence": [
+          "MOON",
+          "SUN",
+          "JUPITER",
+          "MARS",
+          "MERCURY",
+          "SATURN",
+          "VENUS",
+          "RAHU"
+        ],
+        "years_sequence": [1, 2, 3, 4, 5, 6, 7, 8],
+        "use_note": "Used as confirmation system alongside Vimshottari — shorter total period"
+      },
+      {
+        "name": "ASHTOTTARI",
+        "total_years": 108,
+        "use_note": "Used when Rahu is in a specific position — alternate 108-year system"
+      },
+      {
+        "name": "KALACHAKRA",
+        "use_note": "Advanced system based on navamsa — used for refined timing in Phase 10"
+      }
+    ]
+  }
+}

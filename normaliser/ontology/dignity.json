@@ -1,0 +1,195 @@
+{
+  "dignity": {
+    "system_note": "Dignity determines how well a planet can express its natural qualities. Strength scores are additive — multiple dignity factors stack. These values feed directly into the Phase 6 Strength Scoring Engine.",
+    "dignity_types": [
+      {
+        "canonical_name": "EXALTATION",
+        "synonyms": ["uccha", "exalted", "exaltation"],
+        "strength_bonus": 5,
+        "description": "Planet in its highest dignity sign — fullest positive expression",
+        "expression": "Planet operates at maximum potential — significations fully positive",
+        "peak_note": "Exact exaltation degree gives maximum strength; falls off gradually on either side"
+      },
+      {
+        "canonical_name": "MOOLATRIKONA",
+        "synonyms": ["moolatrikona", "mooltrikona", "mula trikona", "MT"],
+        "strength_bonus": 3.5,
+        "description": "Planet in its preferred segment of its own sign — very strong",
+        "expression": "Planet very comfortable — strong consistent positive expression",
+        "peak_note": "Stronger than own sign but weaker than exaltation"
+      },
+      {
+        "canonical_name": "OWN_SIGN",
+        "synonyms": ["swakshetra", "own sign", "svakshetra", "domicile"],
+        "strength_bonus": 4,
+        "description": "Planet in a sign it rules — strong and reliable",
+        "expression": "Planet fully in command — significations stable and reliable",
+        "peak_note": "Outside moolatrikona degrees in own sign"
+      },
+      {
+        "canonical_name": "FRIENDLY_SIGN",
+        "synonyms": ["mitra kshetra", "friend sign", "friendly sign"],
+        "strength_bonus": 2,
+        "description": "Planet in a sign ruled by a natural friend",
+        "expression": "Planet moderately supported — positive expression with some limitation"
+      },
+      {
+        "canonical_name": "NEUTRAL_SIGN",
+        "synonyms": ["sama kshetra", "neutral sign"],
+        "strength_bonus": 0,
+        "description": "Planet in a sign ruled by a neutral planet",
+        "expression": "Baseline — no significant boost or penalty"
+      },
+      {
+        "canonical_name": "ENEMY_SIGN",
+        "synonyms": ["shatru kshetra", "enemy sign"],
+        "strength_bonus": -2,
+        "description": "Planet in a sign ruled by a natural enemy",
+        "expression": "Planet uncomfortable — reduced effectiveness, some distortion"
+      },
+      {
+        "canonical_name": "DEBILITATION",
+        "synonyms": ["neecha", "debilitated", "fall", "debilitation"],
+        "strength_bonus": -5,
+        "description": "Planet in its lowest dignity sign — significations distorted",
+        "expression": "Planet at minimum strength — positive significations suppressed or reversed",
+        "peak_note": "Exact debilitation degree gives maximum weakness; neecha bhanga can cancel this"
+      }
+    ],
+    "house_position_modifiers": [
+      {
+        "canonical_name": "KENDRA",
+        "houses": [1, 4, 7, 10],
+        "strength_bonus": 2,
+        "description": "Angular houses — strongest positional placement"
+      },
+      {
+        "canonical_name": "TRIKONA",
+        "houses": [1, 5, 9],
+        "strength_bonus": 1.5,
+        "description": "Trine houses — highly auspicious placement"
+      },
+      {
+        "canonical_name": "KENDRA_TRIKONA_OVERLAP",
+        "houses": [1],
+        "strength_bonus": 2,
+        "description": "1st house is both kendra and trikona — kendra bonus applied"
+      },
+      {
+        "canonical_name": "UPACHAYA",
+        "houses": [3, 6, 10, 11],
+        "strength_bonus": 1,
+        "description": "Growth houses — malefics especially benefit here",
+        "special_note": "Malefics in upachaya houses gain extra 0.5 bonus over benefics"
+      },
+      {
+        "canonical_name": "PANAPARA",
+        "houses": [2, 5, 8, 11],
+        "strength_bonus": 0.5,
+        "description": "Succedent houses — moderate positional strength"
+      },
+      {
+        "canonical_name": "APOKLIMA",
+        "houses": [3, 6, 9, 12],
+        "strength_bonus": 0,
+        "description": "Cadent houses — weakest positional placement"
+      },
+      {
+        "canonical_name": "DUSTHANA",
+        "houses": [6, 8, 12],
+        "strength_bonus": -1,
+        "description": "Malefic houses — generally weakens positive significations",
+        "special_note": "Dusthana lords in own dusthana can trigger Viparita Raja Yoga"
+      }
+    ],
+    "aspect_dignity_modifiers": [
+      {
+        "aspecting_planet": "JUPITER",
+        "modifier": 1,
+        "description": "Jupiter's aspect improves any planet's effective dignity"
+      },
+      {
+        "aspecting_planet": "VENUS",
+        "modifier": 0.5,
+        "description": "Venus's aspect mildly improves a planet's expression"
+      },
+      {
+        "aspecting_planet": "SATURN",
+        "modifier": -1,
+        "description": "Saturn's aspect suppresses and delays a planet's expression"
+      },
+      {
+        "aspecting_planet": "MARS",
+        "modifier": -0.5,
+        "description": "Mars's aspect creates aggression and disruption"
+      },
+      {
+        "aspecting_planet": "RAHU",
+        "modifier": -0.5,
+        "description": "Rahu's aspect creates obsession and amplifies both good and bad"
+      },
+      {
+        "aspecting_planet": "KETU",
+        "modifier": -0.5,
+        "description": "Ketu's aspect creates detachment and unpredictability"
+      }
+    ],
+    "special_conditions": [
+      {
+        "canonical_name": "COMBUSTION",
+        "synonyms": ["asta", "combust", "burnt"],
+        "strength_penalty": -3,
+        "description": "Planet within Sun's orb loses strength and independence",
+        "exception": "Mercury cazimi (within 1 degree) is strengthened per some schools"
+      },
+      {
+        "canonical_name": "RETROGRADE",
+        "synonyms": ["vakri", "retrograde"],
+        "strength_modifier": 1.5,
+        "modifier_type": "intensifier",
+        "description": "Retrograde planet intensifies its significations — can be positive or negative",
+        "note": "Retrograde planet in own/exaltation sign is especially powerful; in enemy sign especially difficult"
+      },
+      {
+        "canonical_name": "STATIONARY",
+        "synonyms": ["stambhita", "stationary"],
+        "strength_modifier": 2.0,
+        "modifier_type": "intensifier",
+        "description": "Planet at standstill before turning retrograde/direct — very powerful"
+      },
+      {
+        "canonical_name": "VARGOTTAMA",
+        "synonyms": ["vargottama", "vargottama planet"],
+        "strength_bonus": 2,
+        "description": "Planet in same sign in both D1 and D9 — significantly strengthened",
+        "note": "Especially powerful for interpretation — planet acts as if in own sign"
+      },
+      {
+        "canonical_name": "ATMAKARAKA",
+        "synonyms": ["atmakaraka", "AK", "soul significator"],
+        "strength_bonus": 1,
+        "description": "Planet with highest degree in chart — soul significator, extra weight in interpretation"
+      },
+      {
+        "canonical_name": "DIGBALA",
+        "synonyms": ["dig bala", "directional strength"],
+        "strength_bonus": 2,
+        "description": "Planet in its directional strength house — powerful positional dignity",
+        "assignments": {
+          "SUN": 10, "MARS": 10,
+          "MOON": 4, "VENUS": 4,
+          "JUPITER": 1, "MERCURY": 1,
+          "SATURN": 7
+        }
+      }
+    ],
+    "strength_interpretation": [
+      {"range_min": 7, "range_max": 10, "label": "very_strong", "interpretation": "Full positive expression — classical effects apply completely"},
+      {"range_min": 5, "range_max": 6.9, "label": "strong", "interpretation": "Good expression — most positive effects manifest reliably"},
+      {"range_min": 3, "range_max": 4.9, "label": "moderate", "interpretation": "Mixed expression — partial results, context dependent"},
+      {"range_min": 1, "range_max": 2.9, "label": "weak", "interpretation": "Reduced expression — significations suppressed"},
+      {"range_min": -1, "range_max": 0.9, "label": "very_weak", "interpretation": "Minimal expression — planet struggles to deliver results"},
+      {"range_min": -10, "range_max": -1.1, "label": "afflicted", "interpretation": "Distorted expression — positive meanings may reverse to negative"}
+    ]
+  }
+}

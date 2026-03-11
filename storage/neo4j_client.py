@@ -220,7 +220,7 @@ class Neo4jClient:
             if self._is_neo4j_primitive(value):
                 properties[key] = value
             else:
-                properties[key] = json.dumps(value, ensure_ascii=True, sort_keys=True)
+                properties[f"{key}_json"] = json.dumps(value, ensure_ascii=True, sort_keys=True)
         return properties
 
     def _is_neo4j_primitive(self, value: Any) -> bool:

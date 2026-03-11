@@ -1,65 +1,1587 @@
 {
   "yogas": [
-    {"canonical_name": "GAJA_KESARI", "synonyms": ["Gaja Kesari Yoga", "Gajakesari", "Elephant-Lion Yoga"], "type": "dhana_raja_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "JUPITER", "relation": "in_kendra_from", "reference": "MOON"}, {"planet": "JUPITER", "not_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]}]}, "effects": ["wisdom", "fame", "benevolence", "wealth", "leadership"], "classical_sources": ["Brihat Parashara Hora Shastra", "Phaladeepika"], "confidence": "very_high"},
-    {"canonical_name": "RAJA_YOGA", "synonyms": ["Raja Yoga", "Royal Combination"], "type": "raja_yoga", "conditions": {"logic": "OR", "rules": [{"conjunction_between": ["trikona_lord", "kendra_lord"]}, {"aspect_between": ["trikona_lord", "kendra_lord"]}, {"mutual_reception_between": ["trikona_lord", "kendra_lord"]}]}, "effects": ["authority", "fame", "political_success", "leadership"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "DHANA_YOGA", "synonyms": ["Dhana Yoga", "Wealth Combination"], "type": "dhana_yoga", "conditions": {"logic": "OR", "rules": [{"conjunction_between": ["HOUSE_2_lord", "HOUSE_11_lord"]}, {"aspect_between": ["HOUSE_2_lord", "HOUSE_11_lord"]}, {"conjunction_between": ["HOUSE_1_lord", "HOUSE_2_lord"]}]}, "effects": ["wealth", "financial_prosperity", "material_gains"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "high"},
-    {"canonical_name": "BUDHA_ADITYA", "synonyms": ["Budha Aditya Yoga", "Nipuna Yoga"], "type": "graha_yoga", "conditions": {"logic": "AND", "rules": [{"conjunction_between": ["SUN", "MERCURY"]}, {"planet": "SUN", "not_in_sign": ["GEMINI", "VIRGO"]}]}, "effects": ["intelligence", "communication_skills", "career_success", "recognition"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "CHANDRA_MANGALA", "synonyms": ["Chandra Mangala Yoga", "Moon Mars Yoga"], "type": "dhana_yoga", "conditions": {"logic": "OR", "rules": [{"conjunction_between": ["MOON", "MARS"]}, {"mutual_aspect_between": ["MOON", "MARS"]}]}, "effects": ["wealth_through_trade", "bold_temperament", "independent_earning"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "HAMSA", "synonyms": ["Hamsa Yoga"], "type": "pancha_mahapurusha", "conditions": {"logic": "AND", "rules": [{"planet": "JUPITER", "in_house_type": "kendra"}, {"planet": "JUPITER", "in_own_or_exaltation_sign": true}]}, "effects": ["wisdom", "spirituality", "teaching", "grace"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "MALAVYA", "synonyms": ["Malavya Yoga"], "type": "pancha_mahapurusha", "conditions": {"logic": "AND", "rules": [{"planet": "VENUS", "in_house_type": "kendra"}, {"planet": "VENUS", "in_own_or_exaltation_sign": true}]}, "effects": ["luxury", "artistry", "comfort", "attractiveness"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "RUCHAKA", "synonyms": ["Ruchaka Yoga"], "type": "pancha_mahapurusha", "conditions": {"logic": "AND", "rules": [{"planet": "MARS", "in_house_type": "kendra"}, {"planet": "MARS", "in_own_or_exaltation_sign": true}]}, "effects": ["courage", "leadership", "strength", "command"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "BHADRA", "synonyms": ["Bhadra Yoga"], "type": "pancha_mahapurusha", "conditions": {"logic": "AND", "rules": [{"planet": "MERCURY", "in_house_type": "kendra"}, {"planet": "MERCURY", "in_own_or_exaltation_sign": true}]}, "effects": ["intelligence", "eloquence", "administrative_skill", "commerce"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "SASA", "synonyms": ["Sasa Yoga", "Shasha Yoga"], "type": "pancha_mahapurusha", "conditions": {"logic": "AND", "rules": [{"planet": "SATURN", "in_house_type": "kendra"}, {"planet": "SATURN", "in_own_or_exaltation_sign": true}]}, "effects": ["authority", "endurance", "discipline", "landed_status"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "NEECHA_BHANGA", "synonyms": ["Neecha Bhanga Raja Yoga", "Debility Cancellation"], "type": "cancellation_yoga", "conditions": {"logic": "OR", "rules": [{"planet": "debilitated_planet", "debilitation_lord_in_kendra": true}, {"planet": "debilitated_planet", "planet_that_exalts_here_in_kendra": true}, {"planet": "debilitated_planet", "is_conjoined_with_exaltation_lord": true}]}, "effects": ["recovery", "rise_after_fall", "status_gain"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "high"},
-    {"canonical_name": "VIPARITA_RAJA_YOGA", "synonyms": ["Viparita Raja Yoga"], "type": "raja_yoga", "conditions": {"logic": "AND", "rules": [{"planet_group": ["HOUSE_6_lord", "HOUSE_8_lord", "HOUSE_12_lord"], "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]}]}, "effects": ["victory_over_obstacles", "unexpected_success", "resilience"], "classical_sources": ["Saravali"], "confidence": "high"},
-    {"canonical_name": "KEMADRUMA", "synonyms": ["Kemadruma Yoga"], "type": "chandra_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "MOON", "no_planets_in_adjacent_houses": true}, {"planet": "MOON", "no_kendra_support": true}]}, "effects": ["mental_strain", "isolation", "financial_instability"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "SUNAPHA", "synonyms": ["Sunapha Yoga"], "type": "chandra_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "MOON", "planets_in_house": 2}, {"exclude_planets": ["SUN", "RAHU", "KETU"]}]}, "effects": ["self_made_wealth", "speech", "resourcefulness"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "ANAPHA", "synonyms": ["Anapha Yoga"], "type": "chandra_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "MOON", "planets_in_house": 12}, {"exclude_planets": ["SUN", "RAHU", "KETU"]}]}, "effects": ["discipline", "good_conduct", "dignity"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "DURUDHURA", "synonyms": ["Durudhura Yoga"], "type": "chandra_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "MOON", "planets_in_house": 2}, {"from_reference": "MOON", "planets_in_house": 12}, {"exclude_planets": ["SUN", "RAHU", "KETU"]}]}, "effects": ["comfort", "wealth", "supportive_environment"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "VESI", "synonyms": ["Vesi Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "planets_in_house": 2}, {"exclude_planets": ["MOON", "RAHU", "KETU"]}]}, "effects": ["enterprise", "self_reliance", "reputation"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "VOSI", "synonyms": ["Vosi Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "planets_in_house": 12}, {"exclude_planets": ["MOON", "RAHU", "KETU"]}]}, "effects": ["service", "restraint", "sobriety"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "UBHAYACHARI", "synonyms": ["Ubhayachari Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "planets_in_house": 2}, {"from_reference": "SUN", "planets_in_house": 12}, {"exclude_planets": ["MOON", "RAHU", "KETU"]}]}, "effects": ["fame", "administrative_skill", "balanced_judgment"], "classical_sources": ["Brihat Jataka"], "confidence": "high"},
-    {"canonical_name": "PARIVARTANA", "synonyms": ["Parivartana Yoga", "Mutual Exchange"], "type": "exchange_yoga", "conditions": {"logic": "AND", "rules": [{"mutual_reception_between": ["planet_a", "planet_b"]}]}, "effects": ["strong_exchange", "linked_results", "amplified_house_matters"], "classical_sources": ["Saravali"], "confidence": "high"},
-    {"canonical_name": "DHARMA_KARMADHIPATI", "synonyms": ["Dharma Karmadhipati Yoga"], "type": "raja_yoga", "conditions": {"logic": "OR", "rules": [{"conjunction_between": ["HOUSE_9_lord", "HOUSE_10_lord"]}, {"aspect_between": ["HOUSE_9_lord", "HOUSE_10_lord"]}, {"mutual_reception_between": ["HOUSE_9_lord", "HOUSE_10_lord"]}]}, "effects": ["career_success", "fortune", "authority"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "high"},
-    {"canonical_name": "LAKSHMI_YOGA", "synonyms": ["Lakshmi Yoga"], "type": "dhana_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_9_lord", "strong": true}, {"planet": "HOUSE_1_lord", "strong": true}]}, "effects": ["wealth", "fortune", "grace", "prosperity"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "AMALA", "synonyms": ["Amala Yoga"], "type": "benefic_yoga", "conditions": {"logic": "AND", "rules": [{"house_from": "LAGNA_OR_MOON", "house": "HOUSE_10", "benefic_present": true}]}, "effects": ["good_reputation", "clean_conduct", "lasting_fame"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "SARALA", "synonyms": ["Sarala Yoga"], "type": "viparita_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_8_lord", "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]}]}, "effects": ["longevity", "courage", "triumph_over_difficulties"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "high"},
-    {"canonical_name": "HARSHA", "synonyms": ["Harsha Yoga"], "type": "viparita_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_6_lord", "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]}]}, "effects": ["victory", "health", "competitive_success"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "high"},
-    {"canonical_name": "VIMALA", "synonyms": ["Vimala Yoga"], "type": "viparita_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_12_lord", "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]}]}, "effects": ["independence", "measured_expenses", "spiritual_clarity"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "high"},
-    {"canonical_name": "ADI_YOGA", "synonyms": ["Adi Yoga"], "type": "benefic_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "MOON", "benefics_in_houses": ["HOUSE_6", "HOUSE_7", "HOUSE_8"]}]}, "effects": ["comfort", "authority", "respect"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "VASUMATI", "synonyms": ["Vasumati Yoga"], "type": "dhana_yoga", "conditions": {"logic": "AND", "rules": [{"benefics_in_upachayas_from": "LAGNA_OR_MOON"}]}, "effects": ["wealth", "property", "support"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "PARIJATA", "synonyms": ["Parijata Yoga"], "type": "raja_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_1_lord", "dispositor_chain_strength": "high"}]}, "effects": ["rank", "comfort", "social_success"], "classical_sources": ["Saravali"], "confidence": "medium"},
-    {"canonical_name": "KAHALA", "synonyms": ["Kahala Yoga"], "type": "raja_yoga", "conditions": {"logic": "OR", "rules": [{"conjunction_between": ["HOUSE_4_lord", "JUPITER"]}, {"house_exchange_between": ["HOUSE_4_lord", "HOUSE_9_lord"]}]}, "effects": ["courage", "administrative_power", "influence"], "classical_sources": ["Phaladeepika"], "confidence": "medium"},
-    {"canonical_name": "KEDARA", "synonyms": ["Kedara Yoga"], "type": "sankhya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_distributed_in": 4}]}, "effects": ["agriculture", "property", "stability"], "classical_sources": ["Jataka Parijata"], "confidence": "medium"},
-    {"canonical_name": "PASA", "synonyms": ["Pasa Yoga"], "type": "sankhya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_distributed_in": 5}]}, "effects": ["social_entanglement", "resourcefulness", "status"], "classical_sources": ["Jataka Parijata"], "confidence": "medium"},
-    {"canonical_name": "DAMA", "synonyms": ["Dama Yoga"], "type": "sankhya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_distributed_in": 6}]}, "effects": ["self_control", "comfort", "service"], "classical_sources": ["Jataka Parijata"], "confidence": "medium"},
-    {"canonical_name": "VEENA", "synonyms": ["Veena Yoga"], "type": "sankhya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_distributed_in": 7}]}, "effects": ["artistic_talent", "learning", "grace"], "classical_sources": ["Jataka Parijata"], "confidence": "medium"},
-    {"canonical_name": "SHUBHA_KARTARI", "synonyms": ["Shubha Kartari Yoga"], "type": "protective_yoga", "conditions": {"logic": "AND", "rules": [{"house_or_planet": "target", "hemmed_by_benefics": true}]}, "effects": ["protection", "support", "prosperity"], "classical_sources": ["Saravali"], "confidence": "high"},
-    {"canonical_name": "PAPA_KARTARI", "synonyms": ["Papa Kartari Yoga"], "type": "affliction_yoga", "conditions": {"logic": "AND", "rules": [{"house_or_planet": "target", "hemmed_by_malefics": true}]}, "effects": ["restriction", "stress", "pressure"], "classical_sources": ["Saravali"], "confidence": "high"},
-    {"canonical_name": "KALASARPA", "synonyms": ["Kala Sarpa Yoga"], "type": "nodal_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_between_nodes": true}]}, "effects": ["intensity", "obsession", "karmic_pressure"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "CHATUSSAGARA", "synonyms": ["Chatussagara Yoga"], "type": "raja_yoga", "conditions": {"logic": "AND", "rules": [{"planets_in_all_kendras": true}]}, "effects": ["renown", "power", "visibility"], "classical_sources": ["Phaladeepika"], "confidence": "medium"},
-    {"canonical_name": "MAHABHAGYA", "synonyms": ["Mahabhagya Yoga"], "type": "fortune_yoga", "conditions": {"logic": "AND", "rules": [{"birth_gender_matches_lagna_and_day_night": true}]}, "effects": ["fortune", "status", "ease"], "classical_sources": ["Saravali"], "confidence": "medium"},
-    {"canonical_name": "PANCHA_MAHAPURUSHA", "synonyms": ["Five Great Person Yogas"], "type": "group_yoga", "conditions": {"logic": "OR", "rules": [{"matches_any_of": ["HAMSA", "MALAVYA", "RUCHAKA", "BHADRA", "SASA"]}]}, "effects": ["exceptional_strength", "distinction"], "classical_sources": ["Brihat Parashara Hora Shastra"], "confidence": "classical"},
-    {"canonical_name": "SANKHA", "synonyms": ["Shankha Yoga"], "type": "fortune_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_5_lord", "strong": true}, {"planet": "HOUSE_6_lord", "strong": true}, {"planet": "LAGNA_LORD", "in_kendra": true}]}, "effects": ["learning", "virtue", "wealth"], "classical_sources": ["Phaladeepika"], "confidence": "medium"},
-    {"canonical_name": "BHERI", "synonyms": ["Bheri Yoga"], "type": "raja_yoga", "conditions": {"logic": "AND", "rules": [{"planet_group": ["JUPITER", "VENUS", "LAGNA_LORD"], "occupy_kendra_trikona_or_2_7": true}]}, "effects": ["comfort", "fame", "abundance"], "classical_sources": ["Phaladeepika"], "confidence": "medium"},
-    {"canonical_name": "MRIDANGA", "synonyms": ["Mridanga Yoga"], "type": "raja_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "LAGNA_LORD", "strong": true}, {"planet": "dispositor_of_lagna_lord", "exalted_or_own": true}]}, "effects": ["honour", "authority", "celebrity"], "classical_sources": ["Jataka Parijata"], "confidence": "medium"},
-    {"canonical_name": "SRIKANTA", "synonyms": ["Srikanta Yoga"], "type": "fortune_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "LAGNA_LORD", "conjoined_with": "HOUSE_9_lord"}, {"benefic_aspect_on_lagna": true}]}, "effects": ["wealth", "charisma", "patronage"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "SARASWATI", "synonyms": ["Saraswati Yoga"], "type": "learning_yoga", "conditions": {"logic": "AND", "rules": [{"planet_group": ["JUPITER", "VENUS", "MERCURY"], "in_kendra_trikona_or_2": true}, {"planet": "JUPITER", "strong": true}]}, "effects": ["scholarship", "eloquence", "arts"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "LAKSHANA", "synonyms": ["Lakshana Yoga"], "type": "fortune_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "HOUSE_9_lord", "in_house": "HOUSE_9"}, {"planet": "LAGNA_LORD", "strong": true}]}, "effects": ["virtue", "status", "respect"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "CHAMARA", "synonyms": ["Chamara Yoga"], "type": "raja_yoga", "conditions": {"logic": "OR", "rules": [{"planet": "LAGNA_LORD", "exalted_in_kendra": true}, {"benefics_in_lagna_supported_by_jupiter": true}]}, "effects": ["fame", "comfort", "service_from_others"], "classical_sources": ["Phaladeepika"], "confidence": "medium"},
-    {"canonical_name": "SRENI", "synonyms": ["Sreni Yoga"], "type": "sankhya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_distributed_in_consecutive_houses": true}]}, "effects": ["systematic_growth", "organized_life"], "classical_sources": ["Later Classical Tradition"], "confidence": "low"},
-    {"canonical_name": "NABHASA_ASHRAYA", "synonyms": ["Ashraya Yoga"], "type": "nabhasa_yoga", "conditions": {"logic": "OR", "rules": [{"all_planets_in_movable_signs": true}, {"all_planets_in_fixed_signs": true}, {"all_planets_in_dual_signs": true}]}, "effects": ["temperament_signature", "life_pattern"], "classical_sources": ["Brihat Jataka"], "confidence": "medium"},
-    {"canonical_name": "MUSALA", "synonyms": ["Musala Yoga"], "type": "ashraya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_in_fixed_signs": true}]}, "effects": ["steadiness", "endurance", "accumulation"], "classical_sources": ["Brihat Jataka"], "confidence": "medium"},
-    {"canonical_name": "RAJJU", "synonyms": ["Rajju Yoga"], "type": "ashraya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_in_movable_signs": true}]}, "effects": ["travel", "mobility", "restlessness"], "classical_sources": ["Brihat Jataka"], "confidence": "medium"},
-    {"canonical_name": "NALA", "synonyms": ["Nala Yoga"], "type": "ashraya_yoga", "conditions": {"logic": "AND", "rules": [{"all_planets_in_dual_signs": true}]}, "effects": ["adaptability", "intellect", "mixed_results"], "classical_sources": ["Brihat Jataka"], "confidence": "medium"},
-    {"canonical_name": "SUBHA_VESI", "synonyms": ["Benefic Vesi Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "benefics_in_house": 2}]}, "effects": ["good_character", "honesty", "support"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "PAPA_VESI", "synonyms": ["Malefic Vesi Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "malefics_in_house": 2}]}, "effects": ["aggression", "self_interest", "stress"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "SUBHA_VASI", "synonyms": ["Benefic Vasi Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "benefics_in_house": 12}]}, "effects": ["discipline", "good_habits", "service"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "PAPA_VASI", "synonyms": ["Malefic Vasi Yoga"], "type": "surya_yoga", "conditions": {"logic": "AND", "rules": [{"from_reference": "SUN", "malefics_in_house": 12}]}, "effects": ["restlessness", "pressure", "uncertainty"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "LAGNA_ADHI", "synonyms": ["Lagna Adhi Yoga"], "type": "protective_yoga", "conditions": {"logic": "AND", "rules": [{"benefics_in_houses_from_lagna": ["HOUSE_6", "HOUSE_7", "HOUSE_8"]}]}, "effects": ["status", "support", "good_conduct"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "PUSHKALA", "synonyms": ["Pushkala Yoga"], "type": "fortune_yoga", "conditions": {"logic": "AND", "rules": [{"planet": "LAGNA_LORD", "conjoined_with_house_lord": "HOUSE_2"}, {"planet": "MOON", "strong": true}]}, "effects": ["prosperity", "popularity", "comfort"], "classical_sources": ["Jataka Parijata"], "confidence": "medium"},
-    {"canonical_name": "BANDHANA", "synonyms": ["Bandhana Yoga"], "type": "adverse_yoga", "conditions": {"logic": "AND", "rules": [{"planet_group": ["LAGNA_LORD", "HOUSE_12_lord", "SATURN", "RAHU"], "severe_affliction": true}]}, "effects": ["confinement", "obstacles", "legal_trouble"], "classical_sources": ["Later Classical Tradition"], "confidence": "medium"},
-    {"canonical_name": "DARIDRA", "synonyms": ["Daridra Yoga"], "type": "poverty_yoga", "conditions": {"logic": "OR", "rules": [{"planet": "HOUSE_2_lord", "afflicted": true}, {"planet": "HOUSE_11_lord", "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]}]}, "effects": ["financial_stress", "loss", "scarcity"], "classical_sources": ["Phaladeepika"], "confidence": "high"},
-    {"canonical_name": "ISHTA_KASHTA", "synonyms": ["Ishta-Kashta Yoga"], "type": "strength_yoga", "conditions": {"logic": "AND", "rules": [{"planet_balance": "ishta_exceeds_kashta"}]}, "effects": ["net_benefic_strength", "favorable_outcomes"], "classical_sources": ["Shadbala Tradition"], "confidence": "medium"}
+    {
+      "canonical_name": "GAJA_KESARI",
+      "number": 1,
+      "synonyms": ["Gaja Kesari Yoga", "Gajakesari", "Elephant-Lion Yoga"],
+      "type": "dhana_raja_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet": "JUPITER",
+            "relation": "in_kendra_from",
+            "reference": "MOON"
+          },
+          { "planet": "JUPITER", "not_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "any_of": ["SATURN", "RAHU"], "aspects": "JUPITER" },
+        { "planet": "JUPITER", "is_combust": true },
+        { "planet": "JUPITER", "in_sign": ["CAPRICORN"] }
+      ],
+      "strength_modifier": "proportional_to_jupiter_strength_and_moon_waxing",
+      "effects": ["wisdom", "fame", "benevolence", "wealth", "leadership"],
+      "effects_negative": ["over_confidence", "dogmatism_if_jupiter_weak"],
+      "life_areas": ["career", "reputation", "wealth", "wisdom"],
+      "activation_note": "Activates fully during Jupiter or Moon dasha/antardasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra", "Phaladeepika"],
+      "confidence": "very_high"
+    },
+    {
+      "canonical_name": "RAJA_YOGA",
+      "number": 2,
+      "synonyms": ["Raja Yoga", "Royal Combination"],
+      "type": "raja_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "conjunction_between": ["trikona_lord", "kendra_lord"] },
+          { "aspect_between": ["trikona_lord", "kendra_lord"] },
+          { "mutual_reception_between": ["trikona_lord", "kendra_lord"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "any_trikona_or_kendra_lord_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"] },
+        { "any_lord_is_combust": true },
+        { "any_lord_severely_afflicted_by_malefics": true }
+      ],
+      "strength_modifier": "stronger_when_both_lords_in_good_dignity",
+      "effects": ["authority", "fame", "political_success", "leadership"],
+      "effects_negative": ["pride", "fall_from_power_if_weak"],
+      "life_areas": ["career", "status", "authority", "public_recognition"],
+      "activation_note": "Activates during dasha of either participating lord",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "DHANA_YOGA",
+      "number": 3,
+      "synonyms": ["Dhana Yoga", "Wealth Combination"],
+      "type": "dhana_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "conjunction_between": ["HOUSE_2_lord", "HOUSE_11_lord"] },
+          { "aspect_between": ["HOUSE_2_lord", "HOUSE_11_lord"] },
+          { "conjunction_between": ["HOUSE_1_lord", "HOUSE_2_lord"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "HOUSE_2_lord", "in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"] },
+        { "planet": "HOUSE_11_lord", "afflicted_by_malefics": true }
+      ],
+      "strength_modifier": "stronger_when_lords_in_own_or_exaltation_sign",
+      "effects": ["wealth", "financial_prosperity", "material_gains"],
+      "effects_negative": ["greed_if_malefics_involved"],
+      "life_areas": ["finance", "wealth", "material_accumulation"],
+      "activation_note": "Activates during dasha of 2nd or 11th lord",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "BUDHA_ADITYA",
+      "number": 4,
+      "synonyms": ["Budha Aditya Yoga", "Nipuna Yoga"],
+      "type": "graha_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "conjunction_between": ["SUN", "MERCURY"] },
+          { "planet": "MERCURY", "not_combust": true }
+        ]
+      },
+      "condition_note": "Some texts add: SUN not in GEMINI or VIRGO (Mercury's signs) for full effect; others count it regardless — both views preserved",
+      "cancellation_conditions": [
+        { "planet": "MERCURY", "within_degrees_of_sun": 3 },
+        { "planet": "SUN", "in": ["LIBRA"] }
+      ],
+      "strength_modifier": "stronger_when_mercury_not_combust_and_sun_dignified",
+      "effects": [
+        "intelligence",
+        "communication_skills",
+        "career_success",
+        "recognition"
+      ],
+      "effects_negative": ["mental_stress_if_combust_mercury"],
+      "life_areas": ["intellect", "communication", "career", "education"],
+      "activation_note": "Activates during Sun or Mercury dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "CHANDRA_MANGALA",
+      "number": 5,
+      "synonyms": ["Chandra Mangala Yoga", "Moon Mars Yoga"],
+      "type": "dhana_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "conjunction_between": ["MOON", "MARS"] },
+          { "mutual_aspect_between": ["MOON", "MARS"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "MOON", "waning": true, "and_mars_weak": true },
+        { "saturn_aspects_both": true }
+      ],
+      "strength_modifier": "stronger_with_waxing_moon_and_strong_mars",
+      "effects": [
+        "wealth_through_trade",
+        "bold_temperament",
+        "independent_earning"
+      ],
+      "effects_negative": [
+        "emotional_aggression",
+        "mother_relationship_tension"
+      ],
+      "life_areas": ["finance", "courage", "trade", "real_estate"],
+      "activation_note": "Activates during Moon or Mars dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "HAMSA",
+      "number": 6,
+      "synonyms": ["Hamsa Yoga"],
+      "type": "pancha_mahapurusha",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "JUPITER", "in_house_type": "kendra" },
+          { "planet": "JUPITER", "in_own_or_exaltation_sign": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "JUPITER", "combust": true },
+        { "planet": "JUPITER", "severely_afflicted": true },
+        { "planet": "JUPITER", "retrograde_and_weak": true }
+      ],
+      "strength_modifier": "strongest_in_CANCER_exaltation_in_kendra",
+      "effects": ["wisdom", "spirituality", "teaching", "grace", "benevolence"],
+      "effects_negative": ["self_righteousness_if_afflicted"],
+      "life_areas": [
+        "wisdom",
+        "spirituality",
+        "teaching",
+        "wealth",
+        "children"
+      ],
+      "activation_note": "Activates during Jupiter dasha — full expression in mahadasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "MALAVYA",
+      "number": 7,
+      "synonyms": ["Malavya Yoga"],
+      "type": "pancha_mahapurusha",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "VENUS", "in_house_type": "kendra" },
+          { "planet": "VENUS", "in_own_or_exaltation_sign": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "VENUS", "combust": true },
+        { "planet": "VENUS", "conjunct_saturn_or_rahu": true }
+      ],
+      "strength_modifier": "strongest_in_PISCES_exaltation_in_kendra",
+      "effects": [
+        "luxury",
+        "artistry",
+        "comfort",
+        "attractiveness",
+        "refined_taste"
+      ],
+      "effects_negative": ["indulgence", "vanity_if_afflicted"],
+      "life_areas": ["luxury", "relationships", "arts", "beauty", "vehicles"],
+      "activation_note": "Activates during Venus dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "RUCHAKA",
+      "number": 8,
+      "synonyms": ["Ruchaka Yoga"],
+      "type": "pancha_mahapurusha",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "MARS", "in_house_type": "kendra" },
+          { "planet": "MARS", "in_own_or_exaltation_sign": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "MARS", "conjunct_saturn": true },
+        { "planet": "MARS", "severely_aspected_by_jupiter": false }
+      ],
+      "strength_modifier": "strongest_in_CAPRICORN_exaltation_in_kendra",
+      "effects": [
+        "courage",
+        "leadership",
+        "strength",
+        "command",
+        "physical_prowess"
+      ],
+      "effects_negative": ["aggression", "accidents_if_afflicted"],
+      "life_areas": ["courage", "military", "sports", "leadership", "land"],
+      "activation_note": "Activates during Mars dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "BHADRA",
+      "number": 9,
+      "synonyms": ["Bhadra Yoga"],
+      "type": "pancha_mahapurusha",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "MERCURY", "in_house_type": "kendra" },
+          { "planet": "MERCURY", "in_own_or_exaltation_sign": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "MERCURY", "combust": true },
+        { "planet": "MERCURY", "conjunct_malefics_severely": true }
+      ],
+      "strength_modifier": "strongest_in_VIRGO_in_kendra",
+      "effects": [
+        "intelligence",
+        "eloquence",
+        "administrative_skill",
+        "commerce"
+      ],
+      "effects_negative": ["over_analysis", "nervous_issues_if_afflicted"],
+      "life_areas": [
+        "intellect",
+        "communication",
+        "trade",
+        "education",
+        "writing"
+      ],
+      "activation_note": "Activates during Mercury dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "SASA",
+      "number": 10,
+      "synonyms": ["Sasa Yoga", "Shasha Yoga"],
+      "type": "pancha_mahapurusha",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "SATURN", "in_house_type": "kendra" },
+          { "planet": "SATURN", "in_own_or_exaltation_sign": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet": "SATURN", "conjunct_sun_or_mars": true },
+        { "planet": "SATURN", "in_house": ["HOUSE_1"], "with_sun": true }
+      ],
+      "strength_modifier": "strongest_in_LIBRA_exaltation_in_kendra",
+      "effects": [
+        "authority",
+        "endurance",
+        "discipline",
+        "landed_status",
+        "longevity"
+      ],
+      "effects_negative": ["rigidity", "isolation_if_afflicted"],
+      "life_areas": [
+        "career",
+        "discipline",
+        "longevity",
+        "property",
+        "service"
+      ],
+      "activation_note": "Activates during Saturn dasha — slow to manifest",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "PANCHA_MAHAPURUSHA",
+      "number": 11,
+      "synonyms": ["Five Great Person Yogas"],
+      "type": "group_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          {
+            "matches_any_of": ["HAMSA", "MALAVYA", "RUCHAKA", "BHADRA", "SASA"]
+          }
+        ]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "each_sub_yoga_has_own_modifier",
+      "effects": ["exceptional_strength", "distinction", "notable_life"],
+      "effects_negative": [],
+      "life_areas": ["all_life_areas_per_planet"],
+      "activation_note": "Activates during dasha of the forming planet",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "classical"
+    },
+    {
+      "canonical_name": "NEECHA_BHANGA",
+      "number": 12,
+      "synonyms": ["Neecha Bhanga Raja Yoga", "Debility Cancellation"],
+      "type": "cancellation_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "debilitated_planet_lord_in_kendra_from_lagna": true },
+          { "debilitated_planet_lord_in_kendra_from_moon": true },
+          { "planet_that_exalts_in_same_sign_in_kendra": true },
+          { "debilitated_planet_conjunct_exaltation_lord": true },
+          { "debilitated_planet_aspected_by_own_sign_lord": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "debilitated_planet_also_combust": true },
+        { "debilitated_planet_in_dusthana_and_no_cancellation_factor": true }
+      ],
+      "strength_modifier": "stronger_when_multiple_cancellation_factors_present",
+      "effects": ["recovery", "rise_after_fall", "status_gain", "resilience"],
+      "effects_negative": ["initial_struggle_before_rise"],
+      "life_areas": ["status", "career", "self_worth", "recovery"],
+      "activation_note": "Rise occurs during dasha of the debilitated planet after cancellation",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "VIPARITA_RAJA_YOGA",
+      "number": 13,
+      "synonyms": ["Viparita Raja Yoga"],
+      "type": "raja_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet_group": ["HOUSE_6_lord", "HOUSE_8_lord", "HOUSE_12_lord"],
+            "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]
+          },
+          { "trik_lords_must_not_also_rule_kendra_or_trikona": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "any_trik_lord_also_rules_kendra_or_trikona": true },
+        { "benefics_strongly_aspecting_trik_lords": true }
+      ],
+      "strength_modifier": "stronger_when_all_three_trik_lords_involved",
+      "effects": [
+        "victory_over_obstacles",
+        "unexpected_success",
+        "resilience",
+        "rise_through_adversity"
+      ],
+      "effects_negative": ["success_built_on_others_downfall"],
+      "life_areas": ["obstacles", "enemies", "unexpected_gains", "resilience"],
+      "activation_note": "Activates during dasha of any participating trik lord",
+      "classical_sources": ["Saravali"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "SARALA",
+      "number": 14,
+      "synonyms": ["Sarala Yoga"],
+      "type": "viparita_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet": "HOUSE_8_lord",
+            "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]
+          }
+        ]
+      },
+      "cancellation_conditions": [{ "house_8_lord_also_rules_kendra": true }],
+      "strength_modifier": "stronger_when_8th_lord_in_12th_or_6th",
+      "effects": ["longevity", "courage", "triumph_over_difficulties"],
+      "effects_negative": [],
+      "life_areas": ["longevity", "obstacles", "courage"],
+      "activation_note": "Activates during 8th lord dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "HARSHA",
+      "number": 15,
+      "synonyms": ["Harsha Yoga"],
+      "type": "viparita_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet": "HOUSE_6_lord",
+            "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]
+          }
+        ]
+      },
+      "cancellation_conditions": [{ "house_6_lord_also_rules_kendra": true }],
+      "strength_modifier": "stronger_when_6th_lord_in_8th_or_12th",
+      "effects": ["victory", "health", "competitive_success"],
+      "effects_negative": [],
+      "life_areas": ["health", "enemies", "competition"],
+      "activation_note": "Activates during 6th lord dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "VIMALA",
+      "number": 16,
+      "synonyms": ["Vimala Yoga"],
+      "type": "viparita_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet": "HOUSE_12_lord",
+            "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]
+          }
+        ]
+      },
+      "cancellation_conditions": [{ "house_12_lord_also_rules_kendra": true }],
+      "strength_modifier": "stronger_when_12th_lord_in_6th_or_8th",
+      "effects": ["independence", "measured_expenses", "spiritual_clarity"],
+      "effects_negative": [],
+      "life_areas": ["expenditure", "spirituality", "liberation"],
+      "activation_note": "Activates during 12th lord dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "KEMADRUMA",
+      "number": 17,
+      "synonyms": ["Kemadruma Yoga"],
+      "type": "chandra_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "MOON", "no_planets_in_adjacent_houses": true },
+          { "planet": "MOON", "no_kendra_support": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet_in_kendra_from_lagna": true },
+        { "moon_conjunct_planet": true },
+        { "strong_planet_aspects_moon": true },
+        { "moon_in_own_sign_or_exaltation": true }
+      ],
+      "strength_modifier": "worse_when_moon_is_waning_and_in_dusthana",
+      "effects": ["mental_strain", "isolation", "financial_instability"],
+      "effects_negative": ["anxiety", "loneliness", "struggle"],
+      "life_areas": ["mind", "emotions", "finance", "relationships"],
+      "activation_note": "Felt during Moon dasha or Saturn transits on Moon",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "SUNAPHA",
+      "number": 18,
+      "synonyms": ["Sunapha Yoga"],
+      "type": "chandra_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "from_reference": "MOON", "planets_in_house": 2 },
+          { "exclude_planets": ["SUN", "RAHU", "KETU"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet_in_house_2_from_moon_is_debilitated": true }
+      ],
+      "strength_modifier": "stronger_with_benefics_in_2nd_from_moon",
+      "effects": ["self_made_wealth", "speech", "resourcefulness"],
+      "effects_negative": ["impulsiveness_with_malefics"],
+      "life_areas": ["wealth", "speech", "self_reliance"],
+      "activation_note": "Activates during Moon dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "ANAPHA",
+      "number": 19,
+      "synonyms": ["Anapha Yoga"],
+      "type": "chandra_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "from_reference": "MOON", "planets_in_house": 12 },
+          { "exclude_planets": ["SUN", "RAHU", "KETU"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet_in_house_12_from_moon_is_debilitated": true }
+      ],
+      "strength_modifier": "stronger_with_benefics_in_12th_from_moon",
+      "effects": ["discipline", "good_conduct", "dignity"],
+      "effects_negative": ["losses_with_malefics"],
+      "life_areas": ["conduct", "reputation", "spirituality"],
+      "activation_note": "Activates during Moon dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "DURUDHURA",
+      "number": 20,
+      "synonyms": ["Durudhura Yoga"],
+      "type": "chandra_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "from_reference": "MOON", "planets_in_house": 2 },
+          { "from_reference": "MOON", "planets_in_house": 12 },
+          { "exclude_planets": ["SUN", "RAHU", "KETU"] }
+        ]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "stronger_with_benefics_on_both_sides",
+      "effects": ["comfort", "wealth", "supportive_environment"],
+      "effects_negative": ["mixed_results_with_malefics_on_both_sides"],
+      "life_areas": ["wealth", "comfort", "support"],
+      "activation_note": "Activates during Moon dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "VESI",
+      "number": 21,
+      "synonyms": ["Vesi Yoga"],
+      "type": "surya_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "from_reference": "SUN", "planets_in_house": 2 },
+          { "exclude_planets": ["MOON", "RAHU", "KETU"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "planet_in_2nd_from_sun_is_debilitated": true }
+      ],
+      "strength_modifier": "stronger_with_benefics_in_2nd_from_sun",
+      "effects": ["enterprise", "self_reliance", "reputation"],
+      "effects_negative": ["egotism_with_malefics"],
+      "life_areas": ["career", "reputation", "self_reliance"],
+      "activation_note": "Activates during Sun dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "VOSI",
+      "number": 22,
+      "synonyms": ["Vosi Yoga"],
+      "type": "surya_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "from_reference": "SUN", "planets_in_house": 12 },
+          { "exclude_planets": ["MOON", "RAHU", "KETU"] }
+        ]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "stronger_with_benefics_in_12th_from_sun",
+      "effects": ["service", "restraint", "sobriety"],
+      "effects_negative": ["losses_with_malefics"],
+      "life_areas": ["service", "spirituality", "expenses"],
+      "activation_note": "Activates during Sun dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "UBHAYACHARI",
+      "number": 23,
+      "synonyms": ["Ubhayachari Yoga"],
+      "type": "surya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "from_reference": "SUN", "planets_in_house": 2 },
+          { "from_reference": "SUN", "planets_in_house": 12 },
+          { "exclude_planets": ["MOON", "RAHU", "KETU"] }
+        ]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "stronger_with_benefics_on_both_sides",
+      "effects": ["fame", "administrative_skill", "balanced_judgment"],
+      "effects_negative": [],
+      "life_areas": ["fame", "authority", "balance"],
+      "activation_note": "Activates during Sun dasha",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "SUBHA_VESI",
+      "number": 24,
+      "synonyms": ["Benefic Vesi Yoga", "Shubha Vesi"],
+      "type": "surya_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "from_reference": "SUN", "benefics_in_house": 2 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "proportional_to_benefic_strength",
+      "effects": ["good_character", "honesty", "support"],
+      "effects_negative": [],
+      "life_areas": ["character", "reputation", "wealth"],
+      "activation_note": "Activates during Sun or benefic dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PAPA_VESI",
+      "number": 25,
+      "synonyms": ["Malefic Vesi Yoga"],
+      "type": "surya_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "from_reference": "SUN", "malefics_in_house": 2 }]
+      },
+      "cancellation_conditions": [{ "benefic_aspects_the_malefic": true }],
+      "strength_modifier": "worse_with_multiple_malefics",
+      "effects": ["aggression", "self_interest", "stress"],
+      "effects_negative": ["conflict", "ego_clashes"],
+      "life_areas": ["temperament", "speech", "relationships"],
+      "activation_note": "Activates during Sun or malefic dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "SUBHA_VASI",
+      "number": 26,
+      "synonyms": ["Benefic Vasi Yoga", "Shubha Vasi"],
+      "type": "surya_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "from_reference": "SUN", "benefics_in_house": 12 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "proportional_to_benefic_strength",
+      "effects": ["discipline", "good_habits", "service"],
+      "effects_negative": [],
+      "life_areas": ["service", "spirituality", "conduct"],
+      "activation_note": "Activates during Sun dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PAPA_VASI",
+      "number": 27,
+      "synonyms": ["Malefic Vasi Yoga"],
+      "type": "surya_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "from_reference": "SUN", "malefics_in_house": 12 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "worse_with_multiple_malefics",
+      "effects": ["restlessness", "pressure", "uncertainty"],
+      "effects_negative": ["hidden_enemies", "losses"],
+      "life_areas": ["expenses", "hidden_matters", "spirituality"],
+      "activation_note": "Activates during Sun or malefic dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PARIVARTANA",
+      "number": 28,
+      "synonyms": ["Parivartana Yoga", "Mutual Exchange"],
+      "type": "exchange_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "mutual_reception_between": ["planet_a", "planet_b"] }]
+      },
+      "subtypes": {
+        "maha_parivartana": "exchange between kendra and trikona lords — most powerful",
+        "kahala_parivartana": "exchange involving 3rd or 6th lord",
+        "dainya_parivartana": "exchange involving 6th 8th or 12th lord — mixed results"
+      },
+      "cancellation_conditions": [
+        { "both_planets_debilitated_in_exchange": true }
+      ],
+      "strength_modifier": "depends_on_houses_involved_see_subtypes",
+      "effects": [
+        "strong_exchange",
+        "linked_results",
+        "amplified_house_matters"
+      ],
+      "effects_negative": ["complicated_results_in_dainya_subtype"],
+      "life_areas": ["depends_on_houses_exchanged"],
+      "activation_note": "Activates during dasha of either exchanging planet",
+      "classical_sources": ["Saravali"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "DHARMA_KARMADHIPATI",
+      "number": 29,
+      "synonyms": ["Dharma Karmadhipati Yoga"],
+      "type": "raja_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "conjunction_between": ["HOUSE_9_lord", "HOUSE_10_lord"] },
+          { "aspect_between": ["HOUSE_9_lord", "HOUSE_10_lord"] },
+          { "mutual_reception_between": ["HOUSE_9_lord", "HOUSE_10_lord"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "any_lord_in_dusthana": true },
+        { "any_lord_severely_afflicted": true }
+      ],
+      "strength_modifier": "strongest_raja_yoga_pair_9_10",
+      "effects": ["career_success", "fortune", "authority", "dharmic_work"],
+      "effects_negative": ["work_stress_if_lords_weak"],
+      "life_areas": ["career", "fortune", "dharma", "authority"],
+      "activation_note": "Activates during dasha of 9th or 10th lord",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "LAKSHMI_YOGA",
+      "number": 30,
+      "synonyms": ["Lakshmi Yoga"],
+      "type": "dhana_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "HOUSE_9_lord", "strong": true },
+          { "planet": "HOUSE_1_lord", "strong": true },
+          { "planet": "HOUSE_9_lord", "in_kendra_or_trikona": true }
+        ]
+      },
+      "cancellation_conditions": [{ "either_lord_in_dusthana": true }],
+      "strength_modifier": "requires_both_lords_very_strong",
+      "effects": [
+        "wealth",
+        "fortune",
+        "grace",
+        "prosperity",
+        "all_round_success"
+      ],
+      "effects_negative": [],
+      "life_areas": ["wealth", "fortune", "all_life_areas"],
+      "activation_note": "Activates during 9th lord or lagna lord dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "AMALA",
+      "number": 31,
+      "synonyms": ["Amala Yoga"],
+      "type": "benefic_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "house_from": "LAGNA_OR_MOON",
+            "house": "HOUSE_10",
+            "benefic_present": true
+          }
+        ]
+      },
+      "cancellation_conditions": [
+        { "benefic_is_combust": true },
+        { "malefic_also_in_10th": true }
+      ],
+      "strength_modifier": "stronger_with_jupiter_in_10th",
+      "effects": ["good_reputation", "clean_conduct", "lasting_fame"],
+      "effects_negative": [],
+      "life_areas": ["reputation", "career", "public_life"],
+      "activation_note": "Activates during benefic dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "ADI_YOGA",
+      "number": 32,
+      "synonyms": ["Adi Yoga"],
+      "type": "benefic_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "from_reference": "MOON",
+            "benefics_in_houses": ["HOUSE_6", "HOUSE_7", "HOUSE_8"]
+          }
+        ]
+      },
+      "cancellation_conditions": [{ "malefics_also_in_same_houses": true }],
+      "strength_modifier": "stronger_with_all_three_houses_occupied_by_benefics",
+      "effects": ["comfort", "authority", "respect", "rulership"],
+      "effects_negative": [],
+      "life_areas": ["authority", "wealth", "status"],
+      "activation_note": "Activates during dasha of placed benefics",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "LAGNA_ADHI",
+      "number": 33,
+      "synonyms": ["Lagna Adhi Yoga"],
+      "type": "protective_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "benefics_in_houses_from_lagna": ["HOUSE_6", "HOUSE_7", "HOUSE_8"] }
+        ]
+      },
+      "cancellation_conditions": [{ "malefics_also_in_same_houses": true }],
+      "strength_modifier": "stronger_with_all_three_houses_occupied",
+      "effects": ["status", "support", "good_conduct"],
+      "effects_negative": [],
+      "life_areas": ["status", "conduct", "authority"],
+      "activation_note": "Activates during benefic dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "VASUMATI",
+      "number": 34,
+      "synonyms": ["Vasumati Yoga"],
+      "type": "dhana_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "benefics_in_upachayas_from": "LAGNA_OR_MOON" }]
+      },
+      "cancellation_conditions": [{ "benefics_are_weak_or_debilitated": true }],
+      "strength_modifier": "stronger_with_multiple_benefics_in_upachayas",
+      "effects": ["wealth", "property", "support"],
+      "effects_negative": [],
+      "life_areas": ["wealth", "gains", "property"],
+      "activation_note": "Activates during benefic dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "SHUBHA_KARTARI",
+      "number": 35,
+      "synonyms": ["Shubha Kartari Yoga"],
+      "type": "protective_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "house_or_planet": "target", "hemmed_by_benefics": true }]
+      },
+      "cancellation_conditions": [{ "malefics_also_flanking": true }],
+      "strength_modifier": "stronger_with_jupiter_and_venus_flanking",
+      "effects": ["protection", "support", "prosperity"],
+      "effects_negative": [],
+      "life_areas": ["protection", "wellbeing", "prosperity"],
+      "activation_note": "Passive — active throughout life for that house/planet",
+      "classical_sources": ["Saravali"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "PAPA_KARTARI",
+      "number": 36,
+      "synonyms": ["Papa Kartari Yoga"],
+      "type": "affliction_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "house_or_planet": "target", "hemmed_by_malefics": true }]
+      },
+      "cancellation_conditions": [
+        { "strong_benefic_aspects_the_hemmed_entity": true }
+      ],
+      "strength_modifier": "worse_with_saturn_and_rahu_flanking",
+      "effects": ["restriction", "stress", "pressure"],
+      "effects_negative": ["obstacles", "confinement", "suppressed_results"],
+      "life_areas": ["restriction", "pressure", "obstacles"],
+      "activation_note": "Passive — active throughout life for that house/planet",
+      "classical_sources": ["Saravali"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "SARASWATI",
+      "number": 37,
+      "synonyms": ["Saraswati Yoga"],
+      "type": "learning_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet_group": ["JUPITER", "VENUS", "MERCURY"],
+            "in_kendra_trikona_or_2": true
+          },
+          { "planet": "JUPITER", "strong": true }
+        ]
+      },
+      "cancellation_conditions": [{ "jupiter_weak_or_debilitated": true }],
+      "strength_modifier": "strongest_when_all_three_in_kendras",
+      "effects": ["scholarship", "eloquence", "arts", "wisdom", "writing"],
+      "effects_negative": [],
+      "life_areas": ["education", "arts", "intellect", "writing"],
+      "activation_note": "Activates during Jupiter dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "KALASARPA",
+      "number": 38,
+      "synonyms": ["Kala Sarpa Yoga"],
+      "type": "nodal_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_between_nodes": true }]
+      },
+      "cancellation_conditions": [
+        { "any_planet_outside_rahu_ketu_axis": true },
+        { "jupiter_or_venus_aspects_rahu_or_ketu": true },
+        { "moon_not_within_orb_of_nodes": true }
+      ],
+      "strength_modifier": "more_intense_when_nodes_in_kendras",
+      "effects": [
+        "intensity",
+        "obsession",
+        "karmic_pressure",
+        "focused_life_path"
+      ],
+      "effects_negative": [
+        "obstacles",
+        "repeated_patterns",
+        "karmic_restriction"
+      ],
+      "life_areas": ["karma", "life_themes", "obstacles", "focused_ambition"],
+      "activation_note": "Activates during Rahu or Ketu dasha — also during eclipse periods",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "CHATUSSAGARA",
+      "number": 39,
+      "synonyms": ["Chatussagara Yoga"],
+      "type": "raja_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "planets_in_all_kendras": true }]
+      },
+      "cancellation_conditions": [{ "kendra_planets_all_debilitated": true }],
+      "strength_modifier": "strongest_when_kendra_planets_are_in_good_dignity",
+      "effects": ["renown", "power", "visibility", "wide_influence"],
+      "effects_negative": [],
+      "life_areas": ["fame", "power", "authority"],
+      "activation_note": "Activates during dasha of strongest kendra planet",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "MAHABHAGYA",
+      "number": 40,
+      "synonyms": ["Mahabhagya Yoga"],
+      "type": "fortune_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "birth_gender_matches_lagna_and_day_night": true }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "simple_binary_condition_either_present_or_not",
+      "effects": ["fortune", "status", "ease", "natural_luck"],
+      "effects_negative": [],
+      "life_areas": ["fortune", "ease", "status"],
+      "activation_note": "Present throughout life — passive background yoga",
+      "classical_sources": ["Saravali"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PARIJATA",
+      "number": 41,
+      "synonyms": ["Parijata Yoga"],
+      "type": "raja_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "HOUSE_1_lord", "dispositor_chain_strength": "high" }
+        ]
+      },
+      "cancellation_conditions": [{ "dispositor_in_dusthana": true }],
+      "strength_modifier": "depends_on_strength_of_dispositor_chain",
+      "effects": ["rank", "comfort", "social_success"],
+      "effects_negative": [],
+      "life_areas": ["status", "comfort", "social_standing"],
+      "activation_note": "Activates during lagna lord dasha",
+      "classical_sources": ["Saravali"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "KAHALA",
+      "number": 42,
+      "synonyms": ["Kahala Yoga"],
+      "type": "raja_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "conjunction_between": ["HOUSE_4_lord", "JUPITER"] },
+          { "house_exchange_between": ["HOUSE_4_lord", "HOUSE_9_lord"] }
+        ]
+      },
+      "cancellation_conditions": [{ "house_4_lord_debilitated": true }],
+      "strength_modifier": "stronger_with_strong_4th_lord",
+      "effects": ["courage", "administrative_power", "influence"],
+      "effects_negative": [],
+      "life_areas": ["authority", "administration", "property"],
+      "activation_note": "Activates during 4th lord or Jupiter dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "SANKHA",
+      "number": 43,
+      "synonyms": ["Shankha Yoga"],
+      "type": "fortune_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "HOUSE_5_lord", "strong": true },
+          { "planet": "HOUSE_6_lord", "strong": true },
+          { "planet": "LAGNA_LORD", "in_kendra": true }
+        ]
+      },
+      "cancellation_conditions": [{ "lagna_lord_in_dusthana": true }],
+      "strength_modifier": "requires_all_three_conditions_strong",
+      "effects": ["learning", "virtue", "wealth"],
+      "effects_negative": [],
+      "life_areas": ["intellect", "virtue", "wealth"],
+      "activation_note": "Activates during lagna lord dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "BHERI",
+      "number": 44,
+      "synonyms": ["Bheri Yoga"],
+      "type": "raja_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet_group": ["JUPITER", "VENUS", "LAGNA_LORD"],
+            "occupy_kendra_trikona_or_2_7": true
+          }
+        ]
+      },
+      "cancellation_conditions": [{ "any_planet_in_dusthana": true }],
+      "strength_modifier": "stronger_when_all_three_dignified",
+      "effects": ["comfort", "fame", "abundance"],
+      "effects_negative": [],
+      "life_areas": ["fame", "wealth", "comfort"],
+      "activation_note": "Activates during Jupiter or Venus dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "MRIDANGA",
+      "number": 45,
+      "synonyms": ["Mridanga Yoga"],
+      "type": "raja_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "LAGNA_LORD", "strong": true },
+          { "planet": "dispositor_of_lagna_lord", "exalted_or_own": true }
+        ]
+      },
+      "cancellation_conditions": [{ "lagna_lord_in_dusthana": true }],
+      "strength_modifier": "requires_very_strong_lagna_lord_and_dignified_dispositor",
+      "effects": ["honour", "authority", "celebrity"],
+      "effects_negative": [],
+      "life_areas": ["fame", "authority", "recognition"],
+      "activation_note": "Activates during lagna lord dasha",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "CHAMARA",
+      "number": 46,
+      "synonyms": ["Chamara Yoga"],
+      "type": "raja_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "planet": "LAGNA_LORD", "exalted_in_kendra": true },
+          { "benefics_in_lagna_supported_by_jupiter": true }
+        ]
+      },
+      "cancellation_conditions": [{ "lagna_lord_afflicted_by_malefics": true }],
+      "strength_modifier": "stronger_when_jupiter_involved",
+      "effects": ["fame", "comfort", "service_from_others"],
+      "effects_negative": [],
+      "life_areas": ["fame", "respect", "authority"],
+      "activation_note": "Activates during lagna lord or Jupiter dasha",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "SRIKANTA",
+      "number": 47,
+      "synonyms": ["Srikanta Yoga"],
+      "type": "fortune_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "LAGNA_LORD", "conjoined_with": "HOUSE_9_lord" },
+          { "benefic_aspect_on_lagna": true }
+        ]
+      },
+      "cancellation_conditions": [{ "lagna_lord_in_dusthana": true }],
+      "strength_modifier": "requires_strong_9th_lord_and_lagna_lord",
+      "effects": ["wealth", "charisma", "patronage"],
+      "effects_negative": [],
+      "life_areas": ["wealth", "fortune", "charisma"],
+      "activation_note": "Activates during lagna lord or 9th lord dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "LAKSHANA",
+      "number": 48,
+      "synonyms": ["Lakshana Yoga"],
+      "type": "fortune_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "HOUSE_9_lord", "in_house": "HOUSE_9" },
+          { "planet": "LAGNA_LORD", "strong": true }
+        ]
+      },
+      "cancellation_conditions": [{ "9th_lord_in_dusthana": true }],
+      "strength_modifier": "stronger_when_9th_lord_also_dignified",
+      "effects": ["virtue", "status", "respect"],
+      "effects_negative": [],
+      "life_areas": ["virtue", "dharma", "status"],
+      "activation_note": "Activates during 9th lord dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PUSHKALA",
+      "number": 49,
+      "synonyms": ["Pushkala Yoga"],
+      "type": "fortune_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "planet": "LAGNA_LORD", "conjoined_with_house_lord": "HOUSE_2" },
+          { "planet": "MOON", "strong": true }
+        ]
+      },
+      "cancellation_conditions": [{ "moon_waning_and_weak": true }],
+      "strength_modifier": "stronger_with_waxing_full_moon",
+      "effects": ["prosperity", "popularity", "comfort"],
+      "effects_negative": [],
+      "life_areas": ["wealth", "popularity", "comfort"],
+      "activation_note": "Activates during Moon dasha",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "DARIDRA",
+      "number": 50,
+      "synonyms": ["Daridra Yoga"],
+      "type": "poverty_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "planet": "HOUSE_2_lord", "afflicted": true },
+          {
+            "planet": "HOUSE_11_lord",
+            "placed_in": ["HOUSE_6", "HOUSE_8", "HOUSE_12"]
+          }
+        ]
+      },
+      "cancellation_conditions": [
+        { "strong_11th_lord_aspects_2nd_lord": true },
+        { "jupiter_strongly_placed_in_2nd_or_11th": true }
+      ],
+      "strength_modifier": "worse_with_both_2nd_and_11th_lords_afflicted",
+      "effects": ["financial_stress", "loss", "scarcity"],
+      "effects_negative": ["poverty", "debt", "chronic_financial_struggle"],
+      "life_areas": ["finance", "wealth", "material_security"],
+      "activation_note": "Activated during dasha of afflicted 2nd or 11th lord",
+      "classical_sources": ["Phaladeepika"],
+      "confidence": "high"
+    },
+    {
+      "canonical_name": "BANDHANA",
+      "number": 51,
+      "synonyms": ["Bandhana Yoga"],
+      "type": "adverse_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          {
+            "planet_group": ["LAGNA_LORD", "HOUSE_12_lord", "SATURN", "RAHU"],
+            "severe_affliction": true
+          }
+        ]
+      },
+      "cancellation_conditions": [{ "strong_jupiter_aspects_lagna": true }],
+      "strength_modifier": "worse_with_saturn_rahu_conjunction_on_lagna",
+      "effects": ["confinement", "obstacles", "legal_trouble"],
+      "effects_negative": ["imprisonment", "restriction", "legal_battles"],
+      "life_areas": ["freedom", "legal_matters", "obstacles"],
+      "activation_note": "Activates during Saturn or Rahu dasha",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "KEDARA",
+      "number": 52,
+      "synonyms": ["Kedara Yoga"],
+      "type": "sankhya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_distributed_in": 4 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "quality_depends_on_which_4_houses",
+      "effects": ["agriculture", "property", "stability"],
+      "effects_negative": [],
+      "life_areas": ["property", "stability", "land"],
+      "activation_note": "Background influence throughout life",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PASA",
+      "number": 53,
+      "synonyms": ["Pasa Yoga"],
+      "type": "sankhya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_distributed_in": 5 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "quality_depends_on_which_5_houses",
+      "effects": ["social_entanglement", "resourcefulness", "status"],
+      "effects_negative": [],
+      "life_areas": ["social_life", "resourcefulness", "status"],
+      "activation_note": "Background influence throughout life",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "DAMA",
+      "number": 54,
+      "synonyms": ["Dama Yoga"],
+      "type": "sankhya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_distributed_in": 6 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "quality_depends_on_which_6_houses",
+      "effects": ["self_control", "comfort", "service"],
+      "effects_negative": [],
+      "life_areas": ["discipline", "service", "comfort"],
+      "activation_note": "Background influence throughout life",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "VEENA",
+      "number": 55,
+      "synonyms": ["Veena Yoga"],
+      "type": "sankhya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_distributed_in": 7 }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "quality_depends_on_which_7_houses",
+      "effects": ["artistic_talent", "learning", "grace"],
+      "effects_negative": [],
+      "life_areas": ["arts", "learning", "social_grace"],
+      "activation_note": "Background influence throughout life",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "NABHASA_ASHRAYA",
+      "number": 56,
+      "synonyms": ["Ashraya Yoga"],
+      "type": "nabhasa_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "all_planets_in_movable_signs": true },
+          { "all_planets_in_fixed_signs": true },
+          { "all_planets_in_dual_signs": true }
+        ]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "intensity_depends_on_how_many_planets_qualify",
+      "effects": ["temperament_signature", "life_pattern"],
+      "effects_negative": [],
+      "life_areas": ["temperament", "life_direction"],
+      "activation_note": "Background yoga — colours entire life",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "MUSALA",
+      "number": 57,
+      "synonyms": ["Musala Yoga"],
+      "type": "ashraya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_in_fixed_signs": true }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "intensity_proportional_to_planet_count_in_fixed_signs",
+      "effects": ["steadiness", "endurance", "accumulation"],
+      "effects_negative": ["stubbornness", "resistance_to_change"],
+      "life_areas": ["temperament", "stability", "persistence"],
+      "activation_note": "Background yoga throughout life",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "RAJJU",
+      "number": 58,
+      "synonyms": ["Rajju Yoga"],
+      "type": "ashraya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_in_movable_signs": true }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "intensity_proportional_to_planet_count_in_movable_signs",
+      "effects": ["travel", "mobility", "restlessness"],
+      "effects_negative": ["instability", "difficulty_settling"],
+      "life_areas": ["travel", "change", "adaptability"],
+      "activation_note": "Background yoga throughout life",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "NALA",
+      "number": 59,
+      "synonyms": ["Nala Yoga"],
+      "type": "ashraya_yoga",
+      "rarity": "uncommon",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_in_dual_signs": true }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "intensity_proportional_to_planet_count_in_dual_signs",
+      "effects": ["adaptability", "intellect", "mixed_results"],
+      "effects_negative": ["inconsistency", "indecision"],
+      "life_areas": ["adaptability", "intellect", "communication"],
+      "activation_note": "Background yoga throughout life",
+      "classical_sources": ["Brihat Jataka"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "SRENI",
+      "number": 60,
+      "synonyms": ["Sreni Yoga"],
+      "type": "sankhya_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "all_planets_distributed_in_consecutive_houses": true }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "depends_on_which_consecutive_houses",
+      "effects": ["systematic_growth", "organized_life"],
+      "effects_negative": [],
+      "life_areas": ["organization", "systematic_progress"],
+      "activation_note": "Background yoga throughout life",
+      "classical_sources": ["Later Classical Tradition"],
+      "confidence": "low"
+    },
+    {
+      "canonical_name": "ISHTA_KASHTA",
+      "number": 61,
+      "synonyms": ["Ishta-Kashta Yoga"],
+      "type": "strength_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [{ "planet_balance": "ishta_exceeds_kashta" }]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "numerical_balance_of_benefic_vs_malefic_influence",
+      "effects": ["net_benefic_strength", "favorable_outcomes"],
+      "effects_negative": ["adverse_results_when_kashta_exceeds_ishta"],
+      "life_areas": ["overall_life_quality", "planetary_balance"],
+      "activation_note": "Used as background modifier throughout life",
+      "classical_sources": ["Shadbala Tradition"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "GRAHA_MALIKA",
+      "number": 62,
+      "synonyms": ["Graha Malika Yoga", "Planet Chain Yoga"],
+      "type": "sankhya_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "all_7_planets_in_consecutive_houses": true },
+          { "no_gaps_in_chain": true }
+        ]
+      },
+      "cancellation_conditions": [],
+      "strength_modifier": "depends_on_starting_house_of_chain",
+      "effects": [
+        "comprehensive_life_experience",
+        "self_sufficiency",
+        "rounded_personality"
+      ],
+      "effects_negative": [],
+      "life_areas": ["all_life_areas", "balanced_development"],
+      "activation_note": "Background yoga — influence present throughout life",
+      "classical_sources": ["Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "PRAVRAJYA",
+      "number": 63,
+      "synonyms": ["Pravrajya Yoga", "Renunciation Yoga"],
+      "type": "spiritual_yoga",
+      "rarity": "rare",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "four_or_more_planets_in_one_sign": true },
+          { "moon_in_navamsa_of_saturn_aspected_by_saturn": true },
+          { "lagna_lord_in_12th_with_saturn": true }
+        ]
+      },
+      "cancellation_conditions": [
+        { "strong_7th_house_indicators": true },
+        { "venus_strong_and_unafflicted": true }
+      ],
+      "strength_modifier": "stronger_with_saturn_involvement_and_12th_house_emphasis",
+      "effects": [
+        "spiritual_inclination",
+        "renunciation",
+        "detachment",
+        "monastic_life"
+      ],
+      "effects_negative": ["isolation", "difficulty_in_worldly_affairs"],
+      "life_areas": ["spirituality", "liberation", "renunciation"],
+      "activation_note": "Activates during Saturn or Ketu dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra", "Jataka Parijata"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "MATRI_YOGA",
+      "number": 64,
+      "synonyms": ["Matri Yoga", "Mother Yoga"],
+      "type": "relationship_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "OR",
+        "rules": [
+          { "conjunction_between": ["HOUSE_4_lord", "MOON"] },
+          { "aspect_between": ["HOUSE_4_lord", "MOON"] },
+          { "mutual_reception_between": ["HOUSE_4_lord", "MOON"] }
+        ]
+      },
+      "cancellation_conditions": [
+        { "moon_in_dusthana": true },
+        { "house_4_lord_severely_afflicted": true }
+      ],
+      "strength_modifier": "stronger_with_waxing_moon_and_dignified_4th_lord",
+      "effects": [
+        "strong_mother_bond",
+        "domestic_happiness",
+        "emotional_nurture",
+        "property"
+      ],
+      "effects_negative": [
+        "over_dependence_on_mother",
+        "emotional_sensitivity"
+      ],
+      "life_areas": ["mother", "home", "emotions", "property"],
+      "activation_note": "Activates during Moon or 4th lord dasha",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "medium"
+    },
+    {
+      "canonical_name": "SHUBHA_YOGA",
+      "number": 65,
+      "synonyms": ["Shubha Yoga", "Benefic Yoga"],
+      "type": "benefic_yoga",
+      "rarity": "common",
+      "conditions": {
+        "logic": "AND",
+        "rules": [
+          { "benefics_in_trikona_houses": true },
+          { "no_malefics_in_trikona": true }
+        ]
+      },
+      "cancellation_conditions": [{ "malefics_aspect_trikona_benefics": true }],
+      "strength_modifier": "stronger_with_jupiter_in_trikona",
+      "effects": ["virtue", "good_fortune", "spiritual_merit", "dharmic_life"],
+      "effects_negative": [],
+      "life_areas": ["dharma", "fortune", "virtue", "spirituality"],
+      "activation_note": "Activates during dasha of placed benefics",
+      "classical_sources": ["Brihat Parashara Hora Shastra"],
+      "confidence": "medium"
+    }
   ]
 }
