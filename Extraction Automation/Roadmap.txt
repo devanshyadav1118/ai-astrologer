@@ -1,0 +1,151 @@
+✅ Objective
+Automate the process of:
+
+Extracting chapter-wise text from one large PDF
+
+Sending each chapter (approx. 3 pages or more) to Gemini Flash model via CLI
+
+Saving structured outputs into chapter-specific folders
+
+🔧 Tech Stack
+Python for scripting
+
+PyMuPDF (fitz) for PDF processing
+
+Gemini CLI for calling Google Gemini Flash model
+
+Filesystem folders for storing outputs chapter-wise
+
+📁 Folder Structure
+lua
+Copy
+Edit
+project-root/
+├── scripts/
+│   └── process_pdf_to_gemini.py
+├── input/
+│   └── astrology_full_book.pdf
+├── output/
+│   ├── Chapter_01/
+│   │   └── flash_output.txt
+│   ├── Chapter_02/
+│   │   └── flash_output.txt
+│   └── ...
+🗂️ Roadmap Steps
+Step 1: Environment Setup
+Install Python & Required Libraries
+
+bash
+Copy
+Edit
+pip install pymupdf
+Install and Configure Gemini CLI
+
+bash
+Copy
+Edit
+gemini login
+Ensure you can run:
+
+bash
+Copy
+Edit
+gemini chat --model flash
+Step 2: Organize Files
+Place your full PDF in the input/ folder:
+
+bash
+Copy
+Edit
+input/astrology_full_book.pdf
+Step 3: Write Python Automation Script
+Save this as scripts/process_pdf_to_gemini.py:
+
+python
+Copy
+Edit
+import fitz  # PyMuPDF
+import subprocess
+from pathlib import Path
+
+# === CONFIG ===
+INPUT_PDF = Path("../input/astrology_full_book.pdf")
+OUTPUT_ROOT = Path("../output/")
+CHAPTER_SIZE = 3  # pages per chapter
+MAX_CHAPTERS = 100  # safety limit
+
+# === Prompt Template ===
+def format_prompt(pdf_text):
+    return f"""You are an expert astrology rule extractor. Based on the following text, extract all astrological rules in structured JSON format. Ensure high fidelity to source terminology.
+
+TEXT:
+\"\"\"
+{pdf_text}
+\"\"\"
+
+OUTPUT JSON:"""
+
+# === Extract N Pages of Text ===
+def extract_chapter_text(doc, start_page, num_pages):
+    text = ""
+    for i in range(start_page, min(start_page + num_pages, len(doc))):
+        text += doc.load_page(i).get_text()
+    return text.strip()
+
+# === Call Gemini CLI ===
+def run_gemini_flash(prompt_text, output_path):
+    try:
+        result = subprocess.run(
+            ["gemini", "chat", "--model", "flash"],
+            input=prompt_text.encode("utf-8"),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=90
+        )
+        output = result.stdout.decode("utf-8")
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(output)
+    except Exception as e:
+        print(f"❌ Error for {output_path.name}: {e}")
+
+# === Main Automation ===
+def process_pdf():
+    doc = fitz.open(INPUT_PDF)
+    total_pages = len(doc)
+    print(f"📘 Loaded PDF: {total_pages} pages")
+
+    for chapter_num, start_page in enumerate(range(0, total_pages, CHAPTER_SIZE), start=1):
+        if chapter_num > MAX_CHAPTERS:
+            break
+
+        chapter_name = f"Chapter_{chapter_num:02d}"
+        chapter_folder = OUTPUT_ROOT / chapter_name
+        chapter_folder.mkdir(parents=True, exist_ok=True)
+
+        print(f"✍️  Processing {chapter_name} (Pages {start_page}–{start_page+CHAPTER_SIZE-1})")
+        chapter_text = extract_chapter_text(doc, start_page, CHAPTER_SIZE)
+        if not chapter_text.strip():
+            print("⚠️  Empty text, skipping...")
+            continue
+
+        prompt = format_prompt(chapter_text)
+        output_file = chapter_folder / "flash_output.txt"
+
+        run_gemini_flash(prompt, output_file)
+        print(f"✅ Saved: {output_file}")
+
+if __name__ == "__main__":
+    process_pdf()
+Step 4: Run the Pipeline
+bash
+Copy
+Edit
+cd scripts/
+python process_pdf_to_gemini.py
+ 
+ 
+
+✅ You Now Have:
+✔️ Full automation of large PDF → Gemini → chapter-wise output
+✔️ Structured, scriptable, and repeatable flow
+✔️ Storage-ready files per chapter for audit, training, or reasoning

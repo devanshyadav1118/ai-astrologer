@@ -158,3 +158,32 @@ def test_validate_rule_rejects_bad_effect_enum() -> None:
     validated = validator.validate_rule(rule)
     assert validated["validation_status"] == "invalid"
     assert any("invalid impact" in error.casefold() for error in validated["validation_errors"])
+
+
+def test_validate_rule_normalises_external_alias_enums() -> None:
+    validator = RuleValidator()
+    rule = {
+        "id": "R-6",
+        "original_text": "If Saturn is in the 7th house, there is delay.",
+        "conditions": {
+            "logic_block": {
+                "operator": "AND",
+                "clauses": [{"type": "placement", "planet": "Saturn", "house": 7}],
+            }
+        },
+        "effects": [
+            {
+                "category": "status",
+                "description": "delay",
+                "impact": "Negative",
+                "intensity": "High",
+                "probability": "Likely",
+            }
+        ],
+        "metadata": {"source": "Test Book"},
+    }
+    validated = validator.validate_rule(rule)
+
+    assert validated["validation_status"] == "valid"
+    assert validated["conditions"]["clauses"][0]["house"] == "HOUSE_7"
+    assert validated["effects"][0]["category"] == "social_status"

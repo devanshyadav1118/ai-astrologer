@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any, Iterable
 
+from extractor.adapter import adapt_rule
 from normaliser.normaliser import AstrologyNormaliser
 
 
@@ -49,6 +50,11 @@ class RuleValidator:
 
     def validate_rule(self, rule: dict[str, Any]) -> dict[str, Any]:
         """Validate a single extracted rule against schema v2.0."""
+        is_external = _looks_external_rule(rule)
+        if is_external:
+            rule = adapt_rule(rule)
+        else:
+            rule = dict(rule)
         errors: list[str] = []
         warnings: list[str] = []
 
@@ -60,15 +66,32 @@ class RuleValidator:
             if field not in rule or rule[field] is None:
                 errors.append(f"Missing required field: {field}")
 
-        if rule.get("type") not in self.VALID_TYPES:
+        rule_type = str(rule.get("type", "")).casefold() if is_external else rule.get("type")
+        if is_external:
+            rule["type"] = rule_type
+        if rule_type not in self.VALID_TYPES:
             errors.append(
                 f'Invalid rule type: {rule.get("type")} (must be one of {self.VALID_TYPES})'
             )
 
         if rule.get("conditions"):
+            if is_external and isinstance(rule["conditions"], dict):
+                if "operator" in rule["conditions"]:
+                    rule["conditions"]["operator"] = str(rule["conditions"]["operator"]).upper()
+                if isinstance(rule["conditions"].get("clauses"), list):
+                    for clause in rule["conditions"]["clauses"]:
+                        if isinstance(clause, dict) and isinstance(clause.get("type"), str):
+                            clause["type"] = clause["type"].casefold()
             errors.extend(self._validate_conditions(rule["conditions"]))
 
         if rule.get("effects"):
+            if is_external and isinstance(rule["effects"], list):
+                for effect in rule["effects"]:
+                    if not isinstance(effect, dict):
+                        continue
+                    for key in ("category", "impact", "intensity", "probability"):
+                        if isinstance(effect.get(key), str):
+                            effect[key] = effect[key].casefold()
             errors.extend(self._validate_effects(rule["effects"]))
 
         if rule.get("metadata"):
@@ -134,7 +157,7 @@ class RuleValidator:
         errors: list[str] = []
         if "type" not in clause:
             errors.append(f'Clause {index}: missing required field "type"')
-        elif clause["type"] not in self.VALID_CLAUSE_TYPES:
+        if clause["type"] not in self.VALID_CLAUSE_TYPES:
             errors.append(
                 f'Clause {index}: invalid type "{clause["type"]}" '
                 f"(must be one of {self.VALID_CLAUSE_TYPES})"
@@ -160,7 +183,6 @@ class RuleValidator:
             for field in ["category", "description", "impact", "intensity", "probability"]:
                 if field not in effect:
                     errors.append(f'Effect {index}: missing required field "{field}"')
-
             if "category" in effect and effect["category"] not in self.VALID_EFFECT_CATEGORIES:
                 errors.append(
                     f'Effect {index}: unknown category "{effect["category"]}" '
@@ -220,3 +242,9 @@ class RuleValidator:
         print(f'  Warning: {summary["warning"]}')
         print(f'  Invalid: {summary["invalid"]}')
         return {"results": results, "summary": summary}
+
+
+def _looks_external_rule(rule: dict[str, Any]) -> bool:
+    return any(key in rule for key in ("id", "original_text")) or (
+        isinstance(rule.get("conditions"), dict) and "logic_block" in rule.get("conditions", {})
+    )

@@ -30,4 +30,4 @@ def test_canonicalise_token_rejects_unknown_value() -> None:
 def test_project_paths_follow_phase_zero_layout() -> None:
     project_root = Path.cwd()
     assert ontology_directory(project_root) == project_root / "normaliser" / "ontology"
-    assert default_sqlite_path(project_root) == project_root / "data" / "db" / "metadata.sqlite3"
+    assert default_sqlite_path(project_root) == project_root / "data" / "db" / "extraction.db"

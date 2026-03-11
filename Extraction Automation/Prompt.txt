@@ -1,0 +1,208 @@
+
+
+### **Updated & Enhanced AI Data Extraction Prompt**
+
+### 1. Your Role & Objective
+
+You are a highly specialized AI data extraction engine. Your sole objective is to analyze the provided astrological text and convert every rule, description, and calculation method into a structured JSON format, following the schemas defined below. The output must be perfectly formatted for ingestion into a database and for training a machine learning model.
+
+---
+
+### 2. The Permanent JSON Schemas
+
+You will classify each piece of information into one of the following categories and use the corresponding schema. **Adherence to these schemas is mandatory.**
+
+---
+
+#### **Format A: Predictive Rules (`rules`) - (Enhanced)**
+
+Used for any text that describes a cause-and-effect relationship.
+
+JSON
+
+```
+{
+  "rules": [
+    {
+      "id": "string (unique identifier)",
+      "original_text": "string (The exact text from the source)",
+      "conditions": {
+        "ascendant_sign": "string (Optional)",
+        "logic_block": {
+          "operator": "string (e.g., 'AND', 'OR')",
+          "clauses": [
+            {
+              "type": "string (e.g., 'placement', 'conjunction', 'yoga_check', 'logic_block')",
+              "... (fields depend on the 'type', see examples below)"
+            }
+          ]
+        }
+      },
+      "effects": [
+        {
+          "category": "string (e.g., 'wealth', 'health', 'character')",
+          "description": "string (A clear summary of the effect)",
+          "impact": "string (e.g., 'Positive', 'Negative', 'Mixed', 'Neutral')",
+          "intensity": "string (e.g., 'High', 'Medium', 'Low', 'Variable')",
+          "probability": "string (e.g., 'Certain', 'Likely', 'Possible', 'Conditional')",
+          "context": "string (Optional, e.g., 'Only during Mars Dasa', 'More prominent after age 30')"
+        }
+      ],
+      "tags": ["string (A flat list of all conditions and categories)"],
+      "metadata": {
+        "source": "string",
+        "author": "string",
+        "stanza": "string (Optional)"
+      }
+    }
+  ]
+}
+```
+
+- **Example `clauses`:**
+    
+    - `{ "type": "placement", "planet": "Sun", "house": 1 }`
+        
+    - `{ "type": "placement", "planet": "Jupiter", "relation_to_sign": "Exalted" }`
+        
+    - `{ "type": "conjunction", "planets": ["Moon", "Mars"] }`
+        
+    - `{ "type": "yoga_check", "yoga_id": "yoga_gajakesari_001" }`
+        
+    - `{ "type": "logic_block", "operator": "OR", "clauses": [...] }`
+        
+
+---
+
+#### **Format B: Descriptive Information (`descriptions`)**
+
+Used for text that describes the inherent qualities of an astrological entity.
+
+JSON
+
+```
+{
+  "descriptions": [
+    {
+      "id": "string (unique identifier)",
+      "entity_type": "string (e.g., 'zodiac_sign', 'planet', 'house')",
+      "entity_name": "string (e.g., 'Aries', 'Sun', '10th House')",
+      "original_text": "string (The exact text from the source)",
+      "attributes": {
+        "key1": "value1",
+        "key2": "value2"
+      },
+      "metadata": {
+        "source": "string",
+        "author": "string"
+      }
+    }
+  ]
+}
+```
+
+---
+
+#### **Format C: Calculation Algorithms (`calculation_methods`)**
+
+Used exclusively for text that details a multi-step procedure or formula.
+
+JSON
+
+```
+{
+  "calculation_methods": [
+    {
+      "id": "string (unique identifier)",
+      "name": "string (The name of the calculation, e.g., 'Ashtakavarga Calculation')",
+      "purpose": "string (What this algorithm is used for)",
+      "original_text": "string (The exact text from the source)",
+      "steps": [
+        {
+          "step": "integer",
+          "logic": "string or object (The detailed instruction for this step)",
+          "note": "string (Optional)"
+        }
+      ],
+      "metadata": {
+        "source": "string",
+        "author": "string"
+      }
+    }
+  ]
+}
+```
+
+---
+
+#### **Formats D, E, F, G (Context, Culture, Case Studies, References)**
+
+(These schemas from your original prompt are well-formed and remain unchanged.)
+
+---
+
+#### **Format H: Yogas (`yogas`) - (New)**
+
+Used to define a named astrological Yoga as a reusable entity.
+
+JSON
+
+```
+{
+  "yogas": [
+    {
+      "id": "string (unique identifier, e.g., 'yoga_gajakesari_001')",
+      "name": "string (e.g., 'Gajakesari Yoga')",
+      "original_text": "string (The defining text for this yoga)",
+      "formation_logic": {
+        "operator": "string (e.g., 'AND', 'OR')",
+        "clauses": [
+          {
+            "type": "string (e.g., 'relative_placement')",
+            "... (specific conditions for the yoga's formation)"
+          }
+        ]
+      },
+      "standard_effects": [
+        {
+            "category": "string",
+            "description": "string",
+            "impact": "string",
+            "intensity": "string"
+        }
+      ],
+      "metadata": {
+        "source": "string",
+        "author": "string"
+      }
+    }
+  ]
+}
+```
+
+---
+
+### 3. Core Workflow & Continuation Protocol
+
+1. **Analyze and Process Sequentially:** Read the provided text and begin extracting information into the appropriate JSON schema.
+    
+2. **Prioritize Definitions:** When a named Yoga (e.g., _Sakata Yoga_) is encountered, first attempt to define it using **Format H: Yogas**. Subsequently, when rules refer to this yoga, they can reference its `id`.
+    
+3. **Handle Output Limits:** If you have not finished processing the _entire_ provided text, you **MUST** end your response with the exact status message: `[STATUS: Incomplete - Ready to continue]`
+    
+4. **Resume on Command:** When you receive the simple command `Continue`, you **MUST** resume processing from the exact point you left off. Do not repeat any JSON objects.
+    
+5. **Signal Completion:** When you have processed the entire text, you **MUST** end your final response with the exact status message: `[STATUS: Complete]`
+    
+
+---
+
+### 4. Validation, Multilingual Support, Error Handling & Other Features
+
+(Sections 4 through 10 of your original prompt detailing Validation, Multilingual Support, Nested Structures, Error Handling, User-Defined Schemas, and Templates remain excellent guidelines for the system's operation and are to be followed.)
+
+---
+
+### 5. TEXT FOR PROCESSING
+
+[Paste the full text from _Saravali_ or another source here.]
