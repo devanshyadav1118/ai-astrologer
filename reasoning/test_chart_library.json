@@ -1,0 +1,164 @@
+{
+  "cases": [
+    {
+      "case_id": "phase5_001",
+      "title": "Entrepreneur with technical background",
+      "chart_id": "entrepreneur_technical",
+      "expected_rule_ids": ["R_CAREER_10", "R_WEALTH_11"],
+      "expected_contradiction_houses": [7],
+      "novel_review_scores": [true, true, false]
+    },
+    {
+      "case_id": "phase5_002",
+      "title": "Delayed marriage with strong career",
+      "chart_id": "delayed_marriage_career",
+      "expected_rule_ids": ["R_MARRIAGE_7"],
+      "expected_contradiction_houses": [7],
+      "novel_review_scores": [true, false]
+    },
+    {
+      "case_id": "phase5_003",
+      "title": "Research-oriented occult profile",
+      "chart_id": "occult_researcher",
+      "expected_rule_ids": ["R_SPIRIT_8"],
+      "expected_contradiction_houses": [8],
+      "novel_review_scores": [true, true]
+    },
+    {
+      "case_id": "phase5_004",
+      "title": "Public leader with strong status",
+      "chart_id": "public_leader",
+      "expected_rule_ids": ["R_CAREER_10", "R_FAME_1"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    },
+    {
+      "case_id": "phase5_005",
+      "title": "Creative educator with children focus",
+      "chart_id": "creative_educator",
+      "expected_rule_ids": ["R_EDU_5"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true, true]
+    },
+    {
+      "case_id": "phase5_006",
+      "title": "Health-sensitive service worker",
+      "chart_id": "service_health",
+      "expected_rule_ids": ["R_HEALTH_6"],
+      "expected_contradiction_houses": [1, 6],
+      "novel_review_scores": [false, true]
+    },
+    {
+      "case_id": "phase5_007",
+      "title": "Foreign settlement profile",
+      "chart_id": "foreign_settlement",
+      "expected_rule_ids": ["R_TRAVEL_12"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    },
+    {
+      "case_id": "phase5_008",
+      "title": "Wealth through partnerships",
+      "chart_id": "wealth_partnership",
+      "expected_rule_ids": ["R_WEALTH_2", "R_MARRIAGE_7"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true, true]
+    },
+    {
+      "case_id": "phase5_009",
+      "title": "Spiritual withdrawal with research mind",
+      "chart_id": "spiritual_research",
+      "expected_rule_ids": ["R_SPIRIT_12"],
+      "expected_contradiction_houses": [8, 12],
+      "novel_review_scores": [true, false, true]
+    },
+    {
+      "case_id": "phase5_010",
+      "title": "Property and fixed asset focus",
+      "chart_id": "property_focus",
+      "expected_rule_ids": ["R_PROPERTY_4"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    },
+    {
+      "case_id": "phase5_011",
+      "title": "Sibling-driven enterprise",
+      "chart_id": "sibling_enterprise",
+      "expected_rule_ids": ["R_SIBLING_3", "R_CAREER_10"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true, true]
+    },
+    {
+      "case_id": "phase5_012",
+      "title": "Fortune with dharma-karma linkage",
+      "chart_id": "fortune_dharma_karma",
+      "expected_rule_ids": ["R_FORTUNE_9", "R_CAREER_10"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    },
+    {
+      "case_id": "phase5_013",
+      "title": "Longevity with hidden strain",
+      "chart_id": "longevity_strain",
+      "expected_rule_ids": ["R_LONGEVITY_8"],
+      "expected_contradiction_houses": [8],
+      "novel_review_scores": [false, true]
+    },
+    {
+      "case_id": "phase5_014",
+      "title": "Fame through communication",
+      "chart_id": "fame_communication",
+      "expected_rule_ids": ["R_FAME_10"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true, true]
+    },
+    {
+      "case_id": "phase5_015",
+      "title": "Debt and competition heavy chart",
+      "chart_id": "competition_debt",
+      "expected_rule_ids": ["R_ENEMY_6"],
+      "expected_contradiction_houses": [6, 11],
+      "novel_review_scores": [false]
+    },
+    {
+      "case_id": "phase5_016",
+      "title": "Maternal support with property gains",
+      "chart_id": "maternal_property",
+      "expected_rule_ids": ["R_MOTHER_4"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    },
+    {
+      "case_id": "phase5_017",
+      "title": "Scholarly teacher abroad",
+      "chart_id": "teacher_abroad",
+      "expected_rule_ids": ["R_EDU_9", "R_TRAVEL_12"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true, true]
+    },
+    {
+      "case_id": "phase5_018",
+      "title": "Speculation and gains profile",
+      "chart_id": "speculation_gains",
+      "expected_rule_ids": ["R_WEALTH_11", "R_CHILDREN_5"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    },
+    {
+      "case_id": "phase5_019",
+      "title": "Relationship volatility with spiritual pull",
+      "chart_id": "relationship_spirituality",
+      "expected_rule_ids": ["R_MARRIAGE_7", "R_SPIRIT_12"],
+      "expected_contradiction_houses": [7, 12],
+      "novel_review_scores": [false, true]
+    },
+    {
+      "case_id": "phase5_020",
+      "title": "Balanced chart with moderate support",
+      "chart_id": "balanced_chart",
+      "expected_rule_ids": ["R_HEALTH_1"],
+      "expected_contradiction_houses": [],
+      "novel_review_scores": [true]
+    }
+  ]
+}
