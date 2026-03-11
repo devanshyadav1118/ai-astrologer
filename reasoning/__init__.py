@@ -1,1 +1,5 @@
-"""Reasoning package placeholder for later phases."""
+"""Reasoning package."""
+
+from reasoning.house_reasoner import HouseReasoner
+
+__all__ = ["HouseReasoner"]
