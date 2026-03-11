@@ -6,6 +6,7 @@ import json
 import re
 from pathlib import Path
 from typing import Any
+import unicodedata
 
 
 class NormalisationError(ValueError):
@@ -207,10 +208,12 @@ class AstrologyNormaliser:
             return json.load(handle)
 
     def _clean_term(self, term: str) -> str:
-        return " ".join(term.strip().casefold().split())
+        normalized = unicodedata.normalize("NFKD", term)
+        stripped = "".join(char for char in normalized if not unicodedata.combining(char))
+        return " ".join(stripped.strip().casefold().split())
 
     def _normalise_text_for_search(self, text: str) -> str:
-        lowered = text.casefold()
+        lowered = self._clean_term(text)
         lowered = re.sub(r"[_/]", " ", lowered)
         lowered = re.sub(r"[^a-z0-9'\s]", " ", lowered)
         return " ".join(lowered.split())

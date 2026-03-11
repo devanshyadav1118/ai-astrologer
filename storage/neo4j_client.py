@@ -60,6 +60,9 @@ class Neo4jClient:
             "CREATE CONSTRAINT book_id IF NOT EXISTS FOR (b:Book) REQUIRE b.book_id IS UNIQUE",
             "CREATE CONSTRAINT rule_id IF NOT EXISTS FOR (r:Rule) REQUIRE r.rule_id IS UNIQUE",
             "CREATE CONSTRAINT rule_hash IF NOT EXISTS FOR (r:Rule) REQUIRE r.rule_hash IS UNIQUE",
+            "CREATE CONSTRAINT chart_id IF NOT EXISTS FOR (c:Chart) REQUIRE c.chart_id IS UNIQUE",
+            "CREATE CONSTRAINT chart_planet_id IF NOT EXISTS FOR (cp:ChartPlanet) REQUIRE cp.id IS UNIQUE",
+            "CREATE CONSTRAINT chart_house_id IF NOT EXISTS FOR (ch:ChartHouse) REQUIRE ch.id IS UNIQUE",
         ]
         with self.driver.session() as session:
             for statement in constraints:

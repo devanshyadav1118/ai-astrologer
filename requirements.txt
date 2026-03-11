@@ -14,3 +14,4 @@ black
 ruff
 jupyter
 python-dotenv
+vedicastro
