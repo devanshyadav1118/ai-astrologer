@@ -19,6 +19,7 @@ from storage.chart_ingestor import ChartGraphIngestor
 from storage.neo4j_client import Neo4jClient
 from reasoning.chart_reasoner import ChartReasoner
 from reasoning.house_reasoner import HouseReasoner
+from reasoning.dasha_calculator import DashaEngine
 
 
 class ChartProcessor:
@@ -36,6 +37,7 @@ class ChartProcessor:
         neo4j_client: Neo4jClient | None = None,
         chart_ingestor: ChartGraphIngestor | None = None,
         reasoner: ChartReasoner | None = None,
+        dasha_engine: DashaEngine | None = None,
     ) -> None:
         self.chart_id = chart_id
         self.date = date
@@ -55,6 +57,8 @@ class ChartProcessor:
         else:
             hr = HouseReasoner(self.neo4j_client)
             self.reasoner = ChartReasoner(hr)
+            
+        self.dasha_engine = dasha_engine or DashaEngine(self.neo4j_client)
             
         self.output_dir = Path("data") / "charts"
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -83,9 +87,17 @@ class ChartProcessor:
             self.chart_ingestor.ingest_propagation_results(self.chart_id, {
                 "house_importance": analysis["house_importance"],
                 "dominant_themes": analysis["dominant_themes"],
-                "edges": analysis.get("propagation_metadata", {}).get("edges", []) # Wait, need to pass edges from analysis
+                "edges": analysis.get("propagation_metadata", {}).get("edges", [])
             })
-            # Actually, I should update analyze_full_chart to return the edges or just pass the whole results dict
+            
+            # Phase 9: Compute, Enrich, and Ingest Dashas
+            self.dasha_engine.process_dashas(self.chart_id, {
+                "date": self.date,
+                "time": self.time,
+                "latitude": self.latitude,
+                "longitude": self.longitude,
+                "timezone": self.timezone
+            })
             
             ingested = True
         summary = {
