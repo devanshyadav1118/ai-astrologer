@@ -8,6 +8,10 @@ from .config import (
     MAX_PAGES, INPUT_DIR, CHUNKS_FILE
 )
 
+def chunk_pdf(*args, **kwargs):
+    """Dummy for pipeline compatibility."""
+    return []
+
 def extract_pages(pdf_path, max_pages=None):
     """Extracts raw text and page numbers from PDF."""
     pages = []

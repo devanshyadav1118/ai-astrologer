@@ -14,10 +14,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from extractor.adapter import adapt_extraction_payload
-from extractor.chunker import chunk_pdf
-from extractor.rules_extraction import RulesExtractionExtractor
-from extractor.stitcher import stitch_book_chunks
+from extractor.core.extractor import extract_from_chunk
+from extractor.core.chunker import chunk_pdf
+from extractor.core.stitcher import stitch_book_chunks
 from normaliser.post_processor import PostProcessor
 from storage.neo4j_client import Neo4jClient
 from storage.sqlite_client import SQLiteClient
@@ -85,7 +84,6 @@ class BookProcessor:
         self.resume = resume
         self.sqlite = sqlite_client or SQLiteClient()
         self.neo4j = neo4j_client or Neo4jClient()
-        self.extractor = extractor_client or RulesExtractionExtractor()
         self.post_processor = post_processor or PostProcessor()
         self.output_dir = Path("data") / "extracted"
         self.output_dir.mkdir(parents=True, exist_ok=True)

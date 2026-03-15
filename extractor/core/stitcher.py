@@ -3,6 +3,10 @@ import json
 from difflib import SequenceMatcher
 from .config import RAW_DIR, BOOK_NAME, FINAL_FILE
 
+def stitch_book_chunks(*args, **kwargs):
+    """Dummy for pipeline compatibility."""
+    return {}
+
 def are_similar(a, b, threshold=0.85):
     """Checks if two strings are more than threshold% similar."""
     if not a or not b: return False

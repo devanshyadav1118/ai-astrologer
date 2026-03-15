@@ -21,7 +21,7 @@ BOOK_NAME = os.getenv("BOOK_NAME", "default_book")
 # Chunking config
 CHUNK_TOKENS = 800
 OVERLAP_TOKENS = 100
-MAX_PAGES = None # Process entire book if None
+MAX_PAGES = 10 # Process first 10 pages for test
 
 # Concurrency config
 CONCURRENCY = 5
