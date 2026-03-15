@@ -1,4 +1,4 @@
-"""Full-chart orchestration for Phase 5."""
+"""Full-chart orchestration for Phase 5 & 7."""
 
 from __future__ import annotations
 
@@ -7,29 +7,45 @@ from pathlib import Path
 from typing import Any
 
 from reasoning.house_reasoner import HouseReasoner
+from reasoning.yoga_detector import YogaDetector
 
 
 class ChartReasoner:
-    """Combine twelve house analyses into chart-level themes."""
+    """Combine twelve house analyses and detected yogas into chart-level themes."""
 
-    def __init__(self, house_reasoner: HouseReasoner, ontology_dir: str | Path = "normaliser/ontology") -> None:
+    def __init__(
+        self, 
+        house_reasoner: HouseReasoner, 
+        ontology_dir: str | Path = "normaliser/ontology",
+        yoga_detector: YogaDetector | None = None
+    ) -> None:
         self.house_reasoner = house_reasoner
         self.ontology_dir = Path(ontology_dir)
+        self.yoga_detector = yoga_detector or YogaDetector(self.ontology_dir)
         self.concepts = self._load_concepts()
 
     def analyze_full_chart(self, chart_id: str, focus_areas: list[str] | None = None) -> dict[str, Any]:
         normalized_focus = {area.strip().lower() for area in (focus_areas or []) if area.strip()}
+        
+        # 1. House-by-House Analysis (Phase 5)
         houses: list[dict[str, Any]] = []
         for house_number in range(1, 13):
             analysis = self.house_reasoner.analyze_house(chart_id, house_number)
             if analysis is not None:
                 houses.append(analysis)
+        
+        # 2. Yoga Detection (Phase 7)
+        full_chart_data = self.house_reasoner.queries.get_full_chart_data(chart_id)
+        detected_yogas = self.yoga_detector.detect_yogas(full_chart_data)
+        
         ranked = sorted(houses, key=lambda item: float(item.get("rank_score", 0.0)), reverse=True)
         dependency_graph = self._dependency_graph(houses)
+        
         return {
             "chart_id": chart_id,
             "focus_areas": sorted(normalized_focus),
             "house_analyses": houses,
+            "detected_yogas": detected_yogas,
             "dependency_map": dependency_graph["dependency_map"],
             "dependency_resolution": {
                 "order": dependency_graph["order"],
@@ -67,7 +83,6 @@ class ChartReasoner:
                 3,
             )
             percentile = index / total
-            tier = "tier_1" if percentile <= 0.1 else "tier_2" if percentile <= 0.4 else "tier_3"
             ranked.append(
                 {
                     "house": house_key,
@@ -77,7 +92,6 @@ class ChartReasoner:
                     "confidence": analysis["confidence"],
                     "cross_verification": cross_verification[house_key],
                     "focus_match": focus_boost > 0.0,
-                    "tier": tier,
                     "summary": analysis["synthesis"],
                 }
             )
