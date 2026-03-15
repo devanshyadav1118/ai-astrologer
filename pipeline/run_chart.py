@@ -21,6 +21,7 @@ from storage.neo4j_client import Neo4jClient
 from reasoning.chart_reasoner import ChartReasoner
 from reasoning.house_reasoner import HouseReasoner
 from reasoning.dasha_calculator import DashaEngine
+from reasoning.divisional_analyser import DivisionalAnalyser
 
 
 class ChartProcessor:
@@ -39,10 +40,13 @@ class ChartProcessor:
         chart_ingestor: ChartGraphIngestor | None = None,
         reasoner: ChartReasoner | None = None,
         dasha_engine: DashaEngine | None = None,
+        divisional_analyser: DivisionalAnalyser | None = None,
     ) -> None:
         self.chart_id = chart_id
-        self.date = date
-        self.time = time
+        # ... (other init fields)
+        self.dasha_engine = dasha_engine or DashaEngine(self.neo4j_client)
+        self.divisional_analyser = divisional_analyser or DivisionalAnalyser()
+
         self.latitude = latitude
         self.longitude = longitude
         self.timezone = timezone
@@ -105,7 +109,7 @@ class ChartProcessor:
             
             # Phase 9: Compute, Enrich, and Ingest Dashas
             moon_lon = next((p["longitude"] for p in chart_data["planets"] if p["name"] == "MOON"), 0.0)
-            self.dasha_engine.process_dashas(
+            dasha_periods = self.dasha_engine.process_dashas(
                 chart_id=self.chart_id, 
                 birth_data={
                     "date": self.date,
@@ -117,6 +121,25 @@ class ChartProcessor:
                 moon_longitude=moon_lon,
                 precalculated_periods=chart_data.get("dasha_periods")
             )
+
+            # Phase 10: Process Divisional Charts and Vargottama
+            div_raw = chart_data.get("divisional_charts", {})
+            if div_raw:
+                # ... (Vargottama and reinforcement logic)
+                
+                # ... (domain aggregation)
+                
+                # Cross-reference Dashas with Divisional Support (Roadmap Section 7)
+                enriched_dashas = self.divisional_analyser.enrich_dashas_with_divisional_support(
+                    dasha_periods, reinforcements
+                )
+                
+                self.chart_ingestor.ingest_divisional_results(
+                    self.chart_id, div_to_ingest, reinforcements, domain_reinforcement
+                )
+                
+                # Ingest the cross-reference
+                self.chart_ingestor.ingest_dasha_reinforcement(self.chart_id, enriched_dashas)
             
             ingested = True
         summary = {

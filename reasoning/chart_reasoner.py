@@ -44,6 +44,10 @@ class ChartReasoner:
         # 3. House Influence Propagation (Phase 8)
         propagation_results = self.propagation_engine.compute_house_importance(full_chart_data, detected_yogas)
         
+        # 4. Divisional Reinforcement (Phase 10)
+        # Fetch divisional charts and reinforcements from Neo4j
+        divisional_info = self.house_reasoner.queries.get_divisional_data(chart_id)
+        
         ranked = sorted(houses, key=lambda item: float(item.get("rank_score", 0.0)), reverse=True)
         dependency_graph = self._dependency_graph(houses)
         
@@ -54,6 +58,7 @@ class ChartReasoner:
             "detected_yogas": detected_yogas,
             "house_importance": propagation_results["house_importance"],
             "dominant_themes": propagation_results["dominant_themes"],
+            "divisional_reinforcement": divisional_info,
             "propagation_metadata": {
                 "iterations": propagation_results["iterations"],
                 "convergence_delta": propagation_results["convergence_delta"],

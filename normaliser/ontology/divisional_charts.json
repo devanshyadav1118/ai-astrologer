@@ -1,0 +1,92 @@
+{
+  "divisional_charts": [
+    {
+      "chart_name": "NAVAMSA",
+      "chart_code": "D9",
+      "divisions": 9,
+      "segment_degrees": 3.3333333333333335,
+      "domain": "Dharma, marriage, inner planetary strength, spiritual depth",
+      "sequence_rule": "odd_even",
+      "sequence_map": {
+        "Aries": "Aries",
+        "Gemini": "Aries",
+        "Leo": "Aries",
+        "Libra": "Aries",
+        "Sagittarius": "Aries",
+        "Aquarius": "Aries",
+        "Taurus": "Capricorn",
+        "Cancer": "Capricorn",
+        "Virgo": "Capricorn",
+        "Scorpio": "Capricorn",
+        "Capricorn": "Capricorn",
+        "Pisces": "Capricorn"
+      }
+    },
+    {
+      "chart_name": "DASHAMSHA",
+      "chart_code": "D10",
+      "divisions": 10,
+      "segment_degrees": 3.0,
+      "domain": "Career, profession, public life, social contribution",
+      "sequence_rule": "modality",
+      "sequence_map": {
+        "Aries": "Aries",
+        "Cancer": "Aries",
+        "Libra": "Aries",
+        "Capricorn": "Aries",
+        "Taurus": "Capricorn",
+        "Leo": "Capricorn",
+        "Scorpio": "Capricorn",
+        "Aquarius": "Capricorn",
+        "Gemini": "Libra",
+        "Virgo": "Libra",
+        "Sagittarius": "Libra",
+        "Pisces": "Libra"
+      }
+    },
+    {
+      "chart_name": "SAPTAMSHA",
+      "chart_code": "D7",
+      "divisions": 7,
+      "segment_degrees": 4.285714285714286,
+      "domain": "Children, progeny, creativity, legacy",
+      "sequence_rule": "odd_even",
+      "sequence_map": {
+        "Aries": "Aries",
+        "Gemini": "Aries",
+        "Leo": "Aries",
+        "Libra": "Aries",
+        "Sagittarius": "Aries",
+        "Aquarius": "Aries",
+        "Taurus": "Libra",
+        "Cancer": "Libra",
+        "Virgo": "Libra",
+        "Scorpio": "Libra",
+        "Capricorn": "Libra",
+        "Pisces": "Libra"
+      }
+    },
+    {
+      "chart_name": "DWADASHAMSHA",
+      "chart_code": "D12",
+      "divisions": 12,
+      "segment_degrees": 2.5,
+      "domain": "Parents, family lineage, ancestral karma, inheritance",
+      "sequence_rule": "same_sign",
+      "sequence_map": {
+        "Aries": "Aries",
+        "Taurus": "Taurus",
+        "Gemini": "Gemini",
+        "Cancer": "Cancer",
+        "Leo": "Leo",
+        "Virgo": "Virgo",
+        "Libra": "Libra",
+        "Scorpio": "Scorpio",
+        "Sagittarius": "Sagittarius",
+        "Capricorn": "Capricorn",
+        "Aquarius": "Aquarius",
+        "Pisces": "Pisces"
+      }
+    }
+  ]
+}

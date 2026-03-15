@@ -1,0 +1,2261 @@
+{
+  "planets_data": [
+    {
+      "Object": "Asc",
+      "Rasi": "Taurus",
+      "isRetroGrade": null,
+      "LonDecDeg": 59.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.9786,
+      "LatDMS": null,
+      "Nakshatra": "Mrigashīrsha",
+      "RasiLord": "Venus",
+      "NakshatraLord": "Mars",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter",
+      "HouseNr": 1
+    },
+    {
+      "Object": "Sun",
+      "Rasi": "Taurus",
+      "isRetroGrade": false,
+      "LonDecDeg": 41.468,
+      "SignLonDMS": "+11:28:04",
+      "SignLonDecDeg": 11.468,
+      "LatDMS": "+00:57:37",
+      "Nakshatra": "Rohini",
+      "RasiLord": "Venus",
+      "NakshatraLord": "Moon",
+      "SubLord": "Mars",
+      "SubSubLord": "Saturn",
+      "HouseNr": 12
+    },
+    {
+      "Object": "Moon",
+      "Rasi": "Pisces",
+      "isRetroGrade": false,
+      "LonDecDeg": 356.61,
+      "SignLonDMS": "+26:36:35",
+      "SignLonDecDeg": 26.61,
+      "LatDMS": "+11:49:51",
+      "Nakshatra": "Revati",
+      "RasiLord": "Jupiter",
+      "NakshatraLord": "Mercury",
+      "SubLord": "Jupiter",
+      "SubSubLord": "Saturn",
+      "HouseNr": 10
+    },
+    {
+      "Object": "Mercury",
+      "Rasi": "Aries",
+      "isRetroGrade": false,
+      "LonDecDeg": 18.925,
+      "SignLonDMS": "+18:55:29",
+      "SignLonDecDeg": 18.925,
+      "LatDMS": "+00:29:50",
+      "Nakshatra": "Bharani",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Venus",
+      "SubLord": "Rahu",
+      "SubSubLord": "Saturn",
+      "HouseNr": 11
+    },
+    {
+      "Object": "Venus",
+      "Rasi": "Aries",
+      "isRetroGrade": false,
+      "LonDecDeg": 18.96,
+      "SignLonDMS": "+18:57:37",
+      "SignLonDecDeg": 18.96,
+      "LatDMS": "+01:12:53",
+      "Nakshatra": "Bharani",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Venus",
+      "SubLord": "Rahu",
+      "SubSubLord": "Saturn",
+      "HouseNr": 11
+    },
+    {
+      "Object": "Mars",
+      "Rasi": "Capricorn",
+      "isRetroGrade": false,
+      "LonDecDeg": 296.04,
+      "SignLonDMS": "+26:02:23",
+      "SignLonDecDeg": 26.04,
+      "LatDMS": "+00:31:23",
+      "Nakshatra": "Dhanishta",
+      "RasiLord": "Saturn",
+      "NakshatraLord": "Mars",
+      "SubLord": "Rahu",
+      "SubSubLord": "Mars",
+      "HouseNr": 8
+    },
+    {
+      "Object": "Jupiter",
+      "Rasi": "Cancer",
+      "isRetroGrade": false,
+      "LonDecDeg": 108.164,
+      "SignLonDMS": "+18:09:49",
+      "SignLonDecDeg": 18.164,
+      "LatDMS": "+00:08:23",
+      "Nakshatra": "Āshleshā",
+      "RasiLord": "Moon",
+      "NakshatraLord": "Mercury",
+      "SubLord": "Mercury",
+      "SubSubLord": "Jupiter",
+      "HouseNr": 2
+    },
+    {
+      "Object": "Saturn",
+      "Rasi": "Gemini",
+      "isRetroGrade": false,
+      "LonDecDeg": 65.1,
+      "SignLonDMS": "+05:05:59",
+      "SignLonDecDeg": 5.1,
+      "LatDMS": "+00:07:23",
+      "Nakshatra": "Mrigashīrsha",
+      "RasiLord": "Mercury",
+      "NakshatraLord": "Mars",
+      "SubLord": "Sun",
+      "SubSubLord": "Rahu",
+      "HouseNr": 1
+    },
+    {
+      "Object": "Uranus",
+      "Rasi": "Aquarius",
+      "isRetroGrade": false,
+      "LonDecDeg": 308.868,
+      "SignLonDMS": "+08:52:06",
+      "SignLonDecDeg": 8.868,
+      "LatDMS": "+00:00:33",
+      "Nakshatra": "Shatabhisha",
+      "RasiLord": "Saturn",
+      "NakshatraLord": "Rahu",
+      "SubLord": "Jupiter",
+      "SubSubLord": "Jupiter",
+      "HouseNr": 9
+    },
+    {
+      "Object": "Neptune",
+      "Rasi": "Capricorn",
+      "isRetroGrade": true,
+      "LonDecDeg": 289.253,
+      "SignLonDMS": "+19:15:12",
+      "SignLonDecDeg": 19.253,
+      "LatDMS": "-00:00:21",
+      "Nakshatra": "Shravana",
+      "RasiLord": "Saturn",
+      "NakshatraLord": "Moon",
+      "SubLord": "Mercury",
+      "SubSubLord": "Jupiter",
+      "HouseNr": 8
+    },
+    {
+      "Object": "Pluto",
+      "Rasi": "Scorpio",
+      "isRetroGrade": true,
+      "LonDecDeg": 235.068,
+      "SignLonDMS": "+25:04:03",
+      "SignLonDecDeg": 25.068,
+      "LatDMS": "-00:01:33",
+      "Nakshatra": "Jyeshtha",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Mercury",
+      "SubLord": "Rahu",
+      "SubSubLord": "Mercury",
+      "HouseNr": 6
+    },
+    {
+      "Object": "Chiron",
+      "Rasi": "Sagittarius",
+      "isRetroGrade": true,
+      "LonDecDeg": 263.605,
+      "SignLonDMS": "+23:36:18",
+      "SignLonDecDeg": 23.605,
+      "LatDMS": "-00:02:22",
+      "Nakshatra": "PurvaAshadha",
+      "RasiLord": "Jupiter",
+      "NakshatraLord": "Venus",
+      "SubLord": "Saturn",
+      "SubSubLord": "Rahu",
+      "HouseNr": 7
+    },
+    {
+      "Object": "Rahu",
+      "Rasi": "Taurus",
+      "isRetroGrade": true,
+      "LonDecDeg": 35.395,
+      "SignLonDMS": "+05:23:42",
+      "SignLonDecDeg": 5.395,
+      "LatDMS": "-00:03:11",
+      "Nakshatra": "Krittika",
+      "RasiLord": "Venus",
+      "NakshatraLord": "Sun",
+      "SubLord": "Mercury",
+      "SubSubLord": "Ketu",
+      "HouseNr": 12
+    },
+    {
+      "Object": "Ketu",
+      "Rasi": "Scorpio",
+      "isRetroGrade": true,
+      "LonDecDeg": 215.395,
+      "SignLonDMS": "+05:23:42",
+      "SignLonDecDeg": 5.395,
+      "LatDMS": "-00:03:11",
+      "Nakshatra": "Anuradha",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Saturn",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter",
+      "HouseNr": 6
+    },
+    {
+      "Object": "Syzygy",
+      "Rasi": "Scorpio",
+      "isRetroGrade": false,
+      "LonDecDeg": 210.981,
+      "SignLonDMS": "+00:58:51",
+      "SignLonDecDeg": 0.981,
+      "LatDMS": "+15:09:57",
+      "Nakshatra": "Vishakha",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Jupiter",
+      "SubLord": "Mars",
+      "SubSubLord": "Mercury",
+      "HouseNr": 6
+    },
+    {
+      "Object": "Fortuna",
+      "Rasi": "Taurus",
+      "isRetroGrade": false,
+      "LonDecDeg": 39.021,
+      "SignLonDMS": "+09:01:14",
+      "SignLonDecDeg": 9.021,
+      "LatDMS": "+00:00:00",
+      "Nakshatra": "Krittika",
+      "RasiLord": "Venus",
+      "NakshatraLord": "Sun",
+      "SubLord": "Venus",
+      "SubSubLord": "Jupiter",
+      "HouseNr": 12
+    }
+  ],
+  "houses_data": [
+    {
+      "Object": "I",
+      "HouseNr": 1,
+      "Rasi": "Taurus",
+      "LonDecDeg": 59.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Mrigashīrsha",
+      "RasiLord": "Venus",
+      "NakshatraLord": "Mars",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter"
+    },
+    {
+      "Object": "II",
+      "HouseNr": 2,
+      "Rasi": "Gemini",
+      "LonDecDeg": 89.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Punarvasu",
+      "RasiLord": "Mercury",
+      "NakshatraLord": "Jupiter",
+      "SubLord": "Moon",
+      "SubSubLord": "Saturn"
+    },
+    {
+      "Object": "III",
+      "HouseNr": 3,
+      "Rasi": "Cancer",
+      "LonDecDeg": 119.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Āshleshā",
+      "RasiLord": "Moon",
+      "NakshatraLord": "Mercury",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter"
+    },
+    {
+      "Object": "IV",
+      "HouseNr": 4,
+      "Rasi": "Leo",
+      "LonDecDeg": 149.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "UttaraPhalgunī",
+      "RasiLord": "Sun",
+      "NakshatraLord": "Sun",
+      "SubLord": "Rahu",
+      "SubSubLord": "Saturn"
+    },
+    {
+      "Object": "V",
+      "HouseNr": 5,
+      "Rasi": "Virgo",
+      "LonDecDeg": 179.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Chitra",
+      "RasiLord": "Mercury",
+      "NakshatraLord": "Mars",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter"
+    },
+    {
+      "Object": "VI",
+      "HouseNr": 6,
+      "Rasi": "Libra",
+      "LonDecDeg": 209.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Vishakha",
+      "RasiLord": "Venus",
+      "NakshatraLord": "Jupiter",
+      "SubLord": "Moon",
+      "SubSubLord": "Saturn"
+    },
+    {
+      "Object": "VII",
+      "HouseNr": 7,
+      "Rasi": "Scorpio",
+      "LonDecDeg": 239.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Mula",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Ketu",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter"
+    },
+    {
+      "Object": "VIII",
+      "HouseNr": 8,
+      "Rasi": "Sagittarius",
+      "LonDecDeg": 269.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "UttaraAshadha",
+      "RasiLord": "Jupiter",
+      "NakshatraLord": "Sun",
+      "SubLord": "Rahu",
+      "SubSubLord": "Saturn"
+    },
+    {
+      "Object": "IX",
+      "HouseNr": 9,
+      "Rasi": "Capricorn",
+      "LonDecDeg": 299.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Dhanishta",
+      "RasiLord": "Saturn",
+      "NakshatraLord": "Mars",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter"
+    },
+    {
+      "Object": "X",
+      "HouseNr": 10,
+      "Rasi": "Aquarius",
+      "LonDecDeg": 329.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "PurvaBhādrapadā",
+      "RasiLord": "Saturn",
+      "NakshatraLord": "Jupiter",
+      "SubLord": "Moon",
+      "SubSubLord": "Saturn"
+    },
+    {
+      "Object": "XI",
+      "HouseNr": 11,
+      "Rasi": "Pisces",
+      "LonDecDeg": 359.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Ashwini",
+      "RasiLord": "Jupiter",
+      "NakshatraLord": "Ketu",
+      "SubLord": "Saturn",
+      "SubSubLord": "Jupiter"
+    },
+    {
+      "Object": "XII",
+      "HouseNr": 12,
+      "Rasi": "Aries",
+      "LonDecDeg": 29.979,
+      "SignLonDMS": "+29:58:43",
+      "SignLonDecDeg": 29.979,
+      "DegSize": 30.0,
+      "Nakshatra": "Krittika",
+      "RasiLord": "Mars",
+      "NakshatraLord": "Sun",
+      "SubLord": "Rahu",
+      "SubSubLord": "Saturn"
+    }
+  ],
+  "planet_significators": [
+    [
+      "Sun",
+      10,
+      12,
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    [
+      "Moon",
+      11,
+      10,
+      [
+        2,
+        5
+      ],
+      [
+        3
+      ]
+    ],
+    [
+      "Mercury",
+      11,
+      11,
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    [
+      "Venus",
+      11,
+      11,
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    [
+      "Mars",
+      8,
+      8,
+      [
+        7,
+        12
+      ],
+      [
+        7,
+        12
+      ]
+    ],
+    [
+      "Jupiter",
+      11,
+      2,
+      [
+        2,
+        5
+      ],
+      [
+        8,
+        11
+      ]
+    ],
+    [
+      "Saturn",
+      8,
+      1,
+      [
+        7,
+        12
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    [
+      "Uranus",
+      12,
+      9,
+      [],
+      []
+    ],
+    [
+      "Neptune",
+      10,
+      8,
+      [
+        3
+      ],
+      []
+    ],
+    [
+      "Pluto",
+      11,
+      6,
+      [
+        2,
+        5
+      ],
+      []
+    ],
+    [
+      "Rahu",
+      12,
+      12,
+      [
+        4
+      ],
+      []
+    ],
+    [
+      "Ketu",
+      1,
+      6,
+      [
+        9,
+        10
+      ],
+      []
+    ]
+  ],
+  "planetary_aspects": [
+    {
+      "P1": "Sun",
+      "P2": "Moon",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 0.142,
+      "P1_Lon": 41.468,
+      "P2_Lon": 356.61,
+      "LonDiff": 44.858000000000004
+    },
+    {
+      "P1": "Sun",
+      "P2": "Mars",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 14.572,
+      "P1_Lon": 41.468,
+      "P2_Lon": 296.04,
+      "LonDiff": 105.428
+    },
+    {
+      "P1": "Sun",
+      "P2": "Jupiter",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 6.696,
+      "P1_Lon": 41.468,
+      "P2_Lon": 108.164,
+      "LonDiff": 66.696
+    },
+    {
+      "P1": "Sun",
+      "P2": "Uranus",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 2.599,
+      "P1_Lon": 41.468,
+      "P2_Lon": 308.868,
+      "LonDiff": 92.60000000000002
+    },
+    {
+      "P1": "Sun",
+      "P2": "Neptune",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 7.785,
+      "P1_Lon": 41.468,
+      "P2_Lon": 289.253,
+      "LonDiff": 112.215
+    },
+    {
+      "P1": "Sun",
+      "P2": "Pluto",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 13.6,
+      "P1_Lon": 41.468,
+      "P2_Lon": 235.068,
+      "LonDiff": 166.4
+    },
+    {
+      "P1": "Sun",
+      "P2": "Rahu",
+      "AspectType": "Conjunction",
+      "AspectDeg": 0,
+      "AspectOrb": 6.073,
+      "P1_Lon": 41.468,
+      "P2_Lon": 35.395,
+      "LonDiff": 6.073
+    },
+    {
+      "P1": "Sun",
+      "P2": "Ketu",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 6.073,
+      "P1_Lon": 41.468,
+      "P2_Lon": 215.395,
+      "LonDiff": 173.927
+    },
+    {
+      "P1": "Moon",
+      "P2": "Sun",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 0.142,
+      "P1_Lon": 356.61,
+      "P2_Lon": 41.468,
+      "LonDiff": 44.858000000000004
+    },
+    {
+      "P1": "Moon",
+      "P2": "Mars",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 0.57,
+      "P1_Lon": 356.61,
+      "P2_Lon": 296.04,
+      "LonDiff": 60.57
+    },
+    {
+      "P1": "Moon",
+      "P2": "Jupiter",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 8.446,
+      "P1_Lon": 356.61,
+      "P2_Lon": 108.164,
+      "LonDiff": 111.554
+    },
+    {
+      "P1": "Moon",
+      "P2": "Saturn",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 8.49,
+      "P1_Lon": 356.61,
+      "P2_Lon": 65.1,
+      "LonDiff": 68.49000000000001
+    },
+    {
+      "P1": "Moon",
+      "P2": "Uranus",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 2.741,
+      "P1_Lon": 356.61,
+      "P2_Lon": 308.868,
+      "LonDiff": 47.742
+    },
+    {
+      "P1": "Moon",
+      "P2": "Neptune",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 7.356,
+      "P1_Lon": 356.61,
+      "P2_Lon": 289.253,
+      "LonDiff": 67.357
+    },
+    {
+      "P1": "Moon",
+      "P2": "Pluto",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 1.542,
+      "P1_Lon": 356.61,
+      "P2_Lon": 235.068,
+      "LonDiff": 121.542
+    },
+    {
+      "P1": "Moon",
+      "P2": "Rahu",
+      "AspectType": "Semi Quintile",
+      "AspectDeg": 36,
+      "AspectOrb": 2.785,
+      "P1_Lon": 356.61,
+      "P2_Lon": 35.395,
+      "LonDiff": 38.785000000000025
+    },
+    {
+      "P1": "Moon",
+      "P2": "Ketu",
+      "AspectType": "Bi Quintile",
+      "AspectDeg": 144,
+      "AspectOrb": 2.785,
+      "P1_Lon": 356.61,
+      "P2_Lon": 215.395,
+      "LonDiff": 141.215
+    },
+    {
+      "P1": "Mars",
+      "P2": "Sun",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 14.572,
+      "P1_Lon": 296.04,
+      "P2_Lon": 41.468,
+      "LonDiff": 105.428
+    },
+    {
+      "P1": "Mars",
+      "P2": "Moon",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 0.57,
+      "P1_Lon": 296.04,
+      "P2_Lon": 356.61,
+      "LonDiff": 60.57
+    },
+    {
+      "P1": "Mars",
+      "P2": "Mercury",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 7.115,
+      "P1_Lon": 296.04,
+      "P2_Lon": 18.925,
+      "LonDiff": 82.88499999999999
+    },
+    {
+      "P1": "Mars",
+      "P2": "Jupiter",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 7.876,
+      "P1_Lon": 296.04,
+      "P2_Lon": 108.164,
+      "LonDiff": 172.124
+    },
+    {
+      "P1": "Mars",
+      "P2": "Venus",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 7.079,
+      "P1_Lon": 296.04,
+      "P2_Lon": 18.96,
+      "LonDiff": 82.92000000000002
+    },
+    {
+      "P1": "Mars",
+      "P2": "Neptune",
+      "AspectType": "Conjunction",
+      "AspectDeg": 0,
+      "AspectOrb": 6.787,
+      "P1_Lon": 296.04,
+      "P2_Lon": 289.253,
+      "LonDiff": 6.787
+    },
+    {
+      "P1": "Mars",
+      "P2": "Pluto",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 0.972,
+      "P1_Lon": 296.04,
+      "P2_Lon": 235.068,
+      "LonDiff": 60.972
+    },
+    {
+      "P1": "Mars",
+      "P2": "Rahu",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 9.355,
+      "P1_Lon": 296.04,
+      "P2_Lon": 35.395,
+      "LonDiff": 99.35500000000002
+    },
+    {
+      "P1": "Mars",
+      "P2": "Ketu",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 9.355,
+      "P1_Lon": 296.04,
+      "P2_Lon": 215.395,
+      "LonDiff": 80.645
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Mars",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 7.115,
+      "P1_Lon": 18.925,
+      "P2_Lon": 296.04,
+      "LonDiff": 82.88499999999999
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Jupiter",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.761,
+      "P1_Lon": 18.925,
+      "P2_Lon": 108.164,
+      "LonDiff": 89.239
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Venus",
+      "AspectType": "Conjunction",
+      "AspectDeg": 0,
+      "AspectOrb": 0.036,
+      "P1_Lon": 18.925,
+      "P2_Lon": 18.96,
+      "LonDiff": 0.035
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Saturn",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 1.175,
+      "P1_Lon": 18.925,
+      "P2_Lon": 65.1,
+      "LonDiff": 46.175
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Uranus",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 1.944,
+      "P1_Lon": 18.925,
+      "P2_Lon": 308.868,
+      "LonDiff": 70.05700000000002
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Neptune",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.329,
+      "P1_Lon": 18.925,
+      "P2_Lon": 289.253,
+      "LonDiff": 89.67200000000003
+    },
+    {
+      "P1": "Mercury",
+      "P2": "Pluto",
+      "AspectType": "Bi Quintile",
+      "AspectDeg": 144,
+      "AspectOrb": 0.143,
+      "P1_Lon": 18.925,
+      "P2_Lon": 235.068,
+      "LonDiff": 143.857
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Sun",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 6.696,
+      "P1_Lon": 108.164,
+      "P2_Lon": 41.468,
+      "LonDiff": 66.696
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Moon",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 8.446,
+      "P1_Lon": 108.164,
+      "P2_Lon": 356.61,
+      "LonDiff": 111.554
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Mars",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 7.876,
+      "P1_Lon": 108.164,
+      "P2_Lon": 296.04,
+      "LonDiff": 172.124
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Mercury",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.761,
+      "P1_Lon": 108.164,
+      "P2_Lon": 18.925,
+      "LonDiff": 89.239
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Venus",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.797,
+      "P1_Lon": 108.164,
+      "P2_Lon": 18.96,
+      "LonDiff": 89.204
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Saturn",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 1.936,
+      "P1_Lon": 108.164,
+      "P2_Lon": 65.1,
+      "LonDiff": 43.064
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Neptune",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 1.09,
+      "P1_Lon": 108.164,
+      "P2_Lon": 289.253,
+      "LonDiff": 178.911
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Pluto",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 6.904,
+      "P1_Lon": 108.164,
+      "P2_Lon": 235.068,
+      "LonDiff": 126.904
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Rahu",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 0.769,
+      "P1_Lon": 108.164,
+      "P2_Lon": 35.395,
+      "LonDiff": 72.769
+    },
+    {
+      "P1": "Jupiter",
+      "P2": "Ketu",
+      "AspectType": "Sesqui Quintile",
+      "AspectDeg": 108,
+      "AspectOrb": 0.769,
+      "P1_Lon": 108.164,
+      "P2_Lon": 215.395,
+      "LonDiff": 107.231
+    },
+    {
+      "P1": "Venus",
+      "P2": "Mars",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 7.079,
+      "P1_Lon": 18.96,
+      "P2_Lon": 296.04,
+      "LonDiff": 82.92000000000002
+    },
+    {
+      "P1": "Venus",
+      "P2": "Mercury",
+      "AspectType": "Conjunction",
+      "AspectDeg": 0,
+      "AspectOrb": 0.036,
+      "P1_Lon": 18.96,
+      "P2_Lon": 18.925,
+      "LonDiff": 0.035
+    },
+    {
+      "P1": "Venus",
+      "P2": "Jupiter",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.797,
+      "P1_Lon": 18.96,
+      "P2_Lon": 108.164,
+      "LonDiff": 89.204
+    },
+    {
+      "P1": "Venus",
+      "P2": "Saturn",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 1.139,
+      "P1_Lon": 18.96,
+      "P2_Lon": 65.1,
+      "LonDiff": 46.14
+    },
+    {
+      "P1": "Venus",
+      "P2": "Uranus",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 1.908,
+      "P1_Lon": 18.96,
+      "P2_Lon": 308.868,
+      "LonDiff": 70.09199999999998
+    },
+    {
+      "P1": "Venus",
+      "P2": "Neptune",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.293,
+      "P1_Lon": 18.96,
+      "P2_Lon": 289.253,
+      "LonDiff": 89.707
+    },
+    {
+      "P1": "Venus",
+      "P2": "Pluto",
+      "AspectType": "Bi Quintile",
+      "AspectDeg": 144,
+      "AspectOrb": 0.107,
+      "P1_Lon": 18.96,
+      "P2_Lon": 235.068,
+      "LonDiff": 143.892
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Moon",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 8.49,
+      "P1_Lon": 65.1,
+      "P2_Lon": 356.61,
+      "LonDiff": 68.49000000000001
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Mercury",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 1.175,
+      "P1_Lon": 65.1,
+      "P2_Lon": 18.925,
+      "LonDiff": 46.175
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Jupiter",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 1.936,
+      "P1_Lon": 65.1,
+      "P2_Lon": 108.164,
+      "LonDiff": 43.064
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Venus",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 1.139,
+      "P1_Lon": 65.1,
+      "P2_Lon": 18.96,
+      "LonDiff": 46.14
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Uranus",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 3.769,
+      "P1_Lon": 65.1,
+      "P2_Lon": 308.868,
+      "LonDiff": 116.232
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Neptune",
+      "AspectType": "Sesqui Square",
+      "AspectDeg": 135,
+      "AspectOrb": 0.846,
+      "P1_Lon": 65.1,
+      "P2_Lon": 289.253,
+      "LonDiff": 135.847
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Rahu",
+      "AspectType": "Semi Sextile",
+      "AspectDeg": 30,
+      "AspectOrb": 0.295,
+      "P1_Lon": 65.1,
+      "P2_Lon": 35.395,
+      "LonDiff": 29.705
+    },
+    {
+      "P1": "Saturn",
+      "P2": "Ketu",
+      "AspectType": "Quincunx",
+      "AspectDeg": 150,
+      "AspectOrb": 0.295,
+      "P1_Lon": 65.1,
+      "P2_Lon": 215.395,
+      "LonDiff": 150.295
+    },
+    {
+      "P1": "Uranus",
+      "P2": "Sun",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 2.599,
+      "P1_Lon": 308.868,
+      "P2_Lon": 41.468,
+      "LonDiff": 92.60000000000002
+    },
+    {
+      "P1": "Uranus",
+      "P2": "Moon",
+      "AspectType": "Semi Square",
+      "AspectDeg": 45,
+      "AspectOrb": 2.741,
+      "P1_Lon": 308.868,
+      "P2_Lon": 356.61,
+      "LonDiff": 47.742
+    },
+    {
+      "P1": "Uranus",
+      "P2": "Mercury",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 1.944,
+      "P1_Lon": 308.868,
+      "P2_Lon": 18.925,
+      "LonDiff": 70.05700000000002
+    },
+    {
+      "P1": "Uranus",
+      "P2": "Venus",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 1.908,
+      "P1_Lon": 308.868,
+      "P2_Lon": 18.96,
+      "LonDiff": 70.09199999999998
+    },
+    {
+      "P1": "Uranus",
+      "P2": "Saturn",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 3.769,
+      "P1_Lon": 308.868,
+      "P2_Lon": 65.1,
+      "LonDiff": 116.232
+    },
+    {
+      "P1": "Uranus",
+      "P2": "Pluto",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 1.801,
+      "P1_Lon": 308.868,
+      "P2_Lon": 235.068,
+      "LonDiff": 73.8
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Sun",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 7.785,
+      "P1_Lon": 289.253,
+      "P2_Lon": 41.468,
+      "LonDiff": 112.215
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Moon",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 7.356,
+      "P1_Lon": 289.253,
+      "P2_Lon": 356.61,
+      "LonDiff": 67.357
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Mars",
+      "AspectType": "Conjunction",
+      "AspectDeg": 0,
+      "AspectOrb": 6.787,
+      "P1_Lon": 289.253,
+      "P2_Lon": 296.04,
+      "LonDiff": 6.787
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Mercury",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.329,
+      "P1_Lon": 289.253,
+      "P2_Lon": 18.925,
+      "LonDiff": 89.67200000000003
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Jupiter",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 1.09,
+      "P1_Lon": 289.253,
+      "P2_Lon": 108.164,
+      "LonDiff": 178.911
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Venus",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 0.293,
+      "P1_Lon": 289.253,
+      "P2_Lon": 18.96,
+      "LonDiff": 89.707
+    },
+    {
+      "P1": "Neptune",
+      "P2": "Saturn",
+      "AspectType": "Sesqui Square",
+      "AspectDeg": 135,
+      "AspectOrb": 0.846,
+      "P1_Lon": 289.253,
+      "P2_Lon": 65.1,
+      "LonDiff": 135.847
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Sun",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 13.6,
+      "P1_Lon": 235.068,
+      "P2_Lon": 41.468,
+      "LonDiff": 166.4
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Moon",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 1.542,
+      "P1_Lon": 235.068,
+      "P2_Lon": 356.61,
+      "LonDiff": 121.542
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Mars",
+      "AspectType": "Sextile",
+      "AspectDeg": 60,
+      "AspectOrb": 0.972,
+      "P1_Lon": 235.068,
+      "P2_Lon": 296.04,
+      "LonDiff": 60.972
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Mercury",
+      "AspectType": "Bi Quintile",
+      "AspectDeg": 144,
+      "AspectOrb": 0.143,
+      "P1_Lon": 235.068,
+      "P2_Lon": 18.925,
+      "LonDiff": 143.857
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Jupiter",
+      "AspectType": "Trine",
+      "AspectDeg": 120,
+      "AspectOrb": 6.904,
+      "P1_Lon": 235.068,
+      "P2_Lon": 108.164,
+      "LonDiff": 126.904
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Venus",
+      "AspectType": "Bi Quintile",
+      "AspectDeg": 144,
+      "AspectOrb": 0.107,
+      "P1_Lon": 235.068,
+      "P2_Lon": 18.96,
+      "LonDiff": 143.892
+    },
+    {
+      "P1": "Pluto",
+      "P2": "Uranus",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 1.801,
+      "P1_Lon": 235.068,
+      "P2_Lon": 308.868,
+      "LonDiff": 73.8
+    },
+    {
+      "P1": "Rahu",
+      "P2": "Sun",
+      "AspectType": "Conjunction",
+      "AspectDeg": 0,
+      "AspectOrb": 6.073,
+      "P1_Lon": 35.395,
+      "P2_Lon": 41.468,
+      "LonDiff": 6.073
+    },
+    {
+      "P1": "Rahu",
+      "P2": "Moon",
+      "AspectType": "Semi Quintile",
+      "AspectDeg": 36,
+      "AspectOrb": 2.785,
+      "P1_Lon": 35.395,
+      "P2_Lon": 356.61,
+      "LonDiff": 38.785000000000025
+    },
+    {
+      "P1": "Rahu",
+      "P2": "Mars",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 9.355,
+      "P1_Lon": 35.395,
+      "P2_Lon": 296.04,
+      "LonDiff": 99.35500000000002
+    },
+    {
+      "P1": "Rahu",
+      "P2": "Jupiter",
+      "AspectType": "Quintile",
+      "AspectDeg": 72,
+      "AspectOrb": 0.769,
+      "P1_Lon": 35.395,
+      "P2_Lon": 108.164,
+      "LonDiff": 72.769
+    },
+    {
+      "P1": "Rahu",
+      "P2": "Saturn",
+      "AspectType": "Semi Sextile",
+      "AspectDeg": 30,
+      "AspectOrb": 0.295,
+      "P1_Lon": 35.395,
+      "P2_Lon": 65.1,
+      "LonDiff": 29.705
+    },
+    {
+      "P1": "Ketu",
+      "P2": "Sun",
+      "AspectType": "Opposition",
+      "AspectDeg": 180,
+      "AspectOrb": 6.073,
+      "P1_Lon": 215.395,
+      "P2_Lon": 41.468,
+      "LonDiff": 173.927
+    },
+    {
+      "P1": "Ketu",
+      "P2": "Moon",
+      "AspectType": "Bi Quintile",
+      "AspectDeg": 144,
+      "AspectOrb": 2.785,
+      "P1_Lon": 215.395,
+      "P2_Lon": 356.61,
+      "LonDiff": 141.215
+    },
+    {
+      "P1": "Ketu",
+      "P2": "Mars",
+      "AspectType": "Square",
+      "AspectDeg": 90,
+      "AspectOrb": 9.355,
+      "P1_Lon": 215.395,
+      "P2_Lon": 296.04,
+      "LonDiff": 80.645
+    },
+    {
+      "P1": "Ketu",
+      "P2": "Jupiter",
+      "AspectType": "Sesqui Quintile",
+      "AspectDeg": 108,
+      "AspectOrb": 0.769,
+      "P1_Lon": 215.395,
+      "P2_Lon": 108.164,
+      "LonDiff": 107.231
+    },
+    {
+      "P1": "Ketu",
+      "P2": "Saturn",
+      "AspectType": "Quincunx",
+      "AspectDeg": 150,
+      "AspectOrb": 0.295,
+      "P1_Lon": 215.395,
+      "P2_Lon": 65.1,
+      "LonDiff": 150.295
+    }
+  ],
+  "house_significators": [
+    [
+      "I",
+      [
+        "Ketu"
+      ],
+      [
+        "Saturn"
+      ],
+      [
+        "Mercury",
+        "Venus"
+      ],
+      "Venus"
+    ],
+    [
+      "II",
+      [],
+      [
+        "Jupiter"
+      ],
+      [
+        "Moon",
+        "Jupiter",
+        "Pluto"
+      ],
+      "Mercury"
+    ],
+    [
+      "III",
+      [],
+      [],
+      [
+        "Sun",
+        "Neptune"
+      ],
+      "Moon"
+    ],
+    [
+      "IV",
+      [],
+      [],
+      [
+        "Rahu"
+      ],
+      "Sun"
+    ],
+    [
+      "V",
+      [],
+      [],
+      [
+        "Moon",
+        "Jupiter",
+        "Pluto"
+      ],
+      "Mercury"
+    ],
+    [
+      "VI",
+      [],
+      [
+        "Pluto",
+        "Ketu"
+      ],
+      [
+        "Mercury",
+        "Venus"
+      ],
+      "Venus"
+    ],
+    [
+      "VII",
+      [],
+      [],
+      [
+        "Mars",
+        "Saturn"
+      ],
+      "Mars"
+    ],
+    [
+      "VIII",
+      [
+        "Mars",
+        "Saturn"
+      ],
+      [
+        "Mars",
+        "Neptune"
+      ],
+      [],
+      "Jupiter"
+    ],
+    [
+      "IX",
+      [],
+      [
+        "Uranus"
+      ],
+      [
+        "Ketu"
+      ],
+      "Saturn"
+    ],
+    [
+      "X",
+      [
+        "Sun",
+        "Neptune"
+      ],
+      [
+        "Moon"
+      ],
+      [
+        "Ketu"
+      ],
+      "Saturn"
+    ],
+    [
+      "XI",
+      [
+        "Moon",
+        "Mercury",
+        "Venus",
+        "Jupiter",
+        "Pluto"
+      ],
+      [
+        "Mercury",
+        "Venus"
+      ],
+      [],
+      "Jupiter"
+    ],
+    [
+      "XII",
+      [
+        "Uranus",
+        "Rahu"
+      ],
+      [
+        "Sun",
+        "Rahu"
+      ],
+      [
+        "Mars",
+        "Saturn"
+      ],
+      "Mars"
+    ]
+  ],
+  "vimshottari_dasa_table": {
+    "Mercury": {
+      "start": "23-09-1990",
+      "end": "23-09-2007",
+      "bhuktis": {
+        "Mercury": {
+          "start": "23-09-1990",
+          "end": "19-02-1993"
+        },
+        "Ketu": {
+          "start": "19-02-1993",
+          "end": "15-02-1994"
+        },
+        "Venus": {
+          "start": "15-02-1994",
+          "end": "15-12-1996"
+        },
+        "Sun": {
+          "start": "15-12-1996",
+          "end": "21-10-1997"
+        },
+        "Moon": {
+          "start": "21-10-1997",
+          "end": "21-03-1999"
+        },
+        "Mars": {
+          "start": "21-03-1999",
+          "end": "19-03-2000"
+        },
+        "Rahu": {
+          "start": "19-03-2000",
+          "end": "07-10-2002"
+        },
+        "Jupiter": {
+          "start": "07-10-2002",
+          "end": "13-01-2005"
+        },
+        "Saturn": {
+          "start": "13-01-2005",
+          "end": "22-09-2007"
+        }
+      }
+    },
+    "Ketu": {
+      "start": "23-09-2007",
+      "end": "23-09-2014",
+      "bhuktis": {
+        "Ketu": {
+          "start": "23-09-2007",
+          "end": "19-02-2008"
+        },
+        "Venus": {
+          "start": "19-02-2008",
+          "end": "19-04-2009"
+        },
+        "Sun": {
+          "start": "19-04-2009",
+          "end": "25-08-2009"
+        },
+        "Moon": {
+          "start": "25-08-2009",
+          "end": "25-03-2010"
+        },
+        "Mars": {
+          "start": "25-03-2010",
+          "end": "21-08-2010"
+        },
+        "Rahu": {
+          "start": "21-08-2010",
+          "end": "08-09-2011"
+        },
+        "Jupiter": {
+          "start": "08-09-2011",
+          "end": "14-08-2012"
+        },
+        "Saturn": {
+          "start": "14-08-2012",
+          "end": "23-09-2013"
+        },
+        "Mercury": {
+          "start": "23-09-2013",
+          "end": "19-09-2014"
+        }
+      }
+    },
+    "Venus": {
+      "start": "23-09-2014",
+      "end": "23-09-2034",
+      "bhuktis": {
+        "Venus": {
+          "start": "23-09-2014",
+          "end": "23-01-2018"
+        },
+        "Sun": {
+          "start": "23-01-2018",
+          "end": "23-01-2019"
+        },
+        "Moon": {
+          "start": "23-01-2019",
+          "end": "23-09-2020"
+        },
+        "Mars": {
+          "start": "23-09-2020",
+          "end": "23-11-2021"
+        },
+        "Rahu": {
+          "start": "23-11-2021",
+          "end": "23-11-2024"
+        },
+        "Jupiter": {
+          "start": "23-11-2024",
+          "end": "23-07-2027"
+        },
+        "Saturn": {
+          "start": "23-07-2027",
+          "end": "22-09-2030"
+        },
+        "Mercury": {
+          "start": "22-09-2030",
+          "end": "22-07-2033"
+        },
+        "Ketu": {
+          "start": "22-07-2033",
+          "end": "22-09-2034"
+        }
+      }
+    },
+    "Sun": {
+      "start": "23-09-2034",
+      "end": "23-09-2040",
+      "bhuktis": {
+        "Sun": {
+          "start": "23-09-2034",
+          "end": "10-01-2035"
+        },
+        "Moon": {
+          "start": "10-01-2035",
+          "end": "10-07-2035"
+        },
+        "Mars": {
+          "start": "10-07-2035",
+          "end": "16-11-2035"
+        },
+        "Rahu": {
+          "start": "16-11-2035",
+          "end": "10-10-2036"
+        },
+        "Jupiter": {
+          "start": "10-10-2036",
+          "end": "28-07-2037"
+        },
+        "Saturn": {
+          "start": "28-07-2037",
+          "end": "10-07-2038"
+        },
+        "Mercury": {
+          "start": "10-07-2038",
+          "end": "16-05-2039"
+        },
+        "Ketu": {
+          "start": "16-05-2039",
+          "end": "22-09-2039"
+        },
+        "Venus": {
+          "start": "22-09-2039",
+          "end": "22-09-2040"
+        }
+      }
+    },
+    "Moon": {
+      "start": "23-09-2040",
+      "end": "23-09-2050",
+      "bhuktis": {
+        "Moon": {
+          "start": "23-09-2040",
+          "end": "23-07-2041"
+        },
+        "Mars": {
+          "start": "23-07-2041",
+          "end": "23-02-2042"
+        },
+        "Rahu": {
+          "start": "23-02-2042",
+          "end": "23-08-2043"
+        },
+        "Jupiter": {
+          "start": "23-08-2043",
+          "end": "23-12-2044"
+        },
+        "Saturn": {
+          "start": "23-12-2044",
+          "end": "23-07-2046"
+        },
+        "Mercury": {
+          "start": "23-07-2046",
+          "end": "23-12-2047"
+        },
+        "Ketu": {
+          "start": "23-12-2047",
+          "end": "23-07-2048"
+        },
+        "Venus": {
+          "start": "23-07-2048",
+          "end": "23-03-2050"
+        },
+        "Sun": {
+          "start": "23-03-2050",
+          "end": "23-09-2050"
+        }
+      }
+    },
+    "Mars": {
+      "start": "23-09-2050",
+      "end": "23-09-2057",
+      "bhuktis": {
+        "Mars": {
+          "start": "23-09-2050",
+          "end": "19-02-2051"
+        },
+        "Rahu": {
+          "start": "19-02-2051",
+          "end": "08-03-2052"
+        },
+        "Jupiter": {
+          "start": "08-03-2052",
+          "end": "14-02-2053"
+        },
+        "Saturn": {
+          "start": "14-02-2053",
+          "end": "23-03-2054"
+        },
+        "Mercury": {
+          "start": "23-03-2054",
+          "end": "22-03-2055"
+        },
+        "Ketu": {
+          "start": "22-03-2055",
+          "end": "18-08-2055"
+        },
+        "Venus": {
+          "start": "18-08-2055",
+          "end": "18-10-2056"
+        },
+        "Sun": {
+          "start": "18-10-2056",
+          "end": "24-02-2057"
+        },
+        "Moon": {
+          "start": "24-02-2057",
+          "end": "24-09-2057"
+        }
+      }
+    },
+    "Rahu": {
+      "start": "23-09-2057",
+      "end": "23-09-2075",
+      "bhuktis": {
+        "Rahu": {
+          "start": "23-09-2057",
+          "end": "04-06-2060"
+        },
+        "Jupiter": {
+          "start": "04-06-2060",
+          "end": "28-10-2062"
+        },
+        "Saturn": {
+          "start": "28-10-2062",
+          "end": "03-09-2065"
+        },
+        "Mercury": {
+          "start": "03-09-2065",
+          "end": "21-03-2068"
+        },
+        "Ketu": {
+          "start": "21-03-2068",
+          "end": "08-04-2069"
+        },
+        "Venus": {
+          "start": "08-04-2069",
+          "end": "08-04-2072"
+        },
+        "Sun": {
+          "start": "08-04-2072",
+          "end": "04-03-2073"
+        },
+        "Moon": {
+          "start": "04-03-2073",
+          "end": "04-09-2074"
+        },
+        "Mars": {
+          "start": "04-09-2074",
+          "end": "22-09-2075"
+        }
+      }
+    },
+    "Jupiter": {
+      "start": "23-09-2075",
+      "end": "23-09-2091",
+      "bhuktis": {
+        "Jupiter": {
+          "start": "23-09-2075",
+          "end": "10-11-2077"
+        },
+        "Saturn": {
+          "start": "10-11-2077",
+          "end": "22-05-2080"
+        },
+        "Mercury": {
+          "start": "22-05-2080",
+          "end": "28-08-2082"
+        },
+        "Ketu": {
+          "start": "28-08-2082",
+          "end": "03-08-2083"
+        },
+        "Venus": {
+          "start": "03-08-2083",
+          "end": "02-04-2086"
+        },
+        "Sun": {
+          "start": "02-04-2086",
+          "end": "20-01-2087"
+        },
+        "Moon": {
+          "start": "20-01-2087",
+          "end": "20-05-2088"
+        },
+        "Mars": {
+          "start": "20-05-2088",
+          "end": "26-04-2089"
+        },
+        "Rahu": {
+          "start": "26-04-2089",
+          "end": "19-09-2091"
+        }
+      }
+    },
+    "Saturn": {
+      "start": "23-09-2091",
+      "end": "23-09-2110",
+      "bhuktis": {
+        "Saturn": {
+          "start": "23-09-2091",
+          "end": "26-09-2094"
+        },
+        "Mercury": {
+          "start": "26-09-2094",
+          "end": "04-06-2097"
+        },
+        "Ketu": {
+          "start": "04-06-2097",
+          "end": "13-07-2098"
+        },
+        "Venus": {
+          "start": "13-07-2098",
+          "end": "12-09-2101"
+        },
+        "Sun": {
+          "start": "12-09-2101",
+          "end": "24-08-2102"
+        },
+        "Moon": {
+          "start": "24-08-2102",
+          "end": "25-03-2104"
+        },
+        "Mars": {
+          "start": "25-03-2104",
+          "end": "04-05-2105"
+        },
+        "Rahu": {
+          "start": "04-05-2105",
+          "end": "10-03-2108"
+        },
+        "Jupiter": {
+          "start": "10-03-2108",
+          "end": "22-09-2110"
+        }
+      }
+    }
+  },
+  "consolidated_chart_data": [
+    {
+      "Rasi": "Aries",
+      "Object": [
+        "XII",
+        "Mercury",
+        "Venus"
+      ],
+      "isRetroGrade": [
+        false,
+        false,
+        false
+      ],
+      "LonDecDeg": [
+        29.979,
+        18.925,
+        18.96
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+18:55:29",
+        "+18:57:37"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        18.925,
+        18.96
+      ]
+    },
+    {
+      "Rasi": "Taurus",
+      "Object": [
+        "I",
+        "Asc",
+        "Sun",
+        "Rahu",
+        "Fortuna"
+      ],
+      "isRetroGrade": [
+        false,
+        null,
+        false,
+        true,
+        false
+      ],
+      "LonDecDeg": [
+        59.979,
+        59.979,
+        41.468,
+        35.395,
+        39.021
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+29:58:43",
+        "+11:28:04",
+        "+05:23:42",
+        "+09:01:14"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        29.9786,
+        11.468,
+        5.395,
+        9.021
+      ]
+    },
+    {
+      "Rasi": "Gemini",
+      "Object": [
+        "II",
+        "Saturn"
+      ],
+      "isRetroGrade": [
+        false,
+        false
+      ],
+      "LonDecDeg": [
+        89.979,
+        65.1
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+05:05:59"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        5.1
+      ]
+    },
+    {
+      "Rasi": "Cancer",
+      "Object": [
+        "III",
+        "Jupiter"
+      ],
+      "isRetroGrade": [
+        false,
+        false
+      ],
+      "LonDecDeg": [
+        119.979,
+        108.164
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+18:09:49"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        18.164
+      ]
+    },
+    {
+      "Rasi": "Leo",
+      "Object": [
+        "IV"
+      ],
+      "isRetroGrade": [
+        false
+      ],
+      "LonDecDeg": [
+        149.979
+      ],
+      "SignLonDMS": [
+        "+29:58:43"
+      ],
+      "SignLonDecDeg": [
+        29.979
+      ]
+    },
+    {
+      "Rasi": "Virgo",
+      "Object": [
+        "V"
+      ],
+      "isRetroGrade": [
+        false
+      ],
+      "LonDecDeg": [
+        179.979
+      ],
+      "SignLonDMS": [
+        "+29:58:43"
+      ],
+      "SignLonDecDeg": [
+        29.979
+      ]
+    },
+    {
+      "Rasi": "Libra",
+      "Object": [
+        "VI"
+      ],
+      "isRetroGrade": [
+        false
+      ],
+      "LonDecDeg": [
+        209.979
+      ],
+      "SignLonDMS": [
+        "+29:58:43"
+      ],
+      "SignLonDecDeg": [
+        29.979
+      ]
+    },
+    {
+      "Rasi": "Scorpio",
+      "Object": [
+        "VII",
+        "Pluto",
+        "Ketu",
+        "Syzygy"
+      ],
+      "isRetroGrade": [
+        false,
+        true,
+        true,
+        false
+      ],
+      "LonDecDeg": [
+        239.979,
+        235.068,
+        215.395,
+        210.981
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+25:04:03",
+        "+05:23:42",
+        "+00:58:51"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        25.068,
+        5.395,
+        0.981
+      ]
+    },
+    {
+      "Rasi": "Sagittarius",
+      "Object": [
+        "VIII",
+        "Chiron"
+      ],
+      "isRetroGrade": [
+        false,
+        true
+      ],
+      "LonDecDeg": [
+        269.979,
+        263.605
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+23:36:18"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        23.605
+      ]
+    },
+    {
+      "Rasi": "Capricorn",
+      "Object": [
+        "IX",
+        "Mars",
+        "Neptune"
+      ],
+      "isRetroGrade": [
+        false,
+        false,
+        true
+      ],
+      "LonDecDeg": [
+        299.979,
+        296.04,
+        289.253
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+26:02:23",
+        "+19:15:12"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        26.04,
+        19.253
+      ]
+    },
+    {
+      "Rasi": "Aquarius",
+      "Object": [
+        "X",
+        "Uranus"
+      ],
+      "isRetroGrade": [
+        false,
+        false
+      ],
+      "LonDecDeg": [
+        329.979,
+        308.868
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+08:52:06"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        8.868
+      ]
+    },
+    {
+      "Rasi": "Pisces",
+      "Object": [
+        "XI",
+        "Moon"
+      ],
+      "isRetroGrade": [
+        false,
+        false
+      ],
+      "LonDecDeg": [
+        359.979,
+        356.61
+      ],
+      "SignLonDMS": [
+        "+29:58:43",
+        "+26:36:35"
+      ],
+      "SignLonDecDeg": [
+        29.979,
+        26.61
+      ]
+    }
+  ]
+}

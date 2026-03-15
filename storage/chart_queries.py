@@ -180,3 +180,29 @@ class ChartQueries:
             "conjunctions": conjunctions,
             "dispositors": dispositors
         }
+
+    def get_divisional_data(self, chart_id: str) -> dict[str, Any]:
+        """Fetch all divisional chart data for a given chart."""
+        with self.neo4j_client.driver.session() as session:
+            result = session.run(
+                """
+                MATCH (c:Chart {chart_id: $chart_id})-[:HAS_DIVISIONAL_CHART]->(dc:DivisionalChart)
+                RETURN dc.chart_type as type, 
+                       dc.planet_positions as positions, 
+                       dc.planet_dignities as dignities, 
+                       dc.planet_reinforcements as reinforcements, 
+                       dc.domain_reinforcement as domain_aggregates
+                """,
+                chart_id=chart_id
+            )
+            
+            divisional_info = {}
+            for record in result:
+                import json
+                divisional_info[record["type"]] = {
+                    "positions": json.loads(record["positions"]) if record["positions"] else {},
+                    "dignities": json.loads(record["dignities"]) if record["dignities"] else {},
+                    "reinforcements": json.loads(record["reinforcements"]) if record["reinforcements"] else {},
+                    "domain_aggregates": json.loads(record["domain_aggregates"]) if record["domain_aggregates"] else {}
+                }
+            return divisional_info

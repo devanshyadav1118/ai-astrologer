@@ -88,6 +88,9 @@ class VedicAstroAPICalculator:
         # Phase 9: Convert Dasha Table to canonical list format
         dasha_periods = self._convert_dasha_table(raw_data.get("vimshottari_dasa_table", {}))
 
+        # Phase 10: Extract Divisional Charts from API
+        divisional_charts = self._extract_divisional_charts(raw_data.get("divisional_charts", {}))
+
         return {
             "metadata": {
                 "date": date,
@@ -104,12 +107,29 @@ class VedicAstroAPICalculator:
             "conjunctions": conjunctions,
             "dispositors": dispositors,
             "dasha_periods": dasha_periods,
+            "divisional_charts": divisional_charts,
             "api_raw": {
                 "planet_significators": raw_data.get("planet_significators"),
                 "house_significators": raw_data.get("house_significators"),
                 "vimshottari_dasa_table": raw_data.get("vimshottari_dasa_table")
             }
         }
+
+    def _extract_divisional_charts(self, div_raw: dict[str, list[dict[str, Any]]]) -> dict[str, list[dict[str, Any]]]:
+        """Maps raw API divisional data to canonical list of placements."""
+        results = {}
+        for code, planets_data in div_raw.items():
+            placements = []
+            for p in planets_data:
+                # Filter to canonical planets
+                if p["Object"] in {"Sun", "Moon", "Mars", "Mercury", "Jupiter", "Venus", "Saturn", "Rahu", "Ketu"}:
+                    placements.append({
+                        "name": self.normaliser.normalise(p["Object"]),
+                        "divisional_sign": self.normaliser.normalise(p["Rasi"]),
+                        "degree": float(p["SignLonDecDeg"])
+                    })
+            results[code] = placements
+        return results
 
     def _convert_dasha_table(self, table: dict[str, Any]) -> list[dict[str, Any]]:
         """Convert API's nested dasha table to a flat list of period nodes."""

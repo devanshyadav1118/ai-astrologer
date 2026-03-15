@@ -266,6 +266,113 @@ class ChartGraphIngestor:
                 )
         return chart_id
 
+    def ingest_divisional_results(self, chart_id: str, divisional_data: dict[str, Any], reinforcement_scores: dict[str, Any], domain_reinforcement: dict[str, float]) -> None:
+        """
+        Stores divisional positions, dignities, and reinforcement scores.
+        """
+        timestamp = datetime.now(timezone.utc).isoformat()
+        import json
+        with self.neo4j_client.driver.session() as session:
+            for chart_type, planets in divisional_data.items():
+                # 1. Create/Update DivisionalChart node
+                positions_map = {p["name"]: p["divisional_sign"] for p in planets}
+                
+                # Extract dignities and reinforcements for this chart type
+                chart_reinf = reinforcement_scores.get(chart_type, {})
+                dignities_map = {p: data["div_dignity"] for p, data in chart_reinf.items()}
+                reinf_map = {p: data["score"] for p, data in chart_reinf.items()}
+                
+                session.run(
+                    """
+                    MATCH (c:Chart {chart_id: $chart_id})
+                    MERGE (dc:DivisionalChart {id: $id})
+                    SET dc.chart_id = $chart_id,
+                        dc.chart_type = $chart_type,
+                        dc.planet_positions = $positions,
+                        dc.planet_dignities = $dignities,
+                        dc.planet_reinforcements = $reinforcements,
+                        dc.domain_reinforcement = $domain_reinf,
+                        dc.updated_at = $timestamp
+                    MERGE (c)-[:HAS_DIVISIONAL_CHART]->(dc)
+                    """,
+                    id=f"{chart_id}_{chart_type}",
+                    chart_id=chart_id,
+                    chart_type=chart_type,
+                    positions=json.dumps(positions_map),
+                    dignities=json.dumps(dignities_map),
+                    reinforcements=json.dumps(reinf_map),
+                    domain_reinf=json.dumps(domain_reinforcement),
+                    timestamp=timestamp
+                )
+
+                # 2. Update individual ChartPlanet nodes with Vargottama flags (D9 only)
+                if chart_type == "D9":
+                    for p in planets:
+                        is_varg = p.get("is_vargottama", False)
+                        is_review = p.get("vargottama_review", False)
+                        
+                        # Apply +1.0 bonus only if not already applied (idempotent)
+                        # We use is_vargottama check to avoid double-adding on rerun
+                        session.run(
+                            """
+                            MATCH (cp:ChartPlanet {id: $cp_id})
+                            SET cp.strength_total = CASE 
+                                WHEN $is_varg = true AND (cp.is_vargottama IS NULL OR cp.is_vargottama = false) 
+                                THEN cp.strength_total + 1.0 
+                                ELSE cp.strength_total 
+                            END,
+                            cp.is_vargottama = $is_varg,
+                            cp.vargottama_review = $is_review
+                            """,
+                            cp_id=f"{chart_id}_{p['name']}",
+                            is_varg=is_varg,
+                            is_review=is_review
+                        )
+
+    def ingest_dasha_reinforcement(self, chart_id: str, enriched_dashas: list[dict[str, Any]]) -> None:
+        """
+        Updates Dashaperiod nodes with divisional support metadata.
+        """
+        import json
+        with self.neo4j_client.driver.session() as session:
+            for p in enriched_dashas:
+                # Find the dasha node
+                if p["dasha_type"] == "mahadasha":
+                    dasha_id = f"{chart_id}_MD_{p['planet']}"
+                else:
+                    dasha_id = f"{chart_id}_AD_{p['parent_planet']}_{p['planet']}"
+                
+                support = p.get("divisional_support", {})
+                if not support:
+                    continue
+                
+                session.run(
+                    """
+                    MATCH (d:Dashaperiod {id: $dasha_id})
+                    SET d.divisional_support = $support
+                    """,
+                    dasha_id=dasha_id,
+                    support=json.dumps(support)
+                )
+                
+                # Create REINFORCED_BY relationships to relevant divisional charts
+                DOMAIN_MAP = {"CAREER": "D10", "RELATIONSHIPS": "D9", "CHILDREN": "D7", "PARENTS": "D12", "GENERAL": "D9"}
+                
+                for domain, chart_code in DOMAIN_MAP.items():
+                    if domain in support:
+                        session.run(
+                            """
+                            MATCH (d:Dashaperiod {id: $dasha_id})
+                            MATCH (dc:DivisionalChart {id: $dc_id})
+                            MERGE (d)-[r:REINFORCED_BY {domain: $domain}]->(dc)
+                            SET r.score = $score
+                            """,
+                            dasha_id=dasha_id,
+                            dc_id=f"{chart_id}_{chart_code}",
+                            domain=domain,
+                            score=support[domain]
+                        )
+
     def ingest_propagation_results(self, chart_id: str, results: dict[str, Any]) -> None:
         """Store Phase 8 propagation results (house importance and themes) in Neo4j."""
         timestamp = datetime.now(timezone.utc).isoformat()
