@@ -17,6 +17,8 @@ from chart.vedicastro_calculator import VedicAstroCalculator
 from pipeline.run_book import setup_logging
 from storage.chart_ingestor import ChartGraphIngestor
 from storage.neo4j_client import Neo4jClient
+from reasoning.chart_reasoner import ChartReasoner
+from reasoning.house_reasoner import HouseReasoner
 
 
 class ChartProcessor:
@@ -33,6 +35,7 @@ class ChartProcessor:
         calculator: VedicAstroCalculator | None = None,
         neo4j_client: Neo4jClient | None = None,
         chart_ingestor: ChartGraphIngestor | None = None,
+        reasoner: ChartReasoner | None = None,
     ) -> None:
         self.chart_id = chart_id
         self.date = date
@@ -41,12 +44,18 @@ class ChartProcessor:
         self.longitude = longitude
         self.timezone = timezone
         self.calculator = calculator or VedicAstroCalculator()
-        self.neo4j_client = neo4j_client
+        self.neo4j_client = neo4j_client or Neo4jClient()
         if chart_ingestor is not None:
             self.chart_ingestor = chart_ingestor
         else:
-            self.neo4j_client = self.neo4j_client or Neo4jClient()
             self.chart_ingestor = ChartGraphIngestor(self.neo4j_client)
+        
+        if reasoner is not None:
+            self.reasoner = reasoner
+        else:
+            hr = HouseReasoner(self.neo4j_client)
+            self.reasoner = ChartReasoner(hr)
+            
         self.output_dir = Path("data") / "charts"
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.logger = logging.getLogger(__name__)
@@ -62,9 +71,22 @@ class ChartProcessor:
         )
         chart_path = self.output_dir / f"{self.chart_id}.json"
         self._write_json(chart_path, chart_data)
+        
         ingested = False
         if not dry_run:
             self.chart_ingestor.ingest_chart(self.chart_id, chart_data)
+            
+            # Run Full Reasoning (Yogas + Propagation)
+            analysis = self.reasoner.analyze_full_chart(self.chart_id)
+            
+            # Ingest Propagation Results
+            self.chart_ingestor.ingest_propagation_results(self.chart_id, {
+                "house_importance": analysis["house_importance"],
+                "dominant_themes": analysis["dominant_themes"],
+                "edges": analysis.get("propagation_metadata", {}).get("edges", []) # Wait, need to pass edges from analysis
+            })
+            # Actually, I should update analyze_full_chart to return the edges or just pass the whole results dict
+            
             ingested = True
         summary = {
             "chart_id": self.chart_id,

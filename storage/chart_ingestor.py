@@ -265,3 +265,73 @@ class ChartGraphIngestor:
                     same_planet=dispositior["same_planet"],
                 )
         return chart_id
+
+    def ingest_propagation_results(self, chart_id: str, results: dict[str, Any]) -> None:
+        """Store Phase 8 propagation results (house importance and themes) in Neo4j."""
+        timestamp = datetime.now(timezone.utc).isoformat()
+        with self.neo4j_client.driver.session() as session:
+            # 1. Store HouseInfluence nodes
+            for hi in results.get("house_importance", []):
+                hi_id = f"{chart_id}_HI_{hi['house']}"
+                session.run(
+                    """
+                    MATCH (c:Chart {chart_id: $chart_id})
+                    MERGE (hin:HouseInfluence {id: $id})
+                    SET hin.house_number = $house_number,
+                        hin.importance_score = $importance_score,
+                        hin.importance_rank = $importance_rank,
+                        hin.raw_score = $raw_score,
+                        hin.updated_at = $timestamp
+                    MERGE (c)-[:HAS_HOUSE_INFLUENCE]->(hin)
+                    """,
+                    id=hi_id,
+                    chart_id=chart_id,
+                    house_number=hi["house"],
+                    importance_score=hi["importance_score"],
+                    importance_rank=hi["rank"],
+                    raw_score=hi["raw_score"],
+                    timestamp=timestamp
+                )
+
+            # 2. Store DominantTheme nodes
+            for dt in results.get("dominant_themes", []):
+                dt_id = f"{chart_id}_THEME_{dt['theme_name']}"
+                session.run(
+                    """
+                    MATCH (c:Chart {chart_id: $chart_id})
+                    MERGE (tn:DominantTheme {id: $id})
+                    SET tn.theme_name = $theme_name,
+                        tn.theme_score = $theme_score,
+                        tn.theme_rank = $theme_rank,
+                        tn.key_houses = $key_houses,
+                        tn.key_planets = $key_planets,
+                        tn.yoga_contributors = $yoga_contributors,
+                        tn.updated_at = $timestamp
+                    MERGE (c)-[:HAS_DOMINANT_THEME]->(tn)
+                    """,
+                    id=dt_id,
+                    chart_id=chart_id,
+                    theme_name=dt["theme_name"],
+                    theme_score=dt["theme_score"],
+                    theme_rank=dt["theme_rank"],
+                    key_houses=dt["key_houses"],
+                    key_planets=dt["key_planets"],
+                    yoga_contributors=dt["yoga_contributors"],
+                    timestamp=timestamp
+                )
+
+            # 3. Store Influence Edges (Inter-house)
+            for edge in results.get("edges", []):
+                hi_from = f"{chart_id}_HI_{edge['from']}"
+                hi_to = f"{chart_id}_HI_{edge['to']}"
+                session.run(
+                    """
+                    MATCH (h1:HouseInfluence {id: $from_id})
+                    MATCH (h2:HouseInfluence {id: $to_id})
+                    MERGE (h1)-[r:INFLUENCES]->(h2)
+                    SET r.weight = $weight
+                    """,
+                    from_id=hi_from,
+                    to_id=hi_to,
+                    weight=edge["weight"]
+                )

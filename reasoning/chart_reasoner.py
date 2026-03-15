@@ -8,6 +8,7 @@ from typing import Any
 
 from reasoning.house_reasoner import HouseReasoner
 from reasoning.yoga_detector import YogaDetector
+from reasoning.propagation import PropagationEngine
 
 
 class ChartReasoner:
@@ -17,11 +18,13 @@ class ChartReasoner:
         self, 
         house_reasoner: HouseReasoner, 
         ontology_dir: str | Path = "normaliser/ontology",
-        yoga_detector: YogaDetector | None = None
+        yoga_detector: YogaDetector | None = None,
+        propagation_engine: PropagationEngine | None = None
     ) -> None:
         self.house_reasoner = house_reasoner
         self.ontology_dir = Path(ontology_dir)
         self.yoga_detector = yoga_detector or YogaDetector(self.ontology_dir)
+        self.propagation_engine = propagation_engine or PropagationEngine()
         self.concepts = self._load_concepts()
 
     def analyze_full_chart(self, chart_id: str, focus_areas: list[str] | None = None) -> dict[str, Any]:
@@ -38,6 +41,9 @@ class ChartReasoner:
         full_chart_data = self.house_reasoner.queries.get_full_chart_data(chart_id)
         detected_yogas = self.yoga_detector.detect_yogas(full_chart_data)
         
+        # 3. House Influence Propagation (Phase 8)
+        propagation_results = self.propagation_engine.compute_house_importance(full_chart_data, detected_yogas)
+        
         ranked = sorted(houses, key=lambda item: float(item.get("rank_score", 0.0)), reverse=True)
         dependency_graph = self._dependency_graph(houses)
         
@@ -46,6 +52,13 @@ class ChartReasoner:
             "focus_areas": sorted(normalized_focus),
             "house_analyses": houses,
             "detected_yogas": detected_yogas,
+            "house_importance": propagation_results["house_importance"],
+            "dominant_themes": propagation_results["dominant_themes"],
+            "propagation_metadata": {
+                "iterations": propagation_results["iterations"],
+                "convergence_delta": propagation_results["convergence_delta"],
+                "edges": propagation_results.get("edges", [])
+            },
             "dependency_map": dependency_graph["dependency_map"],
             "dependency_resolution": {
                 "order": dependency_graph["order"],
