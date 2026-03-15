@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+import time
+
+import pytest
+
 from extractor.gemini_client import GeminiClient
 
 
@@ -70,3 +74,17 @@ def test_gemini_client_stops_retrying_on_quota_error(monkeypatch) -> None:
         pass
 
     assert call_count["count"] == 1
+
+
+def test_gemini_client_times_out_stuck_request(monkeypatch) -> None:
+    client = GeminiClient(max_attempts=1, request_timeout_seconds=1)
+
+    class _SlowModel:
+        def generate_content(self, prompt: str) -> _FakeResponse:
+            time.sleep(5)
+            return _FakeResponse("{}")
+
+    monkeypatch.setattr(client, "_get_model", lambda: _SlowModel())
+
+    with pytest.raises(RuntimeError, match="timed out"):
+        client.extract_from_prompt("prebuilt prompt", {"chunk_id": "c1"})

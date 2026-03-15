@@ -283,6 +283,86 @@
       "strength_planets": ["MERCURY", "JUPITER", "VENUS"],
       "life_area": "kama",
       "description": "Speech, writing, communication, media, expression and networking"
+    },
+    {
+      "canonical_name": "KENDRA",
+      "synonyms": ["angle", "angular house", "quadrant", "kendra", "1,4,7,10"],
+      "description": "Houses 1, 4, 7, and 10"
+    },
+    {
+      "canonical_name": "TRIKONA",
+      "synonyms": ["trine", "trinal house", "trikona", "1,5,9"],
+      "description": "Houses 1, 5, and 9"
+    },
+    {
+      "canonical_name": "MALEFICS",
+      "synonyms": ["malefics", "malefic planets", "krura grahas", "evil planets", "natural malefics"],
+      "description": "Sun, Mars, Saturn, Rahu, Ketu"
+    },
+    {
+      "canonical_name": "BENEFICS",
+      "synonyms": ["benefics", "benefic planets", "saumya grahas", "good planets", "natural benefics"],
+      "description": "Jupiter, Venus, Mercury (well-associated), Moon (waxing)"
+    },
+    {
+      "canonical_name": "LAGNA_LORD",
+      "synonyms": ["lagna lord", "ascendant lord", "lord of lagna", "lord of the ascendant", "first lord", "1st lord", "lord of 1st", "lord of 1st house", "tanu bhavesha"],
+      "description": "The planet ruling the first house or ascendant"
+    },
+    {
+      "canonical_name": "HOUSE_2_LORD",
+      "synonyms": ["2nd lord", "second lord", "lord of 2nd", "lord of 2nd house", "dhana bhavesha"],
+      "description": "The planet ruling the second house"
+    },
+    {
+      "canonical_name": "HOUSE_3_LORD",
+      "synonyms": ["3rd lord", "third lord", "lord of 3rd", "lord of 3rd house", "sahaja bhavesha"],
+      "description": "The planet ruling the third house"
+    },
+    {
+      "canonical_name": "HOUSE_4_LORD",
+      "synonyms": ["4th lord", "fourth lord", "lord of 4th", "lord of 4th house", "sukha bhavesha"],
+      "description": "The planet ruling the fourth house"
+    },
+    {
+      "canonical_name": "HOUSE_5_LORD",
+      "synonyms": ["5th lord", "fifth lord", "lord of 5th", "lord of 5th house", "putra bhavesha"],
+      "description": "The planet ruling the fifth house"
+    },
+    {
+      "canonical_name": "HOUSE_6_LORD",
+      "synonyms": ["6th lord", "sixth lord", "lord of 6th", "lord of 6th house", "ari bhavesha"],
+      "description": "The planet ruling the sixth house"
+    },
+    {
+      "canonical_name": "HOUSE_7_LORD",
+      "synonyms": ["7th lord", "seventh lord", "lord of 7th", "lord of 7th house", "kalatra bhavesha"],
+      "description": "The planet ruling the seventh house"
+    },
+    {
+      "canonical_name": "HOUSE_8_LORD",
+      "synonyms": ["8th lord", "eighth lord", "lord of 8th", "lord of 8th house", "randhra bhavesha"],
+      "description": "The planet ruling the eighth house"
+    },
+    {
+      "canonical_name": "HOUSE_9_LORD",
+      "synonyms": ["9th lord", "ninth lord", "lord of 9th", "lord of 9th house", "bhagya bhavesha", "dharma bhavesha"],
+      "description": "The planet ruling the ninth house"
+    },
+    {
+      "canonical_name": "HOUSE_10_LORD",
+      "synonyms": ["10th lord", "tenth lord", "lord of 10th", "lord of 10th house", "karma bhavesha", "rajya bhavesha"],
+      "description": "The planet ruling the tenth house"
+    },
+    {
+      "canonical_name": "HOUSE_11_LORD",
+      "synonyms": ["11th lord", "eleventh lord", "lord of 11th", "lord of 11th house", "labha bhavesha"],
+      "description": "The planet ruling the eleventh house"
+    },
+    {
+      "canonical_name": "HOUSE_12_LORD",
+      "synonyms": ["12th lord", "twelfth lord", "lord of 12th", "lord of 12th house", "vyaya bhavesha"],
+      "description": "The planet ruling the twelfth house"
     }
   ]
 }

@@ -1,0 +1,136 @@
+{
+  "functional_natures": {
+    "ARIES": {
+      "SUN": "benefic",
+      "MOON": "benefic",
+      "MARS": "benefic",
+      "MERCURY": "malefic",
+      "JUPITER": "benefic",
+      "VENUS": "neutral",
+      "SATURN": "malefic",
+      "RAHU": "malefic",
+      "KETU": "benefic"
+    },
+    "TAURUS": {
+      "SUN": "malefic",
+      "MOON": "benefic",
+      "MARS": "malefic",
+      "MERCURY": "benefic",
+      "JUPITER": "malefic",
+      "VENUS": "benefic",
+      "SATURN": "yogakaraka",
+      "RAHU": "benefic",
+      "KETU": "malefic"
+    },
+    "GEMINI": {
+      "SUN": "neutral",
+      "MOON": "malefic",
+      "MARS": "malefic",
+      "MERCURY": "benefic",
+      "JUPITER": "malefic",
+      "VENUS": "benefic",
+      "SATURN": "neutral",
+      "RAHU": "benefic",
+      "KETU": "malefic"
+    },
+    "CANCER": {
+      "SUN": "benefic",
+      "MOON": "benefic",
+      "MARS": "yogakaraka",
+      "MERCURY": "malefic",
+      "JUPITER": "benefic",
+      "VENUS": "malefic",
+      "SATURN": "malefic",
+      "RAHU": "malefic",
+      "KETU": "benefic"
+    },
+    "LEO": {
+      "SUN": "benefic",
+      "MOON": "benefic",
+      "MARS": "yogakaraka",
+      "MERCURY": "neutral",
+      "JUPITER": "benefic",
+      "VENUS": "malefic",
+      "SATURN": "malefic",
+      "RAHU": "malefic",
+      "KETU": "benefic"
+    },
+    "VIRGO": {
+      "SUN": "malefic",
+      "MOON": "neutral",
+      "MARS": "malefic",
+      "MERCURY": "benefic",
+      "JUPITER": "malefic",
+      "VENUS": "benefic",
+      "SATURN": "benefic",
+      "RAHU": "benefic",
+      "KETU": "malefic"
+    },
+    "LIBRA": {
+      "SUN": "malefic",
+      "MOON": "neutral",
+      "MARS": "malefic",
+      "MERCURY": "benefic",
+      "JUPITER": "malefic",
+      "VENUS": "benefic",
+      "SATURN": "yogakaraka",
+      "RAHU": "benefic",
+      "KETU": "malefic"
+    },
+    "SCORPIO": {
+      "SUN": "benefic",
+      "MOON": "benefic",
+      "MARS": "benefic",
+      "MERCURY": "malefic",
+      "JUPITER": "benefic",
+      "VENUS": "malefic",
+      "SATURN": "malefic",
+      "RAHU": "malefic",
+      "KETU": "benefic"
+    },
+    "SAGITTARIUS": {
+      "SUN": "benefic",
+      "MOON": "neutral",
+      "MARS": "benefic",
+      "MERCURY": "malefic",
+      "JUPITER": "benefic",
+      "VENUS": "malefic",
+      "SATURN": "malefic",
+      "RAHU": "malefic",
+      "KETU": "benefic"
+    },
+    "CAPRICORN": {
+      "SUN": "malefic",
+      "MOON": "malefic",
+      "MARS": "neutral",
+      "MERCURY": "benefic",
+      "JUPITER": "malefic",
+      "VENUS": "yogakaraka",
+      "SATURN": "benefic",
+      "RAHU": "benefic",
+      "KETU": "malefic"
+    },
+    "AQUARIUS": {
+      "SUN": "malefic",
+      "MOON": "malefic",
+      "MARS": "benefic",
+      "MERCURY": "benefic",
+      "JUPITER": "neutral",
+      "VENUS": "yogakaraka",
+      "SATURN": "benefic",
+      "RAHU": "benefic",
+      "KETU": "malefic"
+    },
+    "PISCES": {
+      "SUN": "neutral",
+      "MOON": "benefic",
+      "MARS": "benefic",
+      "MERCURY": "malefic",
+      "JUPITER": "benefic",
+      "VENUS": "malefic",
+      "SATURN": "malefic",
+      "RAHU": "malefic",
+      "KETU": "benefic"
+    }
+  }
+}

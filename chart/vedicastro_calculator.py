@@ -8,6 +8,7 @@ from types import SimpleNamespace
 from typing import Any, Callable
 
 from normaliser.normaliser import AstrologyNormaliser
+from chart.strength_engine import StrengthEngine
 
 
 class VedicAstroCalculator:
@@ -18,9 +19,11 @@ class VedicAstroCalculator:
         ontology_dir: str | Path = "normaliser/ontology",
         chart_factory: Callable[..., Any] | None = None,
         normaliser: AstrologyNormaliser | None = None,
+        strength_engine: StrengthEngine | None = None,
     ) -> None:
         self.ontology_dir = Path(ontology_dir)
         self.normaliser = normaliser or AstrologyNormaliser(self.ontology_dir)
+        self.strength_engine = strength_engine or StrengthEngine(self.ontology_dir)
         self.chart_factory = chart_factory or self._build_chart
         self.planets = self._load_ontology_map("planets.json", "planets")
         self.signs = self._load_ontology_map("signs.json", "signs")
@@ -43,6 +46,30 @@ class VedicAstroCalculator:
         )
         houses = self._extract_houses(chart)
         planets = self._extract_planets(chart)
+
+        # Phase 6: Calculate sophisticated strength scores for each planet
+        # Pass 1: Initial strength without dispositor contribution
+        chart_data_pre = {"planets": planets, "houses": houses, "aspects": self._calculate_aspects(planets)}
+        initial_scores = {}
+        for planet in planets:
+            strength_data = self.strength_engine.calculate_planet_strength(
+                planet["name"], chart_data_pre, dispositor_score=5.0
+            )
+            initial_scores[planet["name"]] = strength_data["total_strength"]
+
+        # Pass 2: Final strength including dispositor contribution
+        for planet in planets:
+            # Find the dispositor (ruler of the sign the planet is in)
+            ruler_name = self.signs[planet["sign"]]["ruler"]
+            dispositor_score = initial_scores.get(ruler_name, 5.0)
+            
+            final_strength_data = self.strength_engine.calculate_planet_strength(
+                planet["name"], chart_data_pre, dispositor_score=dispositor_score
+            )
+            planet["strength_scores"] = final_strength_data
+            # Overwrite the simple dignity-based modifier with the total strength
+            planet["dignity"]["strength_modifier"] = final_strength_data["total_strength"]
+
         aspects = self._calculate_aspects(planets)
         house_aspects = self._calculate_house_aspects(planets)
         conjunctions = self._calculate_conjunctions(planets)
@@ -175,6 +202,7 @@ class VedicAstroCalculator:
         for name, planet_id in planet_ids.items():
             values, _ = swe.calc_ut(julian_day, planet_id, flags)
             longitude = float(values[0]) % 360.0
+            latitude = float(values[1])
             speed = float(values[3])
             planets.append(
                 SimpleNamespace(
@@ -182,6 +210,7 @@ class VedicAstroCalculator:
                     sign=sign_names[int(longitude // 30) % 12],
                     degree=round(longitude % 30, 6),
                     longitude=round(longitude, 6),
+                    latitude=round(latitude, 6),
                     house=int(((longitude - asc_longitude) % 360.0) // 30) + 1,
                     nakshatra=nakshatra_names[int(longitude // (360.0 / 27.0)) % 27],
                     pada=int(((longitude % (360.0 / 27.0)) // (360.0 / 108.0)) + 1),
@@ -190,12 +219,14 @@ class VedicAstroCalculator:
                 )
             )
         ketu_longitude = (next(planet.longitude for planet in planets if planet.name == "Rahu") + 180.0) % 360.0
+        ketu_latitude = -next(planet.latitude for planet in planets if planet.name == "Rahu")
         planets.append(
             SimpleNamespace(
                 name="Ketu",
                 sign=sign_names[int(ketu_longitude // 30) % 12],
                 degree=round(ketu_longitude % 30, 6),
                 longitude=round(ketu_longitude, 6),
+                latitude=round(ketu_latitude, 6),
                 house=int(((ketu_longitude - asc_longitude) % 360.0) // 30) + 1,
                 nakshatra=nakshatra_names[int(ketu_longitude // (360.0 / 27.0)) % 27],
                 pada=int(((ketu_longitude % (360.0 / 27.0)) // (360.0 / 108.0)) + 1),
@@ -246,12 +277,14 @@ class VedicAstroCalculator:
                 raise ValueError(f"unknown sign for planet {name}: {getattr(planet, 'sign', None)}")
             degree = float(getattr(planet, "degree", 0.0))
             longitude = float(getattr(planet, "longitude", degree))
+            latitude = float(getattr(planet, "latitude", 0.0))
             planets.append(
                 {
                     "name": name,
                     "sign": sign,
                     "degree": degree,
                     "longitude": longitude,
+                    "latitude": latitude,
                     "house": int(getattr(planet, "house")),
                     "nakshatra": nakshatra,
                     "nakshatra_pada": int(getattr(planet, "pada", 0) or 0),
@@ -430,6 +463,7 @@ class _VedicAstroChartAdapter:
                 sign=planet.Rasi,
                 degree=planet.SignLonDecDeg,
                 longitude=planet.LonDecDeg,
+                latitude=getattr(planet, "LatDecDeg", 0.0),
                 house=planet.HouseNr,
                 nakshatra=planet.Nakshatra,
                 pada=None,

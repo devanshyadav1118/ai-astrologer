@@ -16,8 +16,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from extractor.adapter import adapt_extraction_payload
 from extractor.chunker import chunk_pdf
-from extractor.external_automation import ExternalAutomationExtractor
-from extractor.gemini_client import GeminiClient
+from extractor.rules_extraction import RulesExtractionExtractor
 from extractor.stitcher import stitch_book_chunks
 from normaliser.post_processor import PostProcessor
 from storage.neo4j_client import Neo4jClient
@@ -86,7 +85,7 @@ class BookProcessor:
         self.resume = resume
         self.sqlite = sqlite_client or SQLiteClient()
         self.neo4j = neo4j_client or Neo4jClient()
-        self.extractor = extractor_client or ExternalAutomationExtractor()
+        self.extractor = extractor_client or RulesExtractionExtractor()
         self.post_processor = post_processor or PostProcessor()
         self.output_dir = Path("data") / "extracted"
         self.output_dir.mkdir(parents=True, exist_ok=True)
