@@ -14,6 +14,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from chart.vedicastro_calculator import VedicAstroCalculator
+from chart.vedicastro_api_calculator import VedicAstroAPICalculator
 from pipeline.run_book import setup_logging
 from storage.chart_ingestor import ChartGraphIngestor
 from storage.neo4j_client import Neo4jClient
@@ -33,7 +34,7 @@ class ChartProcessor:
         latitude: float,
         longitude: float,
         timezone: float,
-        calculator: VedicAstroCalculator | None = None,
+        calculator: VedicAstroCalculator | VedicAstroAPICalculator | None = None,
         neo4j_client: Neo4jClient | None = None,
         chart_ingestor: ChartGraphIngestor | None = None,
         reasoner: ChartReasoner | None = None,
@@ -45,7 +46,19 @@ class ChartProcessor:
         self.latitude = latitude
         self.longitude = longitude
         self.timezone = timezone
-        self.calculator = calculator or VedicAstroCalculator()
+        
+        # Default to API calculator but allow fallback
+        if calculator is None:
+            try:
+                # Quick check if API is up
+                import requests
+                requests.get("http://127.0.0.1:8088/", timeout=1)
+                self.calculator = VedicAstroAPICalculator()
+            except Exception:
+                self.logger.warning("VedicAstro API not reachable, falling back to local calculator")
+                self.calculator = VedicAstroCalculator()
+        else:
+            self.calculator = calculator
         self.neo4j_client = neo4j_client or Neo4jClient()
         if chart_ingestor is not None:
             self.chart_ingestor = chart_ingestor
@@ -91,13 +104,19 @@ class ChartProcessor:
             })
             
             # Phase 9: Compute, Enrich, and Ingest Dashas
-            self.dasha_engine.process_dashas(self.chart_id, {
-                "date": self.date,
-                "time": self.time,
-                "latitude": self.latitude,
-                "longitude": self.longitude,
-                "timezone": self.timezone
-            })
+            moon_lon = next((p["longitude"] for p in chart_data["planets"] if p["name"] == "MOON"), 0.0)
+            self.dasha_engine.process_dashas(
+                chart_id=self.chart_id, 
+                birth_data={
+                    "date": self.date,
+                    "time": self.time,
+                    "latitude": self.latitude,
+                    "longitude": self.longitude,
+                    "timezone": self.timezone
+                },
+                moon_longitude=moon_lon,
+                precalculated_periods=chart_data.get("dasha_periods")
+            )
             
             ingested = True
         summary = {
@@ -124,11 +143,19 @@ def main() -> None:
     parser.add_argument("--latitude", required=True, type=float, help="Birth latitude")
     parser.add_argument("--longitude", required=True, type=float, help="Birth longitude")
     parser.add_argument("--timezone", required=True, type=float, help="UTC offset, e.g. 5.5")
+    parser.add_argument("--use-api", action="store_true", help="Use VedicAstro API for calculations")
+    parser.add_argument("--api-url", default="http://127.0.0.1:8088", help="Base URL for the VedicAstro API")
     parser.add_argument("--dry-run", action="store_true", help="Calculate and write JSON without Neo4j ingestion")
     args = parser.parse_args()
 
     log_path = setup_logging(args.chart_id)
     logging.info("Logging to %s", log_path)
+    
+    # Processor will handle the default calculator selection (API with fallback)
+    calculator = None
+    if args.use_api:
+        calculator = VedicAstroAPICalculator(api_url=args.api_url)
+    
     processor = ChartProcessor(
         chart_id=args.chart_id,
         date=args.date,
@@ -136,6 +163,7 @@ def main() -> None:
         latitude=args.latitude,
         longitude=args.longitude,
         timezone=args.timezone,
+        calculator=calculator
     )
     summary = processor.run(dry_run=args.dry_run)
     logging.info("Summary: %s", json.dumps(summary, ensure_ascii=True, sort_keys=True))

@@ -25,19 +25,19 @@ class VedicAstroAdapter:
 
     def get_dasha_timeline(
         self, 
-        birth_date: str, 
-        birth_time: str, 
-        lat: float, 
-        lon: float, 
-        tz: float
+        date: str, 
+        time: str, 
+        latitude: float, 
+        longitude: float, 
+        timezone: float
     ) -> list[dict[str, Any]]:
         """Compute Vimshottari Dasha timeline and return canonical period nodes."""
         # 1. Initialize VedicAstro
-        y, m, d = map(int, birth_date.split("-"))
-        hr, mn, sc = map(int, birth_time.split(":"))
-        utc_str = self._format_utc(tz)
+        y, m, d = map(int, date.split("-"))
+        hr, mn, sc = map(int, time.split(":"))
+        utc_str = self._format_utc(timezone)
         
-        va = VedicHoroscopeData(y, m, d, hr, mn, sc, utc_str, lat, lon, ayanamsa="Lahiri")
+        va = VedicHoroscopeData(y, m, d, hr, mn, sc, utc_str, latitude, longitude, ayanamsa="Lahiri")
         chart = va.generate_chart()
         
         # 2. Compute Dashas (Nested Dict: Mahadasha -> Bhukti)
